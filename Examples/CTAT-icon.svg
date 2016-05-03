@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     height="15" width="15" viewBox="0 0 15 15" preserveAspectRatio="none"
+     font-size="15px" font-family="Arial,sans-serif" stroke="none" text-anchor="middle">
+   <desc>CTAT Icon</desc>
+   <rect width="100%" height="100%" fill="#122761"/>
+   <text x="50%" y="100%" fill="white">C</text>
+   <text x="50%" y=".71em" font-weight="bold" fill="orange">T</text>
+</svg>
