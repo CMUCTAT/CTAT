@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATNumberLine Examples</title>
+
+<link rel="stylesheet" href="CTAT.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<!--<script src="http://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>-->
+<script src="ctat.min.js"></script>
+<script>
+  $(function() {
+      initTutor({"question_file":'CTATNumberLine.brd'});
+  });
+</script>
+<style type="text/css">
+body {
+	background-color: lightgrey;
+}
+
+div.tutor_window {
+        position: relative;
+	background-color: white;
+	border: 1px solid black;
+	width: 800px;
+        margin: 0 auto;
+        padding: 5px;
+	box-shadow: 10px 10px 5px grey;
+}
+div.ctat_example {
+    margin:5px;
+    padding:5px;
+    display:inline-block;
+    vertical-align:top;
+}
+div.ctat_code {
+    display:inline-block;
+    width:50%;
+    border-left: 1px dotted gray;
+    padding-left: 3px;
+}
+hr { width: 85%; }
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <h1>CTATNumberLine Example</h1>
+    <p>Some CTATNumberLine examples that show some of its basic functionality.</p>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	CTATNumberLine with default settings:
+	<div id="numberLineDefault" class="CTATNumberLine"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="numberLineDefault" class="CTATNumberLine"&gt;
+&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Setting minimum and maximum values:
+	<div id="numberLineMinMax" class="CTATNumberLine" data-ctat-minimum="-2" data-ctat-maximum="2"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLineMinMax" class="CTATNumberLine"
+     data-ctat-minimum="-2"
+     data-ctat-maximum="2"&gt;
+&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Setting step values:
+	<div id="numberLineStep" class="CTATNumberLine"
+	     data-ctat-minimum="0" data-ctat-maximum="1"
+	     data-ctat-large-tick-step="0.4"
+	     data-ctat-small-tick-step="1/3"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLineStep" class="CTATNumberLine"
+     data-ctat-minimum="0"
+     data-ctat-maximum="1"
+     data-ctat-large-tick-step="0.4"
+     data-ctat-small-tick-step="1/3"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>Please note that the tick mark labels can display either decimals or fractions depending on the values of the data-ctat-*-tick-step attribute. If fractions in the form of 1/3 are used, then the labels will also be fractions.</p>
+	<p>Also, if different tick marks overlap, then the largest tick mark will be displayed. For example in the default example, at 1, the large tick mark is "1" while the small tick mark would be "2/2" and "1" is displayed</p>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Setting denominator:
+	<div id="numberLineDenom" class="CTATNumberLine"
+	     data-ctat-minimum="0" data-ctat-maximum="1"
+	     data-ctat-large-tick-step="0"
+	     data-ctat-small-tick-step="1"
+	     data-ctat-denominator="4"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLineDenom" class="CTATNumberLine"
+     data-ctat-minimum="0"
+     data-ctat-maximum="1"
+     data-ctat-large-tick-step="0"
+     data-ctat-small-tick-step="1"
+     data-ctat-denominator="4"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>data-ctat-denominator is different from the other tick mark
+	  parameters in that it shows tick marks at an interval of 1/value.
+	  This is often used in conjunction with data-ctat-ctrl-denominator.
+	</p>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Setting point size:
+	<div id="numberLinePoint" class="CTATNumberLine"
+	     data-ctat-minimum="0" data-ctat-maximum="1"
+	     data-ctat-large-tick-step="0"
+	     data-ctat-small-tick-step="1"
+	     data-ctat-point-size="12"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLinePoint" class="CTATNumberLine"
+     data-ctat-minimum="0"
+     data-ctat-maximum="1"
+     data-ctat-large-tick-step="0"
+     data-ctat-small-tick-step="1"
+     data-ctat-point-size="12"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>This setting will adjust both the point cursor and the drawn
+	  points.</p>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Setting snap to tickmarks:
+	<div id="numberLineSnap" class="CTATNumberLine"
+	     data-ctat-minimum="0" data-ctat-maximum="1"
+	     data-ctat-large-tick-step="1"
+	     data-ctat-small-tick-step="1/3"
+	     data-ctat-snap="true"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLineSnap" class="CTATNumberLine"
+     data-ctat-minimum="0" data-ctat-maximum="1"
+     data-ctat-large-tick-step="1"
+     data-ctat-small-tick-step="1/3"
+     data-ctat-snap="true"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>When data-ctat-snap="true", CTATNumberLine will report the value
+	of the tick mark as the input in the posted SAI.</p>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Setting rotation:
+	<div id="numberLineRot" class="CTATNumberLine" style="width:180px;height:200px"
+	     data-ctat-rotation="60"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLineRot" class="CTATNumberLine"
+     data-ctat-rotation="60"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>Rotate the number line clockwise around the center point
+	  in degrees.</p>
+      </div>
+    </div>
+
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Controlling minimum and maximum:
+	<div id="numberLineBounds" class="CTATNumberLine"
+	     data-ctat-minimum="0"
+	     data-ctat-maximum="3"
+	     data-ctat-ctrl-min="numberLineBounds_min"
+	     data-ctat-ctrl-max="numberLineBounds_max"></div>
+	<div style="display: flex; justify-content: space-around;">
+	<div>Minimum: <div id="numberLineBounds_min" class="CTATNumericStepper" data-ctat-tutor="false" style="width:40px;display:inline-block;" value="0" min="-3" max="2"></div></div>
+	<div>Maximum: <div id="numberLineBounds_max" class="CTATNumericStepper" data-ctat-tutor="false" style="width:40px;display:inline-block;" value="3" min="2" max="10"></div></div>
+	</div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLineRot" class="CTATNumberLine"
+     data-ctat-minimum="0"
+     data-ctat-maximum="3"
+     data-ctat-ctrl-min="numberLineBounds_min"
+     data-ctat-ctrl-max="numberLineBounds_max"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>If you are using something like a CTATNumericSpinner, do not
+	  forget to set its value and the corresponding CTATNumberLine
+	  attribute to the same initial value.</p>
+      </div>
+    </div>
+
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Controlling tick marks:
+	<div id="numberLineCTick" class="CTATNumberLine"
+	     data-ctat-minimum="0"
+	     data-ctat-maximum="3"
+	     data-ctat-large-tick-step="1"
+	     data-ctat-small-tick-step="1/2"
+	     data-ctat-ctrl-large-tick="numberLineCTick_large"
+	     data-ctat-ctrl-small-tick="numberLineCTick_small"
+	     data-ctat-ctrl-denominator="numberLineCTick_denom">
+	</div>
+	<div style="display: flex; justify-content: space-around;">
+	  <div>Large: <div id="numberLineCTick_large" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1" min="0" max="3"></div></div>
+	  <div>Small: <div id="numberLineCTick_small" class="CTATTextInput" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1/2"></div></div>
+	<div>Denominator: <div id="numberLineCTick_denom" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="0" min="0" max="10"></div></div>
+	</div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLineRot" class="CTATNumberLine"
+     data-ctat-minimum="0"
+     data-ctat-maximum="3"
+     data-ctat-large-tick-step="1"
+     data-ctat-small-tick-step="1/2"
+     data-ctat-ctrl-large-tick="numberLineCTick_large"
+     data-ctat-ctrl-small-tick="numberLineCTick_small"
+     data-ctat-ctrl-denominator="numberLineCTick_denom"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>If you are using something like a CTATNumericSpinner, do not
+	  forget to set its value and the corresponding CTATNumberLine
+	  attribute to the same initial value.</p>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	Setting multi-point entry:
+	<div id="numberLineNumPoints" class="CTATNumberLine"
+	     data-ctat-max-points="0"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="numberLineNumPoints" class="CTATNumberLine"
+	  data-ctat-max-points="3"&gt;&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+
+    <div id="hint-box"
+	 style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow" style="display: inline-block;"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton" style="margin: 0 5px 5px 5px"></div>
+	<div id="done-button" class="CTATDoneButton" style="margin: 0 5px 0px 5px"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
