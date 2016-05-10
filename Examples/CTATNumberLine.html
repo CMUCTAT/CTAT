@@ -219,14 +219,14 @@ hr { width: 85%; }
 	     data-ctat-maximum="3"
 	     data-ctat-large-tick-step="1"
 	     data-ctat-small-tick-step="1/2"
-	     data-ctat-ctrl-large-tick="numberLineCTick_large"
-	     data-ctat-ctrl-small-tick="numberLineCTick_small"
-	     data-ctat-ctrl-denominator="numberLineCTick_denom">
+	     data-ctat-ctrl-large-tick="nlTick_large"
+	     data-ctat-ctrl-small-tick="nlTick_small"
+	     data-ctat-ctrl-denominator="nlTick_denom">
 	</div>
 	<div style="display: flex; justify-content: space-around;">
-	  <div>Large: <div id="numberLineCTick_large" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1" min="0" max="3"></div></div>
-	  <div>Small: <div id="numberLineCTick_small" class="CTATTextInput" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1/2"></div></div>
-	<div>Denominator: <div id="numberLineCTick_denom" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="0" min="0" max="10"></div></div>
+	  <div>Large: <div id="nlTick_large" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1" min="0" max="3"></div></div>
+	  <div>Small: <div id="nlTick_small" class="CTATTextInput" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1/2"></div></div>
+	<div>Denominator: <div id="nlTick_denom" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="0" min="0" max="10"></div></div>
 	</div>
       </div>
       <div class="ctat_code">
@@ -250,7 +250,7 @@ hr { width: 85%; }
       <div class="ctat_example">
 	Setting multi-point entry:
 	<div id="numberLineNumPoints" class="CTATNumberLine"
-	     data-ctat-max-points="0"></div>
+	     data-ctat-max-points="3"></div>
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLineNumPoints" class="CTATNumberLine"
