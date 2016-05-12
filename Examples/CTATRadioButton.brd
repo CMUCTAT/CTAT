@@ -6,7 +6,7 @@
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartProblem</MessageType>
-                <ProblemName>CTATDragNDrop</ProblemName>
+                <ProblemName>CTATJumble</ProblemName>
             </properties>
         </message>
         <message>
@@ -17,27 +17,27 @@
         </message>
     </startNodeMessages>
     <node locked="false" doneState="false">
-        <text>CTATDragNDrop</text>
+        <text>CTATRadioButton</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>606</x>
-            <y>30</y>
+            <x>192</x>
+            <y>38</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>646</x>
-            <y>140</y>
+            <x>220</x>
+            <y>171</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
-        <text>done</text>
+        <text>Done</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>646</x>
-            <y>250</y>
+            <x>221</x>
+            <y>284</y>
         </dimension>
     </node>
     <edge>
@@ -51,20 +51,20 @@
                 <properties>
                     <MessageType>CorrectAction</MessageType>
                     <Selection>
-                        <value>sink</value>
+                        <value>radioGroup</value>
                     </Selection>
                     <Action>
-                        <value>SetChildren</value>
+                        <value>UpdateRadioButton</value>
                     </Action>
                     <Input>
-                        <value>circle</value>
+                        <value>rbutton1: yes</value>
                     </Input>
                     <transaction_id>T20bfb39b-09d6-43ad-bb4f-7838cfb0f399</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please move the circle from the Source area to the Sink area and click Submit.</hintMessage>
+            <hintMessage>Please select the first radio button.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -73,19 +73,19 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">sink</matcherParameter>
+                        <matcherParameter name="single">radioGroup</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">SetChildren</matcherParameter>
+                        <matcherParameter name="single">UpdateRadioButton</matcherParameter>
                     </matcher>
                 </Action>
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">dndcircle</matcherParameter>
+                        <matcherParameter name="single">rbutton1: yes</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -105,7 +105,7 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>3</uniqueID>
+            <uniqueID>4</uniqueID>
             <message>
                 <verb>SendNoteProperty</verb>
                 <properties>

@@ -5,6 +5,7 @@
 <title>CTATDragNDrop Example</title>
 
 <link rel="stylesheet" href="CTAT.css"/>
+<link rel="stylesheet" href="ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <script src="ctat.min.js"></script>
@@ -14,19 +15,6 @@
   });
 </script>
 <style type="text/css">
-body {
-	background-color: lightgrey;
-}
-
-div.tutor_window {
-        position: relative;
-	background-color: white;
-	border: 1px solid black;
-	width: 700px;
-        margin: 0 auto;
-        padding: 5px;
-	box-shadow: 10px 10px 5px grey;
-}
 </style>
 </head>
 <body>
@@ -37,7 +25,7 @@ div.tutor_window {
       The correct answer is the blue circle.
       Use the submit button to submit Sink for grading.</p>
     <div>
-      <div style="margin:5px;padding:5px;display:inline-block;vertical-align:top;">
+      <div class="ctat_example">
 	Source:
 	<div id="source" class="CTATDragNDrop" style="padding:5px;" data-ctat-tutor="false" name="DragNDropGroup">
 	  <div id="dndcircle" style="width:48px;height:48px;">
@@ -48,7 +36,7 @@ div.tutor_window {
 	  <div id="dndtri">triangle</div>
 	</div>
       </div>
-      <div style="display:inline-block;">
+      <div class="ctat_code">
 	<pre>
 Source:
 &lt;div id="source" class="CTATDragNDrop" style="padding:5px;"
@@ -68,13 +56,13 @@ Source:
     </div>
 
     <div>
-      <div style="margin:5px;padding:5px;vertical-align:top;display:inline-block;">
+      <div class="ctat_example">
 	Sink:
 	<div id="sink" class="CTATDragNDrop" name="DragNDropGroup" style="padding:5px;" data-ctat-max-cardinality="1" data-ctat-tutor="false">
 	</div>
 	<div id="submit" class="CTATSubmitButton" data-ctat-target="sink">Submit</div>
       </div>
-      <div style="display:inline-block;">
+      <div class="ctat_code">
 	<pre>
 Sink:
 &lt;div id="sink" class="CTATDragNDrop" name="DragNDropGroup"
@@ -86,12 +74,11 @@ Sink:
 	</pre>
       </div>
     </div>
-    <div id="hint-box"
-	 style="margin:3px;text-align:right;">
-      <div id="HintWindow" class="CTATHintWindow" style="display: inline-block;"></div>
+    <div id="hint-box">
+      <div id="HintWindow" class="CTATHintWindow"></div>
       <div style="float: right;">
-	<div id="hint-button" class="CTATHintButton" style="margin: 0 5px 5px 5px"></div>
-	<div id="done-button" class="CTATDoneButton" style="margin: 0 5px 0px 5px"></div>
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
       </div>
     </div>
   </div>

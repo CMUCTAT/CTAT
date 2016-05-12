@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATRadioButton Example</title>
+
+<link rel="stylesheet" href="CTAT.css"/>
+<link rel="stylesheet" href="ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="ctat.min.js"></script>
+<script>
+  $(function() {
+      initTutor({"question_file":'CTATRadioButton.brd'});
+  });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <h1>CTATRadioButton Example</h1>
+    <p>A simple radio button example.</p>
+    <div>
+      <div class="ctat_example">
+	Click the first radio button:
+	<div id="rbutton1" class="CTATRadioButton" name="radioGroup">yes</div>
+	<div id="rbutton2" class="CTATRadioButton" name="radioGroup">no</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="rbutton1" class="CTATRadioButton"
+     name="radioGroup"&gt;yes&lt;/div&gt;
+&lt;div id="rbutton2" class="CTATRadioButton"
+     name="radioGroup"&gt;no&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+
+    <div id="hint-box">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

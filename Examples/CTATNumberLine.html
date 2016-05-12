@@ -5,6 +5,7 @@
 <title>CTATNumberLine Examples</title>
 
 <link rel="stylesheet" href="CTAT.css"/>
+<link rel="stylesheet" href="ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <!--<script src="http://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>-->
@@ -15,32 +16,8 @@
   });
 </script>
 <style type="text/css">
-body {
-	background-color: lightgrey;
-}
-
-div.tutor_window {
-        position: relative;
-	background-color: white;
-	border: 1px solid black;
-	width: 800px;
-        margin: 0 auto;
-        padding: 5px;
-	box-shadow: 10px 10px 5px grey;
-}
-div.ctat_example {
-    margin:5px;
-    padding:5px;
-    display:inline-block;
-    vertical-align:top;
-}
-div.ctat_code {
-    display:inline-block;
-    width:50%;
-    border-left: 1px dotted gray;
-    padding-left: 3px;
-}
-hr { width: 85%; }
+  div.tutor_window { width: 800px; }
+  hr { width: 85%; }
 </style>
 </head>
 <body>
@@ -250,7 +227,10 @@ hr { width: 85%; }
       <div class="ctat_example">
 	Setting multi-point entry:
 	<div id="numberLineNumPoints" class="CTATNumberLine"
-	     data-ctat-max-points="3"></div>
+	     data-ctat-max-points="3"
+	     data-ctat-snap="true"></div>
+	<!-- <div id="nlnp_submit" class="CTATSubmitButton"
+	     data-ctat-target="numberLineNumPoints"></div> -->
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLineNumPoints" class="CTATNumberLine"
@@ -259,12 +239,11 @@ hr { width: 85%; }
       </div>
     </div>
 
-    <div id="hint-box"
-	 style="margin:3px;text-align:right;">
-      <div id="HintWindow" class="CTATHintWindow" style="display: inline-block;"></div>
+    <div id="hint-box">
+      <div id="HintWindow" class="CTATHintWindow"></div>
       <div style="float: right;">
-	<div id="hint-button" class="CTATHintButton" style="margin: 0 5px 5px 5px"></div>
-	<div id="done-button" class="CTATDoneButton" style="margin: 0 5px 0px 5px"></div>
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
       </div>
     </div>
   </div>
