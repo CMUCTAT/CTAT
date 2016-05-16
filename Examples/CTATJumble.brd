@@ -64,7 +64,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please arange the letters in alphabetical order.</hintMessage>
+            <hintMessage>Please arrange the letters in alphabetical order.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
