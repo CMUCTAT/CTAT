@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATComboBox Example</title>
+
+<link rel="stylesheet" href="CTAT.css"/>
+<link rel="stylesheet" href="ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="ctat.min.js"></script>
+<script>
+  $(function() {
+      initTutor({"question_file":'CTATButton.brd'});
+  });
+</script>
+<style type="text/css">
+  div.ctat_example { max-width: 45%; }
+  hr { width: 80%; }
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <h1>CTATComboBox Example</h1>
+    <p>A select example.</p>
+    <div>
+      <div class="ctat_example">
+	Select "yes":
+	<div id="combo1" class="CTATComboBox">
+	  <option>----</option>
+	  <option>yes</option>
+	  <option>no</option>
+	</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="combo1" class="CTATComboBox"&gt;
+  &lt;option&gt;----&lt;/option&gt;
+  &lt;option&gt;yes&lt;/option&gt;
+  &lt;option&gt;no&lt;/option&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	A select where the options are set with an attribute:
+	<div id="combo2" class="CTATComboBox" data-ctat-labels="----,oui,non">
+	</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="combo2" class="CTATComboBox"
+     data-ctat-labels="----,oui,non"&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="ctat_example">
+	A select using both ways of setting options:
+	<div id="combo3" class="CTATComboBox" data-ctat-labels="oui;non"
+	     data-ctat-split-on=";">
+	  <option>----</option>
+	</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="combo2" class="CTATComboBox"
+     data-ctat-labels="oui;non"
+     data-ctat-split-on=";"&gt;
+  &lt;option&gt;----&lt;/option&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </div>
+
+    <div id="hint-box" style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
