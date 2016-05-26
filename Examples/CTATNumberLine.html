@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <title>CTATNumberLine Examples</title>
 
-<link rel="stylesheet" href="CTAT.css"/>
-<link rel="stylesheet" href="ctat_example.css"/>
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <!--<script src="http://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>-->
-<script src="ctat.min.js"></script>
+<script src="js/ctat.min.js"></script>
 <script>
   $(function() {
       initTutor({"question_file":'CTATNumberLine.brd'});
@@ -18,10 +18,19 @@
 <style type="text/css">
   div.tutor_window { width: 800px; }
   hr { width: 85%; }
+  div[data-ctat-rotation] .CTAT-number-line--large-tickmark-label { fill:maroon; transform: translate(7px,3px); }
+  div[data-ctat-rotation] .CTAT-number-line--small-tickmark-label { fill:purple; transform: translate(7px,3px); }
+  .small_button { width:auto; height:auto; }
+  .small_button>button { font-size:10px; }
 </style>
 </head>
 <body>
   <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
     <h1>CTATNumberLine Example</h1>
     <p>Some CTATNumberLine examples that show some of its basic functionality.</p>
     <hr/>
@@ -146,7 +155,7 @@
     <div>
       <div class="ctat_example">
 	Setting rotation:
-	<div id="numberLineRot" class="CTATNumberLine" style="width:180px;height:200px"
+	<div id="numberLineRot" class="CTATNumberLine" style="width:180px;height:200px" 
 	     data-ctat-rotation="60"></div>
       </div>
       <div class="ctat_code">
@@ -196,12 +205,16 @@
 	     data-ctat-maximum="3"
 	     data-ctat-large-tick-step="1"
 	     data-ctat-small-tick-step="1/2"
-	     data-ctat-ctrl-large-tick="nlTick_large"
+	     data-ctat-ctrl-large-tick="nlTick_inc;nlTick_dec"
 	     data-ctat-ctrl-small-tick="nlTick_small"
 	     data-ctat-ctrl-denominator="nlTick_denom">
 	</div>
 	<div style="display: flex; justify-content: space-around;">
-	  <div>Large: <div id="nlTick_large" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1" min="0" max="3"></div></div>
+	  <div>Large: <div style="display:inline-block;">
+	      <div id="nlTick_inc" class="CTATButton small_button" data-ctat-tutor="false" value="1">&plus;</div>
+	      <div id="nlTick_dec" class="CTATButton small_button" data-ctat-tutor="false" value="-1">&minus;</div>
+	    </div>
+	  </div>
 	  <div>Small: <div id="nlTick_small" class="CTATTextInput" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1/2"></div></div>
 	<div>Denominator: <div id="nlTick_denom" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="0" min="0" max="10"></div></div>
 	</div>
@@ -212,7 +225,7 @@
      data-ctat-maximum="3"
      data-ctat-large-tick-step="1"
      data-ctat-small-tick-step="1/2"
-     data-ctat-ctrl-large-tick="nlTick_large"
+     data-ctat-ctrl-large-tick="nlTick_inc;nlTick_dec"
      data-ctat-ctrl-small-tick="nlTick_small"
      data-ctat-ctrl-denominator="nlTick_denom"&gt;
 &lt;/div&gt;
@@ -241,7 +254,7 @@
 
     <div id="hint-box">
       <div id="HintWindow" class="CTATHintWindow"></div>
-      <div style="float: right;">
+      <div style="display:inline-block;float: right;">
 	<div id="hint-button" class="CTATHintButton"></div>
 	<div id="done-button" class="CTATDoneButton"></div>
       </div>

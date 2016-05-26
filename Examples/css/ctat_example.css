@@ -33,5 +33,5 @@ div.ctat_code {
     margin: 0 5px 0px 5px
 }
 #HintWindow {
-    display: inline-block;
+    display: inline-flex;
 }

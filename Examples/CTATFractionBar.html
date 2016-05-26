@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATFractionBar Example</title>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="js/ctat.min.js"></script>
+<script>
+  $(function() {
+      initTutor({"question_file":'CTATJumble.brd'});
+  });
+</script>
+<style type="text/css">
+  hr { width:80% }
+  .small_button button{ font-size: 10px; }
+  #fractionbar2 .CTAT-fraction-bar--piece {fill: blue; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1"] { fill: #00CC99; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/2"] { fill: #FFFF99; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/3"] { fill: #33CCFF; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/4"] { fill: #FF9933; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/5"] { fill: #FF66FF; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/6"] { fill: #00CC00; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/7"] { fill: #996633; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/8"] { fill: #FF0000; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/9"] { fill: #000099; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/10"] { fill: #660099; }
+  #fractionbar2 .CTAT-fraction-bar--piece[data-selected="false"] { fill: white; fill-opacity: 0; }
+  
+/* RNPColorScheme = ["0x660099","0x00CC99","0xFFFF00","0x33CCFF","0xFF9933","0xFF66FF","0x00CC00","0x996633","0xFF0000","0x000099"]; // Rational Number Project's color coding, different per fraction*/
+
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    <h1>CTATFractionBar Example</h1>
+    <p>A simple CTATFractionBar example for showing some basic functionality.
+      Use the submit button to submit the fraction bar for grading.</p>
+    <div>
+      <div class="ctat_example" style="max-width:45%;">
+	Click on the pieced until only 1/2 is selected.
+	<div id="fractionbar1" class="CTATFractionBar">
+	</div>
+      </div>
+      <div class="ctat_code">
+	The default value is <code>1/2+1/4+(0*1/8)</code>
+	<pre>
+&lt;div id="fractionbar1" class="CTATFractionBar"&gt;
+&lt;/div&gt;
+	</pre>
+      </div>
+    </div><hr/>
+    <div>
+      <div class="ctat_example" style="max-width:45%;">
+	Make a fraction by clicking on the pieces or on the controller buttons.
+	This example is ungraded and is meant to show how the various
+	controllers work with the fraction bar.
+	<div id="fractionbar2" class="CTATFractionBar" style="padding:5px;"
+	     data-ctat-value="1/2+(0*1/2)"
+	     data-ctat-tutor="false"
+	     data-ctat-ctrl-denominator="den_inc;den_dec"
+	     data-ctat-ctrl-partition="part_inc;part_dec"
+	     data-ctat-ctrl-numerator="num_inc;num_dec">
+	</div>
+	<div>
+	  <div style="display:flex;">
+	    Denominator:
+	    <div id="den_inc" class="CTATButton small_button" value="1" data-ctat-tutor="false">den_inc</div>
+	    <div id="den_dec" class="CTATButton small_button" value="-1" data-ctat-tutor="false">den_dec</div>
+	  </div>
+	  <div style="display:flex;">
+	    Partitions:
+	    <div id="part_inc" class="CTATButton small_button" value="1" data-ctat-tutor="false">part_inc</div>
+	    <div id="part_dec" class="CTATButton small_button" value="-1" data-ctat-tutor="false">part_dec</div>
+	  </div>
+	  <div style="display:flex;">
+	    Numerator:
+	    <div id="num_inc" class="CTATButton small_button" value="1" data-ctat-tutor="false">num_inc</div>
+	    <div id="num_dec" class="CTATButton small_button" value="-1" data-ctat-tutor="false">num_dec</div>
+	  </div>
+<!--	<div id="fractionbar2_submit" class="CTATSubmitButton" data-ctat-target="fractionbar2">Submit</div>-->
+	</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="fractionbar2" class="CTATFractionBar"
+     data-ctat-tutor="false"
+     data-ctat-ctrl-denominator="den_inc;den_dec"
+     data-ctat-ctrl-partition="part_inc;part_dec"
+     data-ctat-ctrl-numerator="num_inc;num_dec"&gt;
+&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+
+    <div id="hint-box">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

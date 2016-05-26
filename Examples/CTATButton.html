@@ -4,21 +4,42 @@
 <meta charset="UTF-8">
 <title>CTATButton Example</title>
 
-<link rel="stylesheet" href="CTAT.css"/>
-<link rel="stylesheet" href="ctat_example.css"/>
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
-<script src="ctat.min.js"></script>
+<script src="js/ctat.min.js"></script>
 <script>
   $(function() {
       initTutor({"question_file":'CTATButton.brd'});
   });
 </script>
 <style type="text/css">
+  #button3 .CTAT-button {
+    background-color: transparent;
+    background-image: url("skindata/Default-Default.png");
+    background-repeat: no-repeat;
+    height:66px;
+    width:65px;
+  }
+  #button3 .CTAT-button--hover {
+    background-image: url("skindata/Default-Hover.png");
+  }
+  #button3 .CTAT-button--clicked {
+    background-image: url("skindata/Default-Click.png");
+  }
+  #button3 .CTAT-button:disabled {
+    background-image: url("skindata/Default-Disabled.png");
+  }
 </style>
 </head>
 <body>
   <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
     <h1>CTATButton Example</h1>
     <p>A simple button example.</p>
     <div>
@@ -27,7 +48,48 @@
 	<div id="button1" class="CTATButton">Click</div>
       </div>
       <div class="ctat_code">
-	<pre>&lt;div id="button1" class="CTATButton"&gt;&lt;/div&gt;</pre>
+	<pre>&lt;div id="button1" class="CTATButton"&gt;Click&lt;/div&gt;</pre>
+      </div>
+    </div><hr/>
+    <div>
+      <div class="ctat_example">
+	Simple Image button:
+	<div id="button2" class="CTATButton"><img src="skindata/CTAT-icon.svg"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="button2" class="CTATButton"&gt;
+  &lt;img src="skindata/CTAT-icon.svg"&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </div><hr/>
+    <div>
+      <div class="ctat_example">
+	Reactive Styled Image button:
+	<div id="button3" class="CTATButton"></div>
+      </div>
+      <div class="ctat_code">
+	Put in style tag in the head or in a referenced .css file:
+	<pre>
+  #button3>.CTAT-button {
+    background-color: transparent;
+    background-image: url("skindata/Default-Default.png");
+    background-repeat: no-repeat;
+    height:66px;
+    width:65px;
+  }
+  #button3>.CTAT-button--hover {
+    background-image: url("skindata/Default-Hover.png");
+  }
+  #button3>.CTAT-button--clicked {
+    background-image: url("skindata/Default-Click.png");
+  }
+  #button3>.CTAT-button:disabled {
+    background-image: url("skindata/Default-Disabled.png");
+  }
+	</pre>
+	In document body:
+	<pre>&lt;div id="button3" class="CTATButton"&gt;&lt;/div&gt;</pre>
       </div>
     </div>
 

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="468" height="60" viewBox="0 0 468 60" preserveAspectRatio="none"
+     font-size="50px" font-family="sans-serif">
+   <desc>CTAT: Cognitive Tutor Authoring Tools, Software for authoring intelligent tutor behavior</desc>
+   <defs>
+    <link xmlns="http://www.w3.org/1999/xhtml" href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css' />
+    <style type="text/css">
+      .logo { text-anchor: middle; font: 50px 'Josefin Sans',sans-serif; stroke: white; fill: white; }
+      .tutor { font-weight: 700; stroke: orange; fill: orange; }
+    </style>
+   </defs>
+   <a xlink:href="http://ctat.pact.cs.cmu.edu/">
+   <g fill="#122761">
+   	<svg x="0" y="12" width="48.5" height="48.5">
+   		<rect width="100%" height="100%"/>
+   		<text class="logo" x="50%" y="100%">C</text>
+   	</svg>
+   	<svg x="50.5" y="0" width="48.5" height="48.5">
+   		<rect width="100%" height="100%"/>
+   		<text class="logo tutor" x="50%" y=".74em">T</text>
+   	</svg>
+   	<svg x="101" y="12" width="48.5" height="48.5">
+   		<rect width="100%" height="100%"/>
+   		<text class="logo" x="50%" y="100%">A</text>
+   	</svg>
+   	<svg x="151.5" y="12" width="48.5" height="48.5">
+   		<rect width="100%" height="100%"/>
+   		<text class="logo" x="50%" y="100%">T</text>
+   	</svg>
+   	<text x="200" y="30" style="stroke-width: 0px; font: 20px Arial,sans-serif;">Cognitive<tspan class="tutor">Tutor</tspan>AuthoringTools</text>
+   	<text x="205" y="50" style="stroke-width: 0px; fill: gray; font: 12px Georgia, Times New Roman, Times, serif;">
+   		<tspan>Software for authoring intelligent tutor behavior</tspan>
+   	</text> 
+   </g>
+   </a>
+</svg>

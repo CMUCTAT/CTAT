@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <title>CTATJumble Example</title>
 
-<link rel="stylesheet" href="CTAT.css"/>
-<link rel="stylesheet" href="ctat_example.css"/>
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
-<script src="ctat.min.js"></script>
+<script src="js/ctat.min.js"></script>
 <script>
   $(function() {
       initTutor({"question_file":'CTATJumble.brd'});
@@ -19,23 +19,31 @@
 </head>
 <body>
   <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
     <h1>CTATJumble Example</h1>
     <p>A simple Jumble example for showing some basic functionality.
       Use the submit button to submit the Jumble for grading.</p>
     <div>
       <div class="ctat_example" style="max-width:45%;">
 	Move the letters to put them in alphabetical order:
-	<div id="jumble1" class="CTATJumble" style="padding:5px;" data-ctat-tutor="false">
+	<div id="jumble1" class="CTATJumble"
+	     style="padding:5px;width:70px;height:auto;"
+	     data-ctat-tutor="false">
 	  <div id="jumble1b">B</div>
 	  <div id="jumble1a">A</div>
 	  <div id="jumble1c">C</div>
 	</div>
-	<div id="jumble1_submit" class="CTATSubmitButton" data-ctat-target="jumble1">Submit</div>
+	<div id="jumble1_submit" class="CTATSubmitButton"
+	     data-ctat-target="jumble1">Submit</div>
       </div>
       <div class="ctat_code">
 	<pre>
 &lt;div id="jumble1" class="CTATJumble"
-    style="padding:5px;"
+    style="padding:5px;width:70px;height:auto;"
     data-ctat-tutor="false"&gt;
   &lt;div id="jumble1b"&gt;B&lt;/div&gt;
   &lt;div id="jumble1a"&gt;A&lt;/div&gt;

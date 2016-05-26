@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATImageButton Example</title>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="js/ctat.min.js"></script>
+<script>
+  $(function() {
+      initTutor({"question_file":'CTATButton.brd'});
+  });
+</script>
+<style type="text/css">
+  hr { width: 80%; }
+  #button3 {
+    display:flex;
+    flex-direction:column;
+    border:1px solid black;
+    border-radius:5px;
+    justify-content:space-around;
+    align-items:center;
+    width:66px;
+    height:66px;
+    background-color: blue;
+  }
+  #button3.CTAT-button--hover {
+    background-color: darkblue;
+    border: 1px solid black;
+  }
+  #button3.CTAT-button--clicked {
+    background-color: skyblue;
+    border: 1px solid blue;
+  }
+  #button3:disabled {
+	background-color: #EDEDED;
+	border: 1px solid darkgrey;
+	text-color: #9A9A9A;
+	cursor: default;
+  }
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    <h1>CTATImageButton Example</h1>
+    <p>A simple image button example.</p>
+    <div>
+      <div class="ctat_example">
+	Click this button:
+	<div id="button1" style="width:66px;height:66px;"
+	     class="CTATImageButton"
+	     data-ctat-image-hover="skindata/Default-Hover.png"
+	     data-ctat-image-clicked="skindata/Default-Click.png"
+	     data-ctat-image-default="skindata/Default-Default.png"
+	     data-ctat-image-disabled="skindata/Default-Disabled.png"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="button1" class="CTATImageButton"
+  style="width: 66px; height: 66px;"
+  data-ctat-image-hover="skindata/Default-Hover.png"
+  data-ctat-image-clicked="skindata/Default-Click.png"
+  data-ctat-image-default="skindata/Default-Default.png"
+  data-ctat-image-disabled="skindata/Default-Disabled.png"&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </div>
+    <div><hr/>
+    <div>
+      <div class="ctat_example">
+	Simple Clickable button:
+	<div id="button2" class="CTATImageButton" style="display:inline-block;width:15px;height:15px;"><img src="skindata/CTAT-icon.svg"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="button2" class="CTATImageButton"&gt;
+  &lt;img src="skindata/CTAT-icon.svg"&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </div><hr/>
+    <div>
+      <div class="ctat_example">
+	CTAT-like button:
+	<div id="button3" class="CTATImageButton unselectable" style="">
+	  <div style="font-size:36px;pointer-events:none;">&#x2714;</div>
+	  <div style="pointer-events:none;">Wow</div>
+	</div>
+      </div>
+      <div class="ctat_code">
+	In style tag or css:
+	<pre>
+  #button3 {
+    display:flex;
+    flex-direction:column;
+    border:1px solid black;
+    border-radius:5px;
+    justify-content:space-around;
+    align-items:center;
+    width:66px;
+    height:66px;
+    background-color: blue;
+  }
+  #button3.CTAT-button--hover {
+    background-color: darkblue;
+    border: 1px solid black;
+  }
+  #button3.CTAT-button--clicked {
+    background-color: skyblue;
+    border: 1px solid blue;
+  }
+  #button3:disabled {
+    background-color: #EDEDED;
+    border: 1px solid darkgrey;
+    text-color: #9A9A9A;
+    cursor: default;
+  }
+	</pre>
+	In page:
+	<pre>
+&lt;div id="button3" class="CTATImageButton"&gt;
+  &lt;div style="font-size:36px;pointer-events:none;"&gt;&#x2714;&lt;/div&gt;
+  &lt;div style="pointer-events:none;">Wow&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
+    </div>
+
+
+    <div id="hint-box" style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <title>CTATDragNDrop Example</title>
 
-<link rel="stylesheet" href="CTAT.css"/>
-<link rel="stylesheet" href="ctat_example.css"/>
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
-<script src="ctat.min.js"></script>
+<script src="js/ctat.min.js"></script>
 <script>
   $(function() {
       initTutor({"question_file":'CTATDragNDrop.brd'});
@@ -19,6 +19,11 @@
 </head>
 <body>
   <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
     <h1>CTATDragNDrop Example</h1>
     <p>A simple Drag-N-Drop example for showing some basic functionality.
       As it is currently configured, Sink can only have a single item dragged to it.
@@ -32,7 +37,7 @@
 	    <svg width="48" height="48"><circle cx="24" cy="24" r="20" stroke="darkblue" fill="blue" stroke-width="2px"/></svg>
 	  </div>
 	  <div id="dndtext">Square</div>
-	  <img id="dndimg" src="CTAT-icon.svg"/>
+	  <img id="dndimg" src="skindata/CTAT-icon.svg"/>
 	  <div id="dndtri">triangle</div>
 	</div>
       </div>
@@ -48,7 +53,7 @@ Source:
     &lt;/svg&gt;
   &lt;/div&gt;
   &lt;div id="dndtext"&gt;Square&lt;/div&gt;
-  &lt;img id="dndimg" src="CTAT-icon.svg"/&gt;
+  &lt;img id="dndimg" src="skindata/CTAT-icon.svg"/&gt;
   &lt;div id="dndtri"&gt;triangle&lt;/div&gt;
 &lt;/div&gt;
 	</pre>
@@ -58,7 +63,7 @@ Source:
     <div>
       <div class="ctat_example">
 	Sink:
-	<div id="sink" class="CTATDragNDrop" name="DragNDropGroup" style="padding:5px;" data-ctat-max-cardinality="1" data-ctat-tutor="false">
+	<div id="sink" class="CTATDragNDrop" name="DragNDropGroup" style="padding:5px;" data-ctat-max-cardinality="3" data-ctat-tutor="true">
 	</div>
 	<div id="submit" class="CTATSubmitButton" data-ctat-target="sink">Submit</div>
       </div>
