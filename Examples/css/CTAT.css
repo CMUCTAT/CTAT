@@ -67,8 +67,8 @@ Table of Contents:
 	padding: 0px;
 	left: 0px;
 	top: 0px;
-	/*width: 100%;
-	height: 100%;*/
+	width: 100%;
+	height: 100%;
 }
 
 .CTAT-gen-component:focus {
@@ -81,9 +81,8 @@ Table of Contents:
 
 /*********************** CTAT Component Size Defaults ************************/
 .CTATAudioButton { width: 155px; height: 30px; }
-/*.CTATButton,.CTATSubmitButton { width: 60px; height: 30px; }*/
+.CTATButton,.CTATSubmitButton { width: 60px; height: 30px; }
 .CTATDoneButton, .CTATHintButton  {	width: 66px; height: 66px; }
-/*.CTATDoneButton>button, .CTATHintButton>button { width:100%; height:100%; }*/
 .CTATCheckBox, .CTATRadioButton { width: 100px; height: 1.4em; }
 .CTATComboBox { width: 100px; height: 1.4em; }
 .CTATControllerButton {}
@@ -97,7 +96,6 @@ Table of Contents:
 .CTATTextArea { width: 100px; height: 2em; }
 .CTATTextField {}
 .CTATTextInput { width: 100px; height: 1.4em; }
-.CTAT-text
 
 
 /************************** Button Based Components **************************/
@@ -106,15 +104,11 @@ Table of Contents:
 	#CTAT Generated button components
 	Covers CTATAudioButton, CTATButton, CTATDoneButton, CTATHintButton
 \*---------------------------------------------*/
-/*button.CTAT-gen-component {
+button.CTAT-gen-component {
 	border-radius: 5px;
-}*/
+}
 
 
-.CTAT-button { font:inherit; }
-.CTAT-button:hover {}
-.CTAT-button--clicked {}
-.CTAT-button:disabled {}
 
 
 /******************** CTAT Text Based Components ***********************/
@@ -181,19 +175,12 @@ th.CTAT-gen-component, td.CTAT-gen-component {
 textarea.CTAT-text {
 	overflow: hidden;
 }
-.CTATTextInput input[type="text"] {
-	width: 100%;
-	font: inherit;
-}
 
 /*-------------------------------------------------------*\
 	#CTATNumericStepper
 \*-------------------------------------------------------*/
 
-.CTAT-numeric-stepper {
-	width: 100%;
-	font: inherit;
-}
+.CTAT-numeric-stepper {}
 
 
 
@@ -225,26 +212,27 @@ textarea.CTAT-text {
 /*---------------------------------------------------------*\
 	#CTAT jumble
 \*---------------------------------------------------------*/
-.CTATJumble { /* general jumble component styling, (eg) the bounding box */
+.CTAT-jumble { /* general jumble component styling, (eg) the bounding box */
 	border: 1px solid #CCCCCC;
 	border-radius: 5px;
-	display: flex;
 }
-.CTATJumble--item { /* for each individual item in the jumble */
+.CTAT-jumble--item { /* for each individual item in the jumble */
+	float: left;
+	width: auto;
+	height: auto;
+	padding: 0.5ch;
+}
+.CTAT-jumble--item[draggable="true"] { /* for items that are being dragged */
 	user-select: none;
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
-	padding: 0.5ch;
-	cursor: default;
-}
-.CTATJumble--item[draggable="true"] { /* for items that are being dragged */
 	-khtml-user-drag: element;
 	-webkit-user-drag: element;
 	cursor: move;
 }
-.CTATJumble--item--over { /* for items that are under the dragged item and
+.CTAT-jumble--item--over { /* for items that are under the dragged item and
 	would be moved by dropping the item */
 	border: 1px dashed blue;
 }
@@ -254,14 +242,13 @@ textarea.CTAT-text {
 /*-----------------------------------------------*\
 	#CTAT drag-n-drop
 \*-----------------------------------------------*/
-.CTATDragNDrop { /* Basic DragNDrop box look */
+.CTATDragNDrop {
 	border: 1px solid grey;
 	border-radius: 5px;
 }
-.CTATDragNDrop--valid-drop { /* Added when the CTATDragNDrop is a valid drop */
+.CTATDragNDrop--valid-drop {
 	border: 1px dashed blue;
 }
-.CTATDragNDrop--item {} /* styling to apply to all dragable items */
 
 /******************** CTAT SVG Based Component *************************/
 /*-----------------------------------------------*\
@@ -275,8 +262,6 @@ textarea.CTAT-text {
 	background-color: white;
 	border-radius: 5px;
 	box-sizing: border-box;
-	width: 100%;
-	height: 100%;
 }
 
 
@@ -331,14 +316,12 @@ textarea.CTAT-text {
 	stroke-width: 4px;
 }
 .CTAT-number-line--large-tickmark-label {
-	transform: translate(0px,-3px);
 }
 .CTAT-number-line--small-tickmark {
 }
 .CTAT-number-line--small-tickmark-label {
 	stroke: none;
 	fill: black;
-	transform: translate(0px,-2px);
 }
 .CTAT-number-line--denominator-tickmark {
 	stroke: purple;
@@ -394,7 +377,7 @@ textarea.CTAT-text {
 \*---------------------------------------------*/
 
 /* Also used for in CTATHintWindow to increase connection */
-/* Should .CTATHintWindow--button--* be added so that they can be modified
+/* Should .CTAT-hint-window--button--* be added so that they can be modified
    independently? */
 /* This is in the SVG section because of the option to have SVG buttons as
    part of the component.  If this feature is dropped, then this should be
@@ -405,19 +388,6 @@ textarea.CTAT-text {
 	background-color: gold; /*#FFCC33;*/
  	border: 1px solid orange;
  	cursor: pointer;
- 	width: 100%;
- 	height: 100%;
-}
-.CTAT-hint-button--icon {
-	font-size: 44px;
-	pointer-events: none;
-	position: relative;
-	top: -10px;
-	height: 60%;
-	font-weight: bold;
-}
-.CTAT-hint-button--text {
-	pointer-events: none;
 }
 .CTAT-hint-button--hover {
 	background-color: #E6C200 /*#FFED3A*/;
@@ -445,24 +415,14 @@ textarea.CTAT-text {
 \*--------------------------------------------------*/
 
 .CTAT-done-button {
-	padding: 0;
+	padding-top: 0;
 	font: 15px Helvetica Neue,Helvetica,Arial,sans-serif;
 	border-radius: 5px;
 	background-color: #669900;
 	border: 1px solid green;
+ 	fill: black;
+ 	stroke: black;
  	cursor: pointer;
- 	width: 100%;
- 	height: 100%;
-}
-.CTAT-done-button--icon {
-	font-size: 44px;
-	pointer-events: none;
-	position: relative;
-	top: -10px;
-	height: 60%;
-}
-.CTAT-done-button--text {
-	pointer-events: none;
 }
 .CTAT-done-button--hover {
 	background-color: #5C8A00;
@@ -479,7 +439,7 @@ textarea.CTAT-text {
 \*-----------------------------------------------*/
 
 /* Hint window styling, assumes single instance */
-.CTATHintWindow { /* hint window container styling */
+.CTAT-hint-window { /* hint window container styling */
 	border-radius: 5px;
 	border-width: 1px;
 	border-style: solid;
@@ -490,32 +450,22 @@ textarea.CTAT-text {
 	padding: 5px;
 	box-sizing: border-box;
 	background-color: #dddddd;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
 }
-.CTATHintWindow--hint-content { /* Hint window content (eg) hints */
+.CTAT-hint-window--hintcontent { /* Hint window content (eg) hints */
 	text-align: left;
 	padding: 2px;
-	/*width: 100%;*/
+	width: 100%;
 	overflow: auto;
 	background: white;
-	/*box-sizing: border-box;*/
+	box-sizing: border-box;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #cccccc;
 	cursor: default;
-	/*height: calc(100% - 26px);*/ /* 26 = button.height + button.borderWidth + margin */
+	height: calc(100% - 26px); /* 26 = button.height + button.borderWidth + margin */
 	margin-bottom: 5px;
-	flex: auto;
-	/*font-size: 44px;*/
 }
-.CTATHintWindow--hint-button-area {
-	flex: none;
-	display: flex;
-	justify-content: space-between;
-}
-.CTATHintWindow--button { /* hint window buttons, also uses CTAT hint button style, mostly for coloring */
+.CTAT-hint-window--button { /* hint window buttons, also uses CTAT hint button style, mostly for coloring */
 	border-radius: 5px;
 	font: 11px Helvetica Neue,Helvetical,Arial,sans-serif;
 	stroke-width: 0px;
@@ -523,12 +473,8 @@ textarea.CTAT-text {
 	height: 20px;
 	outline: none; /* No focus highlighting */
 }
-.CTATHintWindow--button-icon {
-	vertical-align: middle;
-	font-weight: bold;
-}
-.CTATHintWindow--previous { /*float: left;*/ } /* hint window previous button */
-.CTATHintWindow--next { /*float: right;*/ } /* hint window next button */
+.CTAT-hint-window--previous { float: left; } /* hint window previous button */
+.CTAT-hint-window--next { float: right; } /* hint window next button */
 
 
 
@@ -536,7 +482,7 @@ textarea.CTAT-text {
 	#CTAT Skill Window
 \*-----------------------------------------------------*/
 
-.CTATSkillWindow { /* skill window container */
+.CTAT-skill-window { /* skill window container */
 	font-size: 12px;
 	padding: 6px;
 	border: 1px solid #CCCCCC;
@@ -545,31 +491,27 @@ textarea.CTAT-text {
 	background-color: #FAFAFA;
 	overflow-x: hidden;
 	overflow-y: auto;
-	display: flex;
-	flex-direction: column;
 }
-.CTATSkillWindow--skill { /* container for meter + label */
-	display: flex;
-	justify-content: flex-start;
-}
-.CTATSkillWindow--bar { /* skill meter bar */
+.CTAT-skill-window--bar { /* skill meter bar */
 	border: 1px solid #CCCCCC;
 	border-radius: 0.5em;
 	height: 1em;
 	width: 50%;
+	float: left;
+	margin-bottom: .5em;
 	overflow: hidden;
-	flex: none;
 }
-.CTATSkillWindow--bar--nonmastered { /* skill meter bar non-mastery fill */
+.CTAT-skill-window--bar--nonmastered { /* skill meter bar non-mastery fill */
 	background: linear-gradient(to bottom, #a69030 0%, #fcde54 50%, #a69030 100%);
 	height: 100%;
 }
-.CTATSkillWindow--bar--mastery { /* skill meter bar mastery fill */
+.CTAT-skill-window--bar--mastery { /* skill meter bar mastery fill */
 	background: linear-gradient(to bottom, #35b30f 0%, lime 50%, #35b30f 100%);
 	height: 100%;
 }
-.CTATSkillWindow--label { /* skill meter label */
-	margin-left: 5px;
+.CTAT-skill-window--label { /* skill meter label */
+	float: right;
+	width: 45%;
 	overflow: hidden;
 	height: 1.5em;
 	text-align: left;
@@ -620,10 +562,8 @@ video.CTAT-gen-component {
 	fill: #9a9a9a; stroke: #9A9A9A;
 	cursor: default;
 }
-/*button.CTAT-gen-component:disabled,*/
-button.CTAT-hint-button:disabled,
-button.CTAT-done-button:disabled,
-button.CTATHintWindow--button:disabled {
+button.CTAT-gen-component:disabled,
+button.CTAT-hint-window--button:disabled {
 	background-color: #EDEDED;
 	border: 1px solid darkgrey;
 	text-color: #9A9A9A;
