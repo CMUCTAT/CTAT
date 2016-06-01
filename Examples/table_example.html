@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATTable Example</title>
+
+<link rel="stylesheet" href="CTAT.css"/>
+<link rel="stylesheet" href="ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="ctat.min.js"></script>
+<script src="ctatloader.js"></script>
+<script>
+ var myVars = 
+ {
+    question_file: "table_example.brd",
+    tutoring_service_communication: "javascript"
+ };	
+
+ function ctatOnload ()
+ {
+   initTutor(myVars);
+ }
+ 
+ function add_row(tableName)
+ {
+	var table = CTATShellTools.findComponent(tableName);
+	table[0].addRow();
+ }
+ 
+ function add_col(tableName)
+ {
+	var table = CTATShellTools.findComponent(tableName);
+	table[0].addColumn();
+ }
+</script>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    
+	<h1>CTATTable Example</h1>
+    <p>A simple table example.</p>
+    <div>
+	  <h4>This table's "data-ctat-can-expand" property is TRUE</h4>
+      <div class="ctat_example">
+		<div id = "expanding_table" class = "CTATTable" data-ctat-num-rows='5' data-ctat-num-cols='5' 
+			data-ctat-has-header="true" data-ctat-header-height="20" data-ctat-can-expand='true' data-ctat-font-size='1'
+			data-ctat-cell-color='#FAEBD7' data-ctat-header-color='#C9EDB3' data-ctat-border-color='#8B8878'
+			style="width: 250px; height: 200px;">
+		</div>
+		</br>
+		<table>
+			<tr>
+				<td>
+					<button id='add_row' onClick=add_row("expanding_table")>Add Row</button>
+				</td>
+				<td>
+					<button id='add_col' onClick=add_col("expanding_table")>Add Column</button>
+				</td>
+			</tr>
+		</table>
+	  </div>
+      <div class="ctat_code">
+		&#60div id = "my_table" </br>class = "CTATTable" </br>data-ctat-num-rows='5' </br>data-ctat-num-cols='5' 
+			</br>data-ctat-has-header="true" </br>data-ctat-header-height="50" </br>data-ctat-can-expand='true' </br>data-ctat-font-size='1'
+			</br>data-ctat-cell-color='#FAEBD7' </br>data-ctat-header-color='#C9EDB3' </br>data-ctat-border-color='#8B8878'
+			</br>style="width: 250px; height: 200px;"&#62 </br>
+		&#60/div&#62
+	  </div>
+    </div>
+	<hr/>
+      
+    <div>
+	  <h4>This table's "data-ctat-can-expand" property is FALSE</h4>
+      <div class="ctat_example">
+		<div id = "const_table" class = "CTATTable" data-ctat-num-rows='5' data-ctat-num-cols='5' 
+			data-ctat-has-header="true" data-ctat-header-height="20" data-ctat-can-expand='false' data-ctat-font-size='1'
+			data-ctat-cell-color='#FAEBD7' data-ctat-header-color='#C9EDB3' data-ctat-border-color='#8B8878'
+			style="width: 250px; height: 200px;">
+		</div>
+		</br>
+		<table>
+			<tr>
+				<td>
+					<button id='add_row_const' onClick=add_row("const_table")>Add Row</button>
+				</td>
+				<td>
+					<button id='add_col_const' onClick=add_col("const_table")>Add Column</button>
+				</td>
+			</tr>
+		</table>
+	  </div>
+      <div class="ctat_code">
+		&#60div </br>id = "const_table" </br>class = "CTATTable" </br>data-ctat-num-rows='5' </br>data-ctat-num-cols='5' 
+			</br>data-ctat-has-header="true" </br>data-ctat-header-height="50" </br>data-ctat-can-expand='false' </br>data-ctat-font-size='1'
+			</br>data-ctat-cell-color='#FAEBD7' </br>data-ctat-header-color="#C9EDB3" </br>data-ctat-border-color='#8B8878'
+			</br>style="width: 250px; height: 200px;"&#62 </br>
+		&#60/div&#62
+	  </div>
+    </div>
+
+    <div id="hint-box" style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
