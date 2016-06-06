@@ -17,6 +17,7 @@
 <style type="text/css">
   hr { width:80% }
   .small_button button{ font-size: 10px; }
+  /* Rational Number Project color scheme with a different color for each value */
   #fractionbar2 .CTAT-fraction-bar--piece {fill: blue; }
   #fractionbar2 .CTAT-fraction-bar--piece[data-value="1"] { fill: #00CC99; }
   #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/2"] { fill: #FFFF99; }
@@ -29,9 +30,8 @@
   #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/9"] { fill: #000099; }
   #fractionbar2 .CTAT-fraction-bar--piece[data-value="1/10"] { fill: #660099; }
   #fractionbar2 .CTAT-fraction-bar--piece[data-selected="false"] { fill: white; fill-opacity: 0; }
-  
-/* RNPColorScheme = ["0x660099","0x00CC99","0xFFFF00","0x33CCFF","0xFF9933","0xFF66FF","0x00CC00","0x996633","0xFF0000","0x000099"]; // Rational Number Project's color coding, different per fraction*/
 
+  #fractionbar3 .CTAT-fraction-bar--label { display: initial; }
 </style>
 </head>
 <body>
@@ -96,6 +96,26 @@
      data-ctat-ctrl-denominator="den_inc;den_dec"
      data-ctat-ctrl-partition="part_inc;part_dec"
      data-ctat-ctrl-numerator="num_inc;num_dec"&gt;
+&lt;/div&gt;
+	</pre>
+      </div>
+    </div><hr/>
+    <div>
+      <div class="ctat_example" style="max-width:45%;">
+	Showing fraction labels:
+	<div id="fractionbar3" class="CTATFractionBar"
+	     data-ctat-tutor="false"
+	     data-ctat-enabled="false">
+	</div>
+      </div>
+      <div class="ctat_code">
+	CSS:
+	<pre>#fractionbar3 .CTAT-fraction-bar--label { display: initial; }</pre>
+	HTML:
+	<pre>
+&lt;div id="fractionbar3" class="CTATFractionBar"&gt;
+     data-ctat-tutor="false"
+     data-ctat-enabled="false">
 &lt;/div&gt;
 	</pre>
       </div>
