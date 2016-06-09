@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATAudioButton Example</title>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="js/ctat.min.js"></script>
+<script>
+  $(function() {
+      initTutor({"question_file":'CTATButton.brd'});
+  });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    <h1>CTATAudioButton Example</h1>
+    <p>A simple audio button example.</p>
+    <div>
+      <div class="ctat_example">
+	Click this button:
+	<div id="button1" class="CTATAudioButton"
+	     data-ctat-tutor="false"
+	     data-ctat-src="https://drive.google.com/uc?export=view&id=0BwGsdDsj8yYcTXZFc2hHZUx5VW8">Listen</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="button1" class="CTATAudioButton"
+    data-ctat-tutor="false"
+    data-ctat-src="audio.mp3"&gt;
+Listen&lt;/div&gt;</pre>
+      </div>
+    </div>
+
+    <div id="hint-box" style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
