@@ -1,8 +1,8 @@
 /**-----------------------------------------------------------------------------
  $Author: vvelsen $
- $Date: 2016-05-12 11:51:14 -0400 (Thu, 12 May 2016) $
+ $Date: 2016-06-03 10:14:55 -0400 (Fri, 03 Jun 2016) $
  $HeadURL: svn://pact-cvs.pact.cs.cmu.edu/usr5/local/svnroot/AuthoringTools/trunk/HTML5/ctatloader.js $
- $Revision: 23517 $
+ $Revision: 23631 $
 
  -
  License:
@@ -25,10 +25,18 @@ console.log ("Starting ctatloader ...");
 
 if(typeof(CTATTarget) == "undefined" || !CTATTarget)
 {
+	console.log ("CTATTarget not defined, setting it to 'Default' ...");
+
 	var CTATTarget="Default";
+}
+else
+{
+	console.log ("CTATTarget already defined at top of ctatloader, set to: " + CTATTarget);
 }
 
 var authoringQuery = {};
+
+console.log ("Double checking target: " + CTATTarget);
 
 /**
  * Started with an example at: // http://www.javascriptkit.com/javatutors/loadjavascriptcss.shtml
@@ -87,6 +95,8 @@ function loadCTAT ()
 
 	if (CTATTarget=="AUTHORING")
 	{
+		console.log ('(CTATTarget=="AUTHORING")');
+	
 		CTATConfiguration.set('tutoring_service_communication', 'websocket');
 		CTATConfiguration.set('user_guid', 'author');
 		CTATConfiguration.set('question_file', '');
@@ -105,6 +115,8 @@ function loadCTAT ()
 	 */
 	if (CTATTarget=="OLI")
 	{
+		console.log ('(CTATTarget=="OLI")');
+	
 		CTATConfiguration.set('SessionLog', 'false');
 		CTATConfiguration.set('DeliverUsingOLI', 'true');
 		CTATConfiguration.set('tutoring_service_communication', 'javascript');
@@ -132,6 +144,8 @@ function loadCTAT ()
 	 */
 	if (CTATTarget=="Google")
 	{
+		console.log ('(CTATTarget=="Google")');
+	
 		loadjscssfile ("https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js","js");
 
 		loadjscssfile ("http://augustus.pslc.cs.cmu.edu/html5/ctatjslib/ctat-tutor-sidebar.min.js","js");
@@ -152,6 +166,8 @@ function loadCTAT ()
 	 */
 	if (CTATTarget=="ASSISTMENTS")
 	{
+		console.log ('(CTATTarget=="ASSISTMENTS")');
+	
 		return;
 	}	
 
@@ -160,6 +176,8 @@ function loadCTAT ()
 	 */
 	if (CTATTarget=="SCORM")
 	{
+		console.log ('(CTATTarget=="SCORM")');
+		
 		//lmsDriver=new CTATSCORMDriver ();
 
 		/*
@@ -179,10 +197,17 @@ function loadCTAT ()
 	 */
 	if (CTATTarget=="LTI")
 	{
-
+		console.log ('(CTATTarget=="LTI")');
+		
 		return;
 	}
-	if (CTATTarget=="XBlock") return; // handled in XBlock code.
+	
+	if (CTATTarget=="XBlock") 
+	{
+		console.log ('(CTATTarget=="XBlock")');
+	
+		return; // handled in XBlock code.
+	}	
 
 
 	/*
@@ -191,7 +216,11 @@ function loadCTAT ()
 	 */
 	if(CTATConfiguration.get("LMS") == "TutorShop")
 	{
+		console.log ('(CTATTarget=="TutorShop")');
+	
+		console.log ("Forcing target to be 'CTAT' ...");
 		CTATTarget = "CTAT";
+		return;
 	}
 
 	/**
@@ -200,13 +229,18 @@ function loadCTAT ()
 	 */
 	if (CTATTarget=="Default")
 	{
+		console.log ('(CTATTarget=="Default")');
+	
 		useDebugging=true;
 
 		// CTATConfiguration.set('tutoring_service_communication', 'javascript');
 
 		//loadjscssfile ("http://ctat.pact.cs.cmu.edu/html5releases/latest/CTAT.css","css");
 		//loadjscssfile ("http://ctat.pact.cs.cmu.edu/html5releases/latest/ctat.min.js","js");
+		return;
 	}
+	
+	console.log ("We should be in the 'CTAT' target, we should not take any action in loadCTAT. CTATTarget: " + CTATTarget);
 }
 
 /**
@@ -214,12 +248,14 @@ function loadCTAT ()
  */
 function initOnload ()
 {
-	//useDebugging=true;
-
 	console.log ("initOnload ()");
 
+	//>-------------------------------------------------------------------------
+	
 	if (CTATTarget=="AUTHORING")
 	{
+		console.log ("CTATTarget=='AUTHORING'");
+	
 		initTutor ();
 
 		// Once all the CTAT code has been loaded allow developers to activate custom code
@@ -238,9 +274,13 @@ function initOnload ()
 
 		return;
 	}
+	
+	//>-------------------------------------------------------------------------	
 
 	if (CTATTarget=="OLI")
 	{
+		console.log ("CTATTarget=='OLI'");
+	
 		//useDebugging=true;
 
 		var win = window.frameElement;
@@ -289,11 +329,15 @@ function initOnload ()
 		// we're ready for that. See OLIComm.js for more information
 	}
 
+	//>-------------------------------------------------------------------------	
+	
 	/*
 	 *
 	 */
 	if (CTATTarget=="SCORM")
 	{
+		console.log ("CTATTarget=='SCORM'");
+	
 		CTATLMS.init.SCORM();
 		// Initialize our own code ...
 		initTutor ();
@@ -315,11 +359,15 @@ function initOnload ()
 		return;
 	}
 	
+	//>-------------------------------------------------------------------------	
+	
 	/*
 	 *
 	 */
 	if (CTATTarget=="ASSISTMENTS")
 	{
+		console.log ("CTATTarget=='ASSISTMENTS'");
+	
 		iframeLoaded(); // Assistments specific call
 	
 		// Initialize our own code ...
@@ -342,11 +390,15 @@ function initOnload ()
 		return;
 	}	
 
+	//>-------------------------------------------------------------------------	
+	
 	/*
 	 *
 	 */
 	if (CTATTarget=="LTI")
 	{
+		console.log ("CTATTarget=='LTI'");
+	
 		CTATLMS.init.TutorShop(); // FIXME: this assumes LTI is hosted on TutorShop
 		initTutor ();
 
@@ -366,14 +418,26 @@ function initOnload ()
 
 		return;
 	}
+	
+	//>-------------------------------------------------------------------------	
 
-	if (CTATTarget=="XBlock") return; // handled in the xblock code.
+	if (CTATTarget=="XBlock") 
+	{
+		console.log ("CTATTarget=='XBlock'");
+	
+		return; // handled in the xblock code.
+	}
+	
+	//>-------------------------------------------------------------------------	
+	
 	/*
 	 * The target CTAT is synonymous with TutorShop. You can use this target outside of
 	 * TutorShop if you use the same directory structure for the css, js and brd files
 	 */
 	if (CTATTarget=="CTAT")
 	{
+		console.log ("CTATTarget=='CTAT'");
+	
 		CTATLMS.init.TutorShop();
 		initTutor ();
 
@@ -394,6 +458,8 @@ function initOnload ()
 		return;
 	}
 
+	//>-------------------------------------------------------------------------	
+	
 	/*
 	 * This target is available to you if you would like to either develop your own
 	 * Learner Management System or would like to test and run your tutor standalone.
@@ -402,6 +468,8 @@ function initOnload ()
 	 */
 	if (CTATTarget=="Default")
 	{
+		console.log ("CTATTarget=='Default'");
+		
 		// initTutor ();
 
 		// Once all the CTAT code has been loaded allow developers to activate custom code
@@ -420,6 +488,8 @@ function initOnload ()
 
 		return;
 	}
+	
+	//>-------------------------------------------------------------------------	
 }
 
 /**
@@ -496,17 +566,19 @@ if (window.jQuery)
 				}
 			}
 
-			if (authoringQuery ['mode'])
+			if ((authoringQuery ['mode']) || (authoringQuery ['MODE']))
 			{
-				if (authoringQuery ['mode']=='auth')
-				{
+				if ((authoringQuery ['mode']=='auth') || (authoringQuery ['MODE']=='auth'))
+				{				
 					CTATTarget="AUTHORING";
 				}
 
-				if (authoringQuery ['mode']=='SCORM')
+				if ((authoringQuery ['mode']=='SCORM') || (authoringQuery ['MODE']=='SCORM'))
 				{
 					CTATTarget="SCORM";
 				}
+				
+				console.log ("Forcing CTATTarget to be: " + CTATTarget);
 			}
 		}
 
@@ -559,7 +631,7 @@ if (window.jQuery)
 {
 	$(window).load(function() 
 	{
-		console.log ("load ()");
+		console.log ("$(window).load("+CTATTarget+")");
 
 		// Load any static resources you need for this tutor. For example the OLI version
 		// uses this time to generate a static reference to the BRD file so that it can
