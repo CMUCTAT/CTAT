@@ -20,8 +20,9 @@
   hr { width: 85%; }
   div[data-ctat-rotation] .CTAT-number-line--large-tickmark-label { fill:maroon; transform: translate(7px,3px); }
   div[data-ctat-rotation] .CTAT-number-line--small-tickmark-label { fill:purple; transform: translate(7px,3px); }
-  .small_button { width:auto; height:auto; }
-  .small_button>button { font-size:10px; }
+  .small_button { font-size:10px; }
+  .CTAT-numeric-stepper::-webkit-inner-spin-button,
+  .CTAT-numeric-stepper::-webkit-outer-spin-button { opacity: 1; }
 </style>
 </head>
 <body>
@@ -173,13 +174,14 @@
       <div class="ctat_example">
 	Controlling minimum and maximum:
 	<div id="numberLineBounds" class="CTATNumberLine"
+	     data-ctat-tutor="true"
 	     data-ctat-minimum="0"
 	     data-ctat-maximum="3"
 	     data-ctat-ctrl-min="numberLineBounds_min"
 	     data-ctat-ctrl-max="numberLineBounds_max"></div>
 	<div style="display: flex; justify-content: space-around;">
-	<div>Minimum: <div id="numberLineBounds_min" class="CTATNumericStepper" data-ctat-tutor="false" style="width:40px;display:inline-block;" value="0" min="-3" max="2"></div></div>
-	<div>Maximum: <div id="numberLineBounds_max" class="CTATNumericStepper" data-ctat-tutor="false" style="width:40px;display:inline-block;" value="3" min="2" max="10"></div></div>
+	  <div>Minimum: <div id="numberLineBounds_min" class="CTATNumericStepper" data-ctat-tutor="false" style="width:40px;display:inline-block;" value="0" min="-3" max="2"></div><!--<br><div id="nlbs" class="CTATSubmitButton" data-ctat-target="numberLineBounds">Submit</div>--></div>
+	  <div>Maximum: <div id="numberLineBounds_max" class="CTATNumericStepper" data-ctat-tutor="false" style="width:40px;display:inline-block;" value="3" min="2" max="10"></div></div>
 	</div>
       </div>
       <div class="ctat_code">
@@ -211,11 +213,11 @@
 	</div>
 	<div style="display: flex; justify-content: space-around;">
 	  <div>Large: <div style="display:inline-block;">
-	      <div id="nlTick_inc" class="CTATButton small_button" data-ctat-tutor="false" value="1">&plus;</div>
+	      <div id="nlTick_inc" class="CTATButton small_button" data-ctat-tutor="false" value="1">&plus;</div><br/>
 	      <div id="nlTick_dec" class="CTATButton small_button" data-ctat-tutor="false" value="-1">&minus;</div>
 	    </div>
 	  </div>
-	  <div>Small: <div id="nlTick_small" class="CTATTextInput" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="1/2"></div></div>
+	  <div>Small: <div id="nlTick_small" class="CTATTextInput" data-ctat-tutor="false" style="width:25px;" value="1/2"></div></div>
 	<div>Denominator: <div id="nlTick_denom" class="CTATNumericStepper" data-ctat-tutor="false" style="width:30px;display:inline-block;" value="0" min="0" max="10"></div></div>
 	</div>
       </div>
