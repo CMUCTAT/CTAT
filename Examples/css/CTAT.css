@@ -140,22 +140,31 @@ Table of Contents:
 	flex-direction: column;
 	align-items: stretch;
 }
-.CTATTable .CTATTextArea>textarea {
+.CTATTable .CTATTextArea textarea {
 	width: 95%;
 	height: 100%;
-	/*outline: none;
+	outline: none;
 	box-shadow: none;
-	border: none;*/
+	border: none;
+}
+.CTATTable textarea.CTAT--hint {
+	-moz-box-shadow: 0px 0px 15px 5px yellow;
+	-webkit-box-shadow: 0px 0px 15px 5px yellow;
+	box-shadow: 0px 0px 15px 5px yellow;
+	background-color: yellow;
 }
 .CTATTable--row {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
-	flex: 1 1;
+	flex: none;
 }
 .CTATTable--cell {
+	flex: none;
 	border: 1px solid black;
 	overflow: hidden;
+	width: 4em;
+	height: 1.2em;
 }
 .CTATTable--headers {
 	flex: none;

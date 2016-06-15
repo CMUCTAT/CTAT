@@ -19,21 +19,25 @@
 
  function ctatOnload ()
  {
-   initTutor(myVars);
+     initTutor(myVars);
  }
  
  function add_row(tableName)
  {
-	var table = CTATShellTools.findComponent(tableName);
-	table[0].addRow();
+     var table = CTATShellTools.findComponent(tableName);
+     table[0].addRow();
  }
  
  function add_col(tableName)
  {
-	var table = CTATShellTools.findComponent(tableName);
-	table[0].addColumn();
+     var table = CTATShellTools.findComponent(tableName);
+     table[0].addColumn();
  }
 </script>
+<style>
+  #const_table .CTATTable--row { flex: 1 1; }
+  #const_table .CTATTable--cell { flex: 1 1; width:inherit; height:inherit;}
+</style>
 </head>
 <body>
   <div class="tutor_window">
@@ -43,65 +47,63 @@
 	   src="skindata/CTAT_Banner.svg">
     </a>
     
-	<h1>CTATTable Example</h1>
+    <h1>CTATTable Example</h1>
     <p>A simple table example.</p>
     <div>
-	  <h4>This table's "data-ctat-can-expand" property is TRUE</h4>
-      <div class="ctat_example">
-		<div id = "expanding_table" class = "CTATTable" data-ctat-num-rows='5' data-ctat-num-cols='5' 
-			data-ctat-has-header="true" data-ctat-header-height="20" data-ctat-can-expand='true' data-ctat-font-size='1'
-			data-ctat-cell-color='#FAEBD7' data-ctat-header-color='#C9EDB3' data-ctat-border-color='#8B8878'
-			style="width: 250px; height: 200px;">
-		</div>
-		</br>
-		<table>
-			<tr>
-				<td>
-					<button id='add_row' onClick=add_row("expanding_table")>Add Row</button>
-				</td>
-				<td>
-					<button id='add_col' onClick=add_col("expanding_table")>Add Column</button>
-				</td>
-			</tr>
-		</table>
-	  </div>
+      This table will expand if 'addRow' or 'addCol' interface actions
+      are executed.
+      To change the cell size, override with:
+      <pre>#expanding_table .CTATTable--cell { width: x; height: y; }</pre>
+      <div style="display: flex;">
+      <div class="ctat_example" style="display:flex; flex-direction: column;">
+	<div id="expanding_table" class="CTATTable"
+	     data-ctat-num-rows="5" data-ctat-num-cols="5" 
+	     data-ctat-has-header="true">
+	</div>
+	<div style="display: flex;">
+	  <button id='add_row' onClick=add_row("expanding_table")>Add Row</button>&nbsp;
+	  <button id='add_col' onClick=add_col("expanding_table")>Add Column</button>
+	</div>
+      </div>
       <div class="ctat_code">
-		&#60div id = "my_table" </br>class = "CTATTable" </br>data-ctat-num-rows='5' </br>data-ctat-num-cols='5' 
-			</br>data-ctat-has-header="true" </br>data-ctat-header-height="50" </br>data-ctat-can-expand='true' </br>data-ctat-font-size='1'
-			</br>data-ctat-cell-color='#FAEBD7' </br>data-ctat-header-color='#C9EDB3' </br>data-ctat-border-color='#8B8878'
-			</br>style="width: 250px; height: 200px;"&#62 </br>
-		&#60/div&#62
-	  </div>
+	<pre>
+&lt;div id="my_table" class="CTATTable"
+     data-ctat-num-rows="5"
+     data-ctat-num-cols="5" 
+     data-ctat-has-header="true"&gt;
+&lt;/div&gt;
+	  </pre>
+      </div>
+      </div>
     </div>
-	<hr/>
-      
+    <hr/>
+
     <div>
-	  <h4>This table's "data-ctat-can-expand" property is FALSE</h4>
+      To have it expand to the available space if you set the width and height of the CTATTable:
+      <pre>#const_table .CTATTable--cell { flex: 1 1; width: inherit; height: inherit; }</pre>
+      Add the following to make sure the table does not grow beyond the specified height:
+      <pre>#const_table .CTATTable--row { flex: 1 1; }</pre>
       <div class="ctat_example">
-		<div id = "const_table" class = "CTATTable" data-ctat-num-rows='5' data-ctat-num-cols='5' 
-			data-ctat-has-header="true" data-ctat-header-height="20" data-ctat-can-expand='false' data-ctat-font-size='1'
-			data-ctat-cell-color='#FAEBD7' data-ctat-header-color='#C9EDB3' data-ctat-border-color='#8B8878'
-			style="width: 250px; height: 200px;">
-		</div>
-		</br>
-		<table>
-			<tr>
-				<td>
-					<button id='add_row_const' onClick=add_row("const_table")>Add Row</button>
-				</td>
-				<td>
-					<button id='add_col_const' onClick=add_col("const_table")>Add Column</button>
-				</td>
-			</tr>
-		</table>
-	  </div>
+	<div id="const_table" class="CTATTable"
+	     data-ctat-num-rows="5" data-ctat-num-cols="5" 
+	     data-ctat-has-header="true"
+	     style="width: 250px; height: 200px;">
+	</div>
+	<br>
+	<div style="display:flex;">
+	  <button id='add_row_const' onClick=add_row("const_table")>Add Row</button>&nbsp;
+	  <button id='add_col_const' onClick=add_col("const_table")>Add Column</button>
+	</div>
+      </div>
       <div class="ctat_code">
-		&#60div </br>id = "const_table" </br>class = "CTATTable" </br>data-ctat-num-rows='5' </br>data-ctat-num-cols='5' 
-			</br>data-ctat-has-header="true" </br>data-ctat-header-height="50" </br>data-ctat-can-expand='false' </br>data-ctat-font-size='1'
-			</br>data-ctat-cell-color='#FAEBD7' </br>data-ctat-header-color="#C9EDB3" </br>data-ctat-border-color='#8B8878'
-			</br>style="width: 250px; height: 200px;"&#62 </br>
-		&#60/div&#62
-	  </div>
+	<pre>
+&lt;div id="const_table" class="CTATTable"
+     data-ctat-num-rows="5"
+     data-ctat-num-cols="5" 
+     data-ctat-has-header="true"
+     style="width: 250px; height: 200px;"&gt;
+&lt;/div&gt;
+	</pre>
     </div>
 
     <div id="hint-box" style="margin:3px;text-align:right;">
