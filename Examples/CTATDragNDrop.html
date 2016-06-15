@@ -16,6 +16,7 @@ function ctatOnload() {
 };
 </script>
 <style type="text/css">
+  .CTATDragNDrop { padding: 5px; }
 </style>
 </head>
 <body>
@@ -26,26 +27,35 @@ function ctatOnload() {
 	   src="skindata/CTAT_Banner.svg">
     </a>
     <h1>CTATDragNDrop Example</h1>
-    <p>A simple Drag-N-Drop example for showing some basic functionality.
-      As it is currently configured, Sink can only have a single item dragged to it.
+    <p>
+      A simple Drag-N-Drop example for showing some basic functionality.
+      As it is currently configured, Sink can only have a single item
+      dragged to it.
       The correct answer is the blue circle.
-      Use the submit button to submit Sink for grading.</p>
+      Use the submit button to submit Sink for grading.
+      Drag items to Text Items to see per item grading,
+      the words are the correct answers.
+    </p>
     <div>
       <div class="ctat_example">
 	Source:
-	<div id="source" class="CTATDragNDrop" style="padding:5px;" data-ctat-tutor="false" name="DragNDropGroup">
+	<div id="source" class="CTATDragNDrop"
+	     data-ctat-tutor="false" name="DragNDropGroup">
 	  <div id="dndcircle" style="width:48px;height:48px;">
-	    <svg width="48" height="48"><circle cx="24" cy="24" r="20" stroke="darkblue" fill="blue" stroke-width="2px"/></svg>
+	    <svg width="48" height="48">
+	      <circle cx="24" cy="24" r="20"
+		      stroke="darkblue" fill="blue" stroke-width="2px"/>
+	    </svg>
 	  </div>
-	  <div id="dndtext">Square</div>
+	  <div id="dndtext" class="unselectable">Square</div>
 	  <img id="dndimg" src="skindata/CTAT-icon.svg"/>
-	  <div id="dndtri">triangle</div>
+	  <div id="dndtri" class="unselectable">triangle</div>
 	</div>
       </div>
       <div class="ctat_code">
 	<pre>
 Source:
-&lt;div id="source" class="CTATDragNDrop" style="padding:5px;"
+&lt;div id="source" class="CTATDragNDrop"
     data-ctat-tutor="false" name="DragNDropGroup"&gt;
   &lt;div id="dndcircle" style="width:48px;height:48px;"&gt;
     &lt;svg width="48" height="48"&gt;
@@ -53,9 +63,9 @@ Source:
          fill="blue" stroke-width="2px"/&gt;
     &lt;/svg&gt;
   &lt;/div&gt;
-  &lt;div id="dndtext"&gt;Square&lt;/div&gt;
+  &lt;div id="dndtext" class="unselectable"&gt;Square&lt;/div&gt;
   &lt;img id="dndimg" src="skindata/CTAT-icon.svg"/&gt;
-  &lt;div id="dndtri"&gt;triangle&lt;/div&gt;
+  &lt;div id="dndtri" class="unselectable"&gt;triangle&lt;/div&gt;
 &lt;/div&gt;
 	</pre>
       </div>
@@ -64,15 +74,17 @@ Source:
     <div>
       <div class="ctat_example">
 	Sink:
-	<div id="sink" class="CTATDragNDrop" name="DragNDropGroup" style="padding:5px;" data-ctat-max-cardinality="3" data-ctat-tutor="false">
+	<div id="sink" class="CTATDragNDrop" name="DragNDropGroup"
+	     data-ctat-max-cardinality="1" data-ctat-tutor="false">
 	</div>
-	<div id="submit" class="CTATSubmitButton" data-ctat-target="sink">Submit</div>
+	<div id="submit" class="CTATSubmitButton"
+	     data-ctat-target="sink">Submit</div>
       </div>
       <div class="ctat_code">
 	<pre>
 Sink:
 &lt;div id="sink" class="CTATDragNDrop" name="DragNDropGroup"
-  style="padding:5px;" data-ctat-max-cardinality="1"
+  data-ctat-max-cardinality="1"
   data-ctat-tutor="false"&gt;
 &lt;/div&gt;
 &lt;div id="submit" class="CTATSubmitButton"
@@ -80,6 +92,19 @@ Sink:
 	</pre>
       </div>
     </div>
+    <div>
+      <div class="ctat_example">
+	Text Items:
+	<div id="textsink" class="CTATDragNDrop" name="DragNDropGroup"
+	     data-ctat-tutor="true"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+Text Items:
+&lt;div id="textsink" class="CTATDragNDrop" name="DragNDropGroup"
+     data-ctat-tutor="true"&gt;&lt;/div&gt;
+	</pre>
+      </div>
     <div id="hint-box">
       <div id="HintWindow" class="CTATHintWindow"></div>
       <div style="float: right;">
