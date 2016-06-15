@@ -6,7 +6,7 @@
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartProblem</MessageType>
-                <ProblemName>CTATJumble</ProblemName>
+                <ProblemName>CTATComboBox</ProblemName>
             </properties>
         </message>
         <message>
@@ -17,43 +17,43 @@
         </message>
     </startNodeMessages>
     <node locked="false" doneState="false">
-        <text>CTATButton</text>
+        <text>CTATComboBox</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>192</x>
-            <y>38</y>
+            <x>323</x>
+            <y>30</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>232</x>
-            <y>148</y>
+            <x>361</x>
+            <y>140</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
-        <text>Done</text>
+        <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>347</x>
-            <y>328</y>
+            <x>361</x>
+            <y>250</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state3</text>
         <uniqueID>4</uniqueID>
         <dimension>
-            <x>343</x>
-            <y>247</y>
+            <x>361</x>
+            <y>360</y>
         </dimension>
     </node>
-    <node locked="false" doneState="false">
-        <text>state4</text>
+    <node locked="false" doneState="true">
+        <text>Done</text>
         <uniqueID>5</uniqueID>
         <dimension>
-            <x>79</x>
-            <y>242</y>
+            <x>365</x>
+            <y>470</y>
         </dimension>
     </node>
     <edge>
@@ -63,24 +63,24 @@
             <stepStudentError></stepStudentError>
             <uniqueID>1</uniqueID>
             <message>
-                <verb>SendNoteProperty</verb>
+                <verb>NotePropertySet</verb>
                 <properties>
-                    <MessageType>CorrectAction</MessageType>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>cf3f7060-fcae-4d1a-5f68-5325ddd0c5d0</transaction_id>
                     <Selection>
-                        <value>button1</value>
+                        <value>combo1</value>
                     </Selection>
                     <Action>
-                        <value>ButtonPressed</value>
+                        <value>UpdateComboBox</value>
                     </Action>
                     <Input>
-                        <value>-1</value>
+                        <value>yes</value>
                     </Input>
-                    <transaction_id>T20bfb39b-09d6-43ad-bb4f-7838cfb0f399</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please click the highlighted button.</hintMessage>
+            <hintMessage>Please select 'yes' from the highlighted menu.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -89,19 +89,19 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">button1</matcherParameter>
+                        <matcherParameter name="single">combo1</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">ButtonPressed</matcherParameter>
+                        <matcherParameter name="single">UpdateComboBox</matcherParameter>
                     </matcher>
                 </Action>
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">-1</matcherParameter>
+                        <matcherParameter name="single">yes</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -121,14 +121,134 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>6</uniqueID>
+            <uniqueID>3</uniqueID>
             <message>
                 <verb>NotePropertySet</verb>
                 <properties>
                     <MessageType>InterfaceAction</MessageType>
-                    <transaction_id>c026bea5-d682-ead0-8f97-b64f79249943</transaction_id>
+                    <transaction_id>85402b75-7358-ad56-cd36-8250c77ade28</transaction_id>
                     <Selection>
-                        <value>button3</value>
+                        <value>combo2</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateComboBox</value>
+                    </Action>
+                    <Input>
+                        <value>oui</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please select 'oui' from the highlighted menu.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">combo2</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateComboBox</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">oui</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>8147daff-e3a4-695f-7992-0224ba112d7a</transaction_id>
+                    <Selection>
+                        <value>combo3</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateComboBox</value>
+                    </Action>
+                    <Input>
+                        <value>oui</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please select 'oui' from the highlighted menu.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">combo3</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateComboBox</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">oui</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>ada56bc0-2fdd-4948-b37f-c27b118137f4</transaction_id>
+                    <Selection>
+                        <value>done</value>
                     </Selection>
                     <Action>
                         <value>ButtonPressed</value>
@@ -141,66 +261,6 @@
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
             <hintMessage>Please click on the highlighted button.</hintMessage>
-            <callbackFn></callbackFn>
-            <actionType>Correct Action</actionType>
-            <oldActionType>Correct Action</oldActionType>
-            <checkedStatus>Never Checked</checkedStatus>
-            <matchers Concatenation="true">
-                <Selection>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">button3</matcherParameter>
-                    </matcher>
-                </Selection>
-                <Action>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">ButtonPressed</matcherParameter>
-                    </matcher>
-                </Action>
-                <Input>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">-1</matcherParameter>
-                    </matcher>
-                </Input>
-                <Actor linkTriggered="false">Student</Actor>
-            </matchers>
-        </actionLabel>
-        <preCheckedStatus>No-Applicable</preCheckedStatus>
-        <rule>
-            <text>unnamed</text>
-            <indicator>-1</indicator>
-        </rule>
-        <sourceID>2</sourceID>
-        <destID>4</destID>
-        <traversalCount>0</traversalCount>
-    </edge>
-    <edge>
-        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
-            <studentHintRequest></studentHintRequest>
-            <stepSuccessfulCompletion></stepSuccessfulCompletion>
-            <stepStudentError></stepStudentError>
-            <uniqueID>4</uniqueID>
-            <message>
-                <verb>SendNoteProperty</verb>
-                <properties>
-                    <MessageType>CorrectAction</MessageType>
-                    <Selection>
-                        <value>done</value>
-                    </Selection>
-                    <Action>
-                        <value>ButtonPressed</value>
-                    </Action>
-                    <Input>
-                        <value>-1</value>
-                    </Input>
-                    <transaction_id>T07fdb2c6-510d-4bb0-b79e-ee86c7fc4aa0</transaction_id>
-                </properties>
-            </message>
-            <buggyMessage>No, this is not correct.</buggyMessage>
-            <successMessage></successMessage>
-            <hintMessage>Please click the Done button.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -233,66 +293,6 @@
             <indicator>-1</indicator>
         </rule>
         <sourceID>4</sourceID>
-        <destID>3</destID>
-        <traversalCount>0</traversalCount>
-    </edge>
-    <edge>
-        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
-            <studentHintRequest></studentHintRequest>
-            <stepSuccessfulCompletion></stepSuccessfulCompletion>
-            <stepStudentError></stepStudentError>
-            <uniqueID>8</uniqueID>
-            <message>
-                <verb>NotePropertySet</verb>
-                <properties>
-                    <MessageType>InterfaceAction</MessageType>
-                    <transaction_id>94d30199-bfbc-89d6-b4ed-e11def38c1c8</transaction_id>
-                    <Selection>
-                        <value>button2</value>
-                    </Selection>
-                    <Action>
-                        <value>ButtonPressed</value>
-                    </Action>
-                    <Input>
-                        <value>-1</value>
-                    </Input>
-                </properties>
-            </message>
-            <buggyMessage>No, do not press this button. It is incorrect and is only intended to show how it looks when incorrect.</buggyMessage>
-            <successMessage></successMessage>
-            <hintMessage>Please click on the highlighted button.</hintMessage>
-            <callbackFn></callbackFn>
-            <actionType>Buggy Action</actionType>
-            <oldActionType>Correct Action</oldActionType>
-            <checkedStatus>Never Checked</checkedStatus>
-            <matchers Concatenation="true">
-                <Selection>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">button2</matcherParameter>
-                    </matcher>
-                </Selection>
-                <Action>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">ButtonPressed</matcherParameter>
-                    </matcher>
-                </Action>
-                <Input>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">-1</matcherParameter>
-                    </matcher>
-                </Input>
-                <Actor linkTriggered="false">Student</Actor>
-            </matchers>
-        </actionLabel>
-        <preCheckedStatus>No-Applicable</preCheckedStatus>
-        <rule>
-            <text>unnamed</text>
-            <indicator>-1</indicator>
-        </rule>
-        <sourceID>2</sourceID>
         <destID>5</destID>
         <traversalCount>0</traversalCount>
     </edge>

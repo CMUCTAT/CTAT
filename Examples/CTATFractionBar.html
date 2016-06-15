@@ -9,10 +9,11 @@
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
 <script>
-  $(function() {
-      initTutor({"question_file":'CTATJumble.brd'});
-  });
+function ctatOnload() {
+    initTutor({"question_file":'CTATFractionBar.brd'});
+};
 </script>
 <style type="text/css">
   hr { width:80% }

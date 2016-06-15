@@ -9,10 +9,11 @@
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
 <script>
-  $(function() {
+function ctatOnload() {
       initTutor({"question_file":'CTATDragNDrop.brd'});
-  });
+};
 </script>
 <style type="text/css">
 </style>
@@ -63,7 +64,7 @@ Source:
     <div>
       <div class="ctat_example">
 	Sink:
-	<div id="sink" class="CTATDragNDrop" name="DragNDropGroup" style="padding:5px;" data-ctat-max-cardinality="3" data-ctat-tutor="true">
+	<div id="sink" class="CTATDragNDrop" name="DragNDropGroup" style="padding:5px;" data-ctat-max-cardinality="3" data-ctat-tutor="false">
 	</div>
 	<div id="submit" class="CTATSubmitButton" data-ctat-target="sink">Submit</div>
       </div>
