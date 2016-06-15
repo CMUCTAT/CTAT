@@ -20,24 +20,40 @@
         <text>CTATDragNDrop</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>606</x>
-            <y>30</y>
+            <x>177</x>
+            <y>36</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>646</x>
-            <y>140</y>
+            <x>217</x>
+            <y>146</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>done</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>646</x>
-            <y>250</y>
+            <x>224</x>
+            <y>455</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>220</x>
+            <y>260</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>220</x>
+            <y>370</y>
         </dimension>
     </node>
     <edge>
@@ -105,6 +121,126 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>1f5c7f8e-e59d-8c8d-93d6-fbacec0f1c47</transaction_id>
+                    <Selection>
+                        <value>textsink</value>
+                    </Selection>
+                    <Action>
+                        <value>Add</value>
+                    </Action>
+                    <Input>
+                        <value>dndtext</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please provide your answer 'dndtext' in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">textsink</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Add</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">dndtext</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>00a68a22-a46c-3d41-9223-c9d95cfde09d</transaction_id>
+                    <Selection>
+                        <value>textsink</value>
+                    </Selection>
+                    <Action>
+                        <value>Add</value>
+                    </Action>
+                    <Input>
+                        <value>dndtri</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please provide your answer 'dndtri' in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">textsink</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">Add</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">dndtri</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
             <uniqueID>3</uniqueID>
             <message>
                 <verb>SendNoteProperty</verb>
@@ -156,10 +292,15 @@
             <text>unnamed</text>
             <indicator>-1</indicator>
         </rule>
-        <sourceID>2</sourceID>
+        <sourceID>6</sourceID>
         <destID>3</destID>
         <traversalCount>0</traversalCount>
     </edge>
-    <EdgesGroups ordered="true"></EdgesGroups>
+    <EdgesGroups ordered="true">
+        <group name="Random Drop" ordered="false" reenterable="true">
+            <link id="7"/>
+            <link id="1"/>
+            <link id="9"/></group>
+    </EdgesGroups>
 </stateGraph>
 
