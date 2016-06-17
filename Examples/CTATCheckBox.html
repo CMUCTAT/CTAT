@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATCheckBox Example</title>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
+<script>
+  function ctatOnload () {
+    initTutor({"question_file":'CTATCheckBox.brd'});
+  };
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    <h1>CTATCheckBox Example</h1>
+    <p>A simple check box example.</p>
+    <div>
+      <div class="ctat_example">
+	Select only "yes":
+	<div id="check1" class="CTATCheckBox" name="checkGroup">yes</div>
+	<div id="check2" class="CTATCheckBox" name="checkGroup">no</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="check1" class="CTATCheckBox"
+     name="checkGroup"&gt;yes&lt;/div&gt;
+&lt;div id="check2" class="CTATCheckBox"
+     name="checkGroup"&gt;no&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+    <div>
+      <div class="ctat_example">
+	<p>Select only "yes" and click Submit:</p>
+	<div style="display:flex; justify-content: space-between;">
+	<div id="checkA" class="CTATCheckBox" name="submitGroup"
+	     data-ctat-tutor="false">yes</div>
+	<div id="checkB" class="CTATCheckBox" name="submitGroup"
+	     data-ctat-tutor="false">no</div>
+	<div id="submit" class="CTATSubmitButton"
+	     data-ctat-target="submitGroup">Submit</div>
+	</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="check1" class="CTATCheckBox"
+     data-ctat-tutor="false"
+     name="checkGroup"&gt;yes&lt;/div&gt;
+&lt;div id="check2" class="CTATCheckBox"
+     data-ctat-tutor="false"
+     name="checkGroup"&gt;no&lt;/div&gt;
+&lt;div id="submit" class="CTATSubmitButton"
+     data-ctat-target="submitGroup"&gt;Submit&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+
+    <div id="hint-box">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
