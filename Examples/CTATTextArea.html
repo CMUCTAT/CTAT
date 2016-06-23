@@ -39,12 +39,18 @@ function ctatOnload() {
     <p>A simple multi-line text entry example.</p>
     <div>
       <div class="ctat_example">
-	Enter anything:
-	<div id="mltext" class="CTATTextArea" data-ctat-tab-on-enter="false" data-ctat-tutor="false" style="height:4em;"></div>
+	Enter anything:<br>
+	<div id="mltext" class="CTATTextArea" data-ctat-tab-on-enter="false" data-ctat-tutor="false" style="height:4em;"></div><br>
 	<div id="submit" class="CTATSubmitButton" data-ctat-target="mltext">Submit</div>
       </div>
       <div class="ctat_code">
-	<pre>&lt;div id="textarea" class="CTATTextArea"&gt;&lt;/div&gt;</pre>
+	<pre>
+&lt;div id="mltext" class="CTATTextArea"
+     data-ctat-tab-on-enter="false"
+     data-ctat-tutor="false"&gt;&lt;/div&gt;
+&lt;div id="submit" class="CTATSubmitButton"
+     data-ctat-target="mltext"&gt;&lt;/div&gt;
+	</pre>
       </div>
     </div>
 
