@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATNumericStepper Example</title>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
+<script>
+function ctatOnload() {
+      initTutor({"question_file":'CTATNumericStepper.brd'});
+};
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    <h1>CTATNumericStepper Example</h1>
+    <p>A simple numeric stepper example.</p>
+    <div>
+      <div class="ctat_example">
+	Enter the number 5:
+	<div id="stepper" class="CTATNumericStepper" value="0" min="0" max="10" step="1"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="stepper" class="CTATNumericStepper"
+     value="0" min="0" max="10"&gt;
+&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+    <p>Though, using it with a CTATSubmitButton is advised.
+    <div>
+      <div class="ctat_example">
+	Enter the number 5:<br/>
+	<div id="stepper1" class="CTATNumericStepper" value="0" min="0" max="10" step="1" data-ctat-tutor="false"></div><br/>
+	<div id="submit" class="CTATSubmitButton" data-ctat-target="stepper1">Submit</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="steppers" class="CTATNumericStepper"
+     value="0" min="0" max="10"&gt;
+&lt;/div&gt;
+&lt;div id="submit" class="CTATSubmitButton"
+    data-ctat-target="stepper1"&gt;Submit&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+
+    <div id="hint-box" style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
