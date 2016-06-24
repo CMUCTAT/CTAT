@@ -7,12 +7,16 @@
 <link rel="stylesheet" href="css/CTAT.css"/>
 <link rel="stylesheet" href="css/ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <script src="js/ctat.min.js"></script>
 <script src="js/ctatloader.js"></script>
 <script>
 function ctatOnload() {
-      initTutor({"question_file":'CTATTextField.brd'});
+    initTutor({"question_file":'CTATTextField.brd'});
+    $('#tutor_text').on('CTAT_EXECUTE_SAI', function(e) {
+    	MathJax.Hub.Queue(['Typeset',MathJax.Hub,$('#tutor_text')[0]]);
+    });
 };
 </script>
 <style type="text/css">
