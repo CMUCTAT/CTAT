@@ -125,7 +125,15 @@
                         <value>UpdateTextArea</value>
                     </Action>
                     <Input>
-                        <value>Yes, &lt;b&gt;CTAT&lt;/b&gt; is here to help you.</value>
+                        <value>Yes, &lt;b&gt;CTAT&lt;/b&gt; is here to help you
+and is
+&lt;math xmlns='http://www.w3.org/1998/Math/MathML'&gt;
+ &lt;mfrac&gt;
+  &lt;mn&gt;7&lt;/mn&gt;
+  &lt;mn&gt;8&lt;/mn&gt;
+ &lt;/mfrac&gt;
+&lt;/math&gt;
+ ready to go!</value>
                     </Input>
                     <transaction_id>d4cc3aed-b13d-610f-15cb-96ff3715d29c</transaction_id>
                 </properties>
