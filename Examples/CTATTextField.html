@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATTextField Example</title>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
+<script>
+function ctatOnload() {
+      initTutor({"question_file":'CTATTextInput.brd'});
+};
+</script>
+<style type="text/css">
+#tutor_text {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px;
+  width: 200px;
+}
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    <h1>CTATTextField Example</h1>
+    <p>A simple text field example. Generally, CTATTextFields are designed to
+      display html from the tutoring service and is not generally meant to be
+      student editable.</p>
+    <div>
+      <div class="ctat_example">
+	<div id="tutor_text" class="CTATTextField"><em>Click the button</em> to have the tutor change this message.</div>
+	<div id="button" class="CTATButton" data-ctat-show-feedback="false">Tutor, are you there?</div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="tutor_text" class="CTATTextField"&gt;&lt;/div&gt;</pre>
+      </div>
+    </div>
+
+    <div id="hint-box" style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
