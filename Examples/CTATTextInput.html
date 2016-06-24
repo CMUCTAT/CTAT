@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATTextInput Example</title>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
+<script>
+function ctatOnload() {
+      initTutor({"question_file":'CTATTextInput.brd'});
+};
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    <h1>CTATTextArea Example</h1>
+    <p>A simple text entry example.</p>
+    <div>
+      <div class="ctat_example">
+	Enter 1:
+	<div id="input" class="CTATTextInput"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="input" class="CTATTextInput"&gt;&lt;/div&gt;</pre>
+      </div>
+    </div>
+
+    <div id="hint-box" style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
