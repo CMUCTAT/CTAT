@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CTATSubmitButton Example</title>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
+<script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
+<script>
+function ctatOnload() {
+      initTutor({"question_file":'CTATSubmitButton.brd'});
+};
+</script>
+<style type="text/css">
+  div.tutor_window { width: 800px; }
+  hr { width: 85%; }
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner"
+	   alt="CTAT: Cognitive Tutor Authoring Tools"
+	   src="skindata/CTAT_Banner.svg">
+    </a>
+    <h1>CTATSubmitButton Examples</h1>
+    <p>A Submit button with no target does nothing.</p>
+    <div>
+      <div class="ctat_example">
+	Click this button:
+	<div id="button0" class="CTATSubmitButton">No Op</div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="button0" class="CTATSubmitButton"&gt;No Op&lt;/div&gt;</pre>
+      </div>
+    </div><hr/>
+    <div>
+      <div class="ctat_example" style="width:350px;display:inline-flex; flex-direction:column;">
+	<p>Submit button with check boxes, it is recomended to set the group name as the target:</p>
+	<div id="checkA" class="CTATCheckBox" name="submitGroup"
+	     data-ctat-tutor="false">yes</div>
+	<div id="checkB" class="CTATCheckBox" name="submitGroup"
+	     data-ctat-tutor="false">oui</div>
+	<div id="checkC" class="CTATCheckBox" name="submitGroup"
+	     data-ctat-tutor="false">no</div>
+	<div id="button1" class="CTATSubmitButton" data-ctat-target="submitGroup">Submit Checkboxes</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="checkA" class="CTATCheckBox"
+     data-ctat-tutor="false"
+     name="checkGroup"&gt;yes&lt;/div&gt;
+&lt;div id="checkB" class="CTATCheckBox"
+     data-ctat-tutor="false"
+     name="checkGroup"&gt;oui&lt;/div&gt;
+&lt;div id="checkC" class="CTATCheckBox"
+     data-ctat-tutor="false"
+     name="checkGroup"&gt;no&lt;/div&gt;
+&lt;div id="button1" class="CTATSubmitButton"
+     data-ctat-target="submitGroup"&gt;Submit&lt;/div&gt;
+	</pre>
+      </div>
+    </div><hr/>
+    <div>
+      <div class="ctat_example">
+	Submitting multiple components:<br/>
+	<div id="pie" class="CTATPieChart" data-ctat-tutor="false"></div>
+	<div id="bar" class="CTATFractionBar" data-ctat-tutor="false"></div>
+	<div id="button2" class="CTATSubmitButton" data-ctat-target="pie;bar">Submit fractions</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="pie" class="CTATPieChart"
+     data-ctat-tutor="false"&gt;&lt;/div&gt;
+&lt;div id="bar" class="CTATFractionBar"
+     data-ctat-tutor="false"&gt;&lt;/div&gt;
+&lt;div id="button2" class="CTATSubmitButton"
+     data-ctat-target="pie;bar"&gt;&lt;/div&gt;
+	</pre>
+      </div>
+    </div><hr/>
+    <div>
+      <div class="ctat_example">
+	Submitting part of a complex component:<br/>
+	<div id="line" class="CTATNumberLine" data-ctat-ctrl-denominator="denom;button3" data-ctat-minimum="0" data-ctat-maximum="1" data-ctat-max-points="0" data-ctat-small-tick-step="0"></div>
+	<div id="denom" class="CTATNumericStepper" value="1" min="1" max="10" data-ctat-tutor="false"></div><br/>
+	<div id="button3" class="CTATSubmitButton" data-ctat-target="line">Submit Denominator</div>
+      </div>
+      <div class="ctat_code">
+	<pre>
+&lt;div id="line" class="CTATNumberLine"
+     data-ctat-ctrl-denominator="denom;button3"
+     data-ctat-minimum="0" data-ctat-maximum="1"
+     data-ctat-max-points="0"
+     data-ctat-small-tick-step="0"&gt;&lt;/div&gt;
+&lt;div id="denom" class="CTATNumericStepper"
+     value="1" min="1" max="10"
+     data-ctat-tutor="false"&gt;&lt;/div&gt;
+&lt;div id="button3" class="CTATSubmitButton"
+     data-ctat-target="line"&gt;&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+
+    <div id="hint-box" style="margin:3px;text-align:right;">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div style="float: right;">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done-button" class="CTATDoneButton"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

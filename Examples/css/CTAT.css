@@ -84,20 +84,22 @@ Table of Contents:
 
 /*********************** CTAT Component Size Defaults ************************/
 
-.CTATAudioButton { display: inline-block; }
+.CTATAudioButton { display: inline-block; } /* size to the content of the button */
 .CTATButton,.CTATSubmitButton { display: inline-block; } /* inline to act like <button/> */
 .CTATCheckBox, .CTATRadioButton { display: inline-flex; }
 .CTATComboBox { display: inline-block; }
 .CTATDoneButton, .CTATHintButton  {	width: 66px; height: 66px; }
 /*.CTATDoneButton>button, .CTATHintButton>button { width:100%; height:100%; }*/
 .CTATDragNDrop { width: 160px; height: 100px; }
-.CTATFractionBar { width: 240px; height: 70px; }
+.CTATFractionBar { width: 240px; height: 70px; } /* default size */
+.CTATGroupingComponent {}
+.CTATGroupingComponent[data-ctat-use-componentlist="true"] { visibility: hidden; }
 .CTATHintWindow { width: 240px; height: 140px; }
 .CTATImageButton {}
 .CTATJumble {}
 .CTATNumberLine { width: 360px; height: 90px; }
 .CTATNumericStepper { display: inline-block; width: 60px; }
-.CTATPieChart { width: 100px; height: 100px; }
+.CTATPieChart { width: 100px; height: 100px; } /* default size */
 .CTATSkillWindow { width: 240px; height: 140px; }
 .CTATTextArea { display: inline-block; }
 .CTATTextField {}
@@ -116,14 +118,14 @@ Table of Contents:
 }*/
 
 
-.CTAT-button {
+.CTAT-button { /* For the generated <button> */
 	font:inherit;
 	width:inherit;
 	height:inherit;
 }
-.CTAT-button:hover {}
-.CTAT-button--clicked {}
-.CTAT-button:disabled {}
+.CTAT-button:hover {} /* when the mouse is hovering over the <button> */
+.CTAT-button--clicked {} /* when the <button> is being clicked */
+.CTAT-button:disabled {} /* when the <button> is disabled */
 
 
 /******************** CTAT Text Based Components ***********************/
@@ -163,16 +165,16 @@ Table of Contents:
 	flex: none;
 	border: 1px solid black;
 	overflow: hidden;
-	width: 4em;
-	height: 1.2em;
+	width: 4em; /* cell width */
+	height: 1.2em; /* cell size */
 }
 .CTATTable--headers {
 	flex: none;
 }
 .CTATTable--header textarea{
-	background-color: linen;
+	background-color: linen; /* change header background color */
 	text-align: center;
-	font-weight: bold;
+	font-weight: bold; /* change header font */
 }
 
 /*---------------------------------------------------*\
@@ -210,16 +212,25 @@ Table of Contents:
 	#CTAT Radio Button
 \*------------------------------------------------*/
 
-.CTATCheckBox, .CTATRadioButton { display: inline-flex; align-items: center; flex-direction: row; }
+.CTATCheckBox, .CTATRadioButton { /* Container for the button and label. */
+	display: inline-flex; /* this should be either inline-flex or flex */
+	align-items: center;
+	flex-direction: row;
+}
 /* extra styling for the sub entities */
-.CTATCheckBox--button, .CTATRadioButton--button {}
-.CTATCheckBox--label, .CTATRadioButton--label {}
+.CTATCheckBox--button, .CTATRadioButton--button {} /* Added to the generated <input> */
+.CTATCheckBox--label, .CTATRadioButton--label {} /* Added to the generated <label> */
 
 /*---------------------------------------------------------*\
 	#CTAT ComboBox
 \*---------------------------------------------------------*/
 
-.CTATComboBox>select { width:inherit; height:inherit; color: inherit; font: inherit; }
+.CTATComboBox>select { /* inherit from Component */
+	width:inherit;
+	height:inherit;
+	color: inherit;
+	font: inherit;
+}
 
 /*---------------------------------------------------------*\
 	#CTAT Jumble
@@ -387,10 +398,10 @@ Table of Contents:
 /* This is in the SVG section because of the option to have SVG buttons as
    part of the component.  If this feature is dropped, then this should be
    moved to its own section */
-.CTATHintButton {
+.CTATHintButton { /* for that classic CTAT look and feel */
 	font: 15px Helvetica Neue, Helvetica, Arial, sans-serif;
 }
-.CTAT-hint-button {
+.CTAT-hint-button { /* on the <button> */
 	overflow: hidden;
 	padding: 0;
 	font: inherit;
@@ -402,7 +413,7 @@ Table of Contents:
  	height: inherit;
 }
 .CTAT-hint-button:focus { outline: none; }
-.CTAT-hint-button--icon {
+.CTAT-hint-button--icon { /* on the ? */
 	font-size: 44px;
 	pointer-events: none;
 	position: relative;
@@ -410,13 +421,13 @@ Table of Contents:
 	height: 60%;
 	font-weight: bold;
 }
-.CTAT-hint-button--text {
+.CTAT-hint-button--text { /* on the text (eg) "Hint" */
 	pointer-events: none;
 }
-.CTAT-hint-button--hover {
+.CTAT-hint-button--hover { /* added when moused over */
 	background-color: #E6C200 /*#FFED3A*/;
 }
-.CTAT-hint-button--clicked {
+.CTAT-hint-button--clicked { /* added when it is clicked */
 	background-color: #FFDB19 /*#FFED3A*/;
 }
 
@@ -424,10 +435,10 @@ Table of Contents:
 	#CTAT Done Button
 \*--------------------------------------------------*/
 
-.CTATDoneButton {
+.CTATDoneButton { /* default Done button font for that classic CTAT feel */
 	font: 15px Helvetica Neue, Helvetica, Arial, sans-serif;
 }
-.CTAT-done-button {
+.CTAT-done-button { /* for the <button> inside the CTATDoneButton */
 	padding: 0;
 	font: inherit;
 	border-radius: 5px;
@@ -438,7 +449,7 @@ Table of Contents:
  	height: inherit;
 }
 .CTAT-done-button:focus { outline: none; }
-.CTAT-done-button--content {
+.CTAT-done-button--content { /* for the <div> inside the <button> */
 	pointer-events: none;
 	height: inherit;
 	width: inherit;
@@ -446,20 +457,20 @@ Table of Contents:
 	flex-direction: column;
 	justify-content: flex-end;
 }
-.CTAT-done-button--icon {
+.CTAT-done-button--icon { /* for the checkmark */
 	font-size: 44px;
 	pointer-events: none;
 	height: 75%;
 }
-.CTAT-done-button--text {
+.CTAT-done-button--text { /* for the text (eg) Done */
 	flex: none;
 	pointer-events: none;
 	margin-bottom: 5px;
 }
-.CTAT-done-button--hover {
+.CTAT-done-button--hover { /* added when hovering over the button */
 	background-color: #5C8A00;
 }
-.CTAT-done-button--clicked {
+.CTAT-done-button--clicked { /* added when clicking the button */
 	background-color: #85AD33;
 }
 
@@ -496,7 +507,7 @@ Table of Contents:
 	flex: auto;
 	pointer-events: none;
 }
-.CTATHintWindow--hint-button-area {
+.CTATHintWindow--hint-button-area { /* area containing the buttons */
 	flex: none;
 	display: flex;
 	justify-content: space-between;
@@ -509,7 +520,7 @@ Table of Contents:
 	height: 20px;
 	outline: none; /* No focus highlighting */
 }
-.CTATHintWindow--button-icon {
+.CTATHintWindow--button-icon { /* the arrows in the buttons */
 	margin-left:3px;
 	margin-right:3px;
 	vertical-align: middle;
