@@ -76,20 +76,23 @@ Table of Contents:
 }
 
 
-/******************* CTAT Tutor Container Div Defaults ************************/
+/******************* CTAT Tutor Panel Defaults *******************************/
 
-.CTATTutorContainer { background: white; }
-.CTATTutorProblem, .CTATTutorSolution { border: 1px solid #CCCCCC; border-radius: 5px; padding: 5px; }
+.CTATTutor { width: 900px; height: 600px; display: flex; flex-flow: column; }
+.CTATProblemSolving { flex: 1 0 auto; display: flex; }
+.CTATProblem, .CTATSolution { border: 1px solid #CCCCCC; border-radius: 5px; padding: 5px; }
+.CTATProblem { flex: 1; }
+.CTATSolution { flex: 2; }
+.CTATTools { height: 140px; display: flex; }
+.CTATButtons { height: 140px; display: flex; flex-flow: column; justify-content: space-between; }
 
 
 /*********************** CTAT Component Size Defaults ************************/
 
 .CTATAudioButton { display: inline-block; } /* size to the content of the button */
-.CTATButton,.CTATSubmitButton { display: inline-block; } /* inline to act like <button/> */
-.CTATCheckBox, .CTATRadioButton { display: inline-flex; }
+.CTATButton, .CTATSubmitButton { display: inline-block; } /* inline to act like <button/> */
 .CTATComboBox { display: inline-block; }
-.CTATDoneButton, .CTATHintButton  {	width: 66px; height: 66px; }
-/*.CTATDoneButton>button, .CTATHintButton>button { width:100%; height:100%; }*/
+.CTATDoneButton, .CTATHintButton { width: 68px; height: 68px; }
 .CTATDragNDrop { width: 160px; height: 100px; }
 .CTATFractionBar { width: 240px; height: 70px; } /* default size */
 .CTATGroupingComponent {}
@@ -113,15 +116,10 @@ Table of Contents:
 	Covers CTATAudioButton, CTATButton, CTATDoneButton, CTATHintButton
 \*---------------------------------------------*/
 
-/*button.CTAT-gen-component {
-	border-radius: 5px;
-}*/
-
-
 .CTAT-button { /* For the generated <button> */
-	font:inherit;
-	width:inherit;
-	height:inherit;
+	font: inherit;
+	width: inherit;
+	height: inherit;
 }
 .CTAT-button:hover {} /* when the mouse is hovering over the <button> */
 .CTAT-button--clicked {} /* when the <button> is being clicked */
@@ -137,7 +135,6 @@ Table of Contents:
 \*-----------------------------------------------------*/
 
 .CTATTable {
-	/*display: table;*/
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -150,8 +147,6 @@ Table of Contents:
 	border: none;
 }
 .CTATTable textarea.CTAT--hint {
-	-moz-box-shadow: 0px 0px 15px 5px yellow;
-	-webkit-box-shadow: 0px 0px 15px 5px yellow;
 	box-shadow: 0px 0px 15px 5px yellow;
 	background-color: yellow;
 }
@@ -171,7 +166,7 @@ Table of Contents:
 .CTATTable--headers {
 	flex: none;
 }
-.CTATTable--header textarea{
+.CTATTable--header textarea {
 	background-color: linen; /* change header background color */
 	text-align: center;
 	font-weight: bold; /* change header font */
@@ -181,16 +176,16 @@ Table of Contents:
 	#CTAT Text Components
 \*---------------------------------------------------*/
 
-.CTATTextArea>textarea {
+.CTATTextArea > textarea {
 	overflow: hidden;
 	resize: none;
 	width: inherit;
 	height: inherit;
 }
-.CTATTextInput>input[type="text"] {
+.CTATTextInput > input[type="text"] {
 	width: inherit;
 	height: inherit;
-	font-size: inherit;
+	font: inherit;
 	background-color: inherit;
 }
 
@@ -198,7 +193,7 @@ Table of Contents:
 	#CTATNumericStepper
 \*-------------------------------------------------------*/
 
-.CTATNumericStepper>input {
+.CTATNumericStepper > input {
 	width: inherit;
 	height: inherit;
 	font: inherit;
@@ -225,9 +220,9 @@ Table of Contents:
 	#CTAT ComboBox
 \*---------------------------------------------------------*/
 
-.CTATComboBox>select { /* inherit from Component */
-	width:inherit;
-	height:inherit;
+.CTATComboBox > select { /* inherit from Component */
+	width: inherit;
+	height: inherit;
 	color: inherit;
 	font: inherit;
 }
@@ -249,9 +244,7 @@ Table of Contents:
 	-ms-user-select: none;
 	padding: 0.5ch;
 	cursor: default;
-	border-width: 1px;
-	border-style: solid;
-	border-color: transparent;
+	border: 1px solid transparent;
 }
 .CTATJumble--item[draggable="true"] { /* for items that are being dragged */
 	-khtml-user-drag: element;
@@ -330,13 +323,13 @@ Table of Contents:
 	stroke-width: 4px;
 }
 .CTATNumberLine--large-tickmark-label {
-	transform: translate(0px,-3px);
+	transform: translate(0px, -3px);
 }
 .CTATNumberLine--small-tickmark {}
 .CTATNumberLine--small-tickmark-label {
 	stroke: none;
 	fill: black;
-	transform: translate(0px,-2px);
+	transform: translate(0px, -2px);
 }
 .CTATNumberLine--denominator-tickmark {
 	stroke: purple;
@@ -355,7 +348,7 @@ Table of Contents:
 	border: 1px solid #CCCCCC;
 	border-radius: 5px;
 	overflow: visible;
-	 /*--explode: 10px; only supported in moz */
+	/*--explode: 10px; only supported in moz */
 }
 .CTATFractionBar--container { /* fraction bar container */
 	border: 2px solid #CCCCCC;
@@ -407,10 +400,10 @@ Table of Contents:
 	font: inherit;
 	border-radius: 5px;
 	background-color: gold; /*#FFCC33;*/
- 	border: 1px solid orange;
- 	cursor: pointer;
- 	width: inherit;
- 	height: inherit;
+	border: 1px solid orange;
+	cursor: pointer;
+	width: inherit;
+	height: inherit;
 }
 .CTAT-hint-button:focus { outline: none; }
 .CTAT-hint-button--icon { /* on the ? */
@@ -444,9 +437,9 @@ Table of Contents:
 	border-radius: 5px;
 	background-color: #669900;
 	border: 1px solid green;
- 	cursor: pointer;
- 	width: inherit;
- 	height: inherit;
+	cursor: pointer;
+	width: inherit;
+	height: inherit;
 }
 .CTAT-done-button:focus { outline: none; }
 .CTAT-done-button--content { /* for the <div> inside the <button> */
@@ -481,11 +474,11 @@ Table of Contents:
 /* Hint window styling, assumes single instance */
 .CTATHintWindow { /* hint window container styling */
 	border-radius: 5px;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #cccccc;
-	-webkit-user-select: none;
+	border: 1px solid #CCCCCC;
+	user-select: none;
 	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
 	-ms-user-select: none;
 	padding: 5px;
 	box-sizing: border-box;
@@ -499,9 +492,7 @@ Table of Contents:
 	padding: 2px;
 	overflow: auto;
 	background: white;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #cccccc;
+	border: 1px solid #CCCCCC;
 	cursor: default;
 	margin-bottom: 5px;
 	flex: auto;
@@ -515,21 +506,19 @@ Table of Contents:
 .CTATHintWindow--button { /* hint window buttons, also uses CTAT hint button style, mostly for coloring */
 	border-radius: 5px;
 	font: 11px Helvetica Neue, Helvetical, Arial, sans-serif;
-	stroke-width: 0px;
 	width: 82px;
 	height: 20px;
+	line-height: 16px;
 	outline: none; /* No focus highlighting */
 }
 .CTATHintWindow--button-icon { /* the arrows in the buttons */
-	margin-left:3px;
-	margin-right:3px;
+	margin-left: 3px;
+	margin-right: 3px;
 	vertical-align: middle;
 	font-weight: bold;
 }
-.CTATHintWindow--previous { /*float: left;*/ } /* hint window previous button */
-.CTATHintWindow--next { /*float: right;*/ } /* hint window next button */
-
-
+.CTATHintWindow--previous {} /* hint window previous button */
+.CTATHintWindow--next {} /* hint window next button */
 
 /*-----------------------------------------------------*\
 	#CTAT Skill Window
@@ -548,6 +537,7 @@ Table of Contents:
 	flex-direction: column;
 }
 .CTATSkillWindow--skill { /* container for meter + label */
+	flex: none;
 	display: flex;
 	justify-content: flex-start;
 }
@@ -601,7 +591,6 @@ Table of Contents:
 
 video.CTAT-gen-component {
 	background-color: inherit;
-	filter: alpha(opacity=0);
 }
 
 
@@ -617,7 +606,7 @@ button.CTAT-done-button:disabled,
 button.CTATHintWindow--button:disabled {
 	background-color: #EDEDED;
 	border: 1px solid darkgrey;
-	text-color: #9A9A9A;
+	color: #9A9A9A;
 	cursor: default;
 }
 
@@ -629,27 +618,19 @@ button.CTATHintWindow--button:disabled {
 \*-------------------------------------------------------*/
 
 .CTAT--incorrect {
-	-webkit-box-shadow: 0px 0px 15px 5px red;
-	-moz-box-shadow: 0px 0px 15px 5px red;
 	box-shadow: 0px 0px 15px 5px red;
 }
 textarea.CTAT--incorrect,
 input.CTAT--incorrect[type="text"] {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	color: red;
 }
 label.CTAT--incorrect {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	text-shadow: 0px 0px 5px red;
 }
 input.CTAT--incorrect[type="checkbox"],
 input.CTAT--incorrect[type="radio"] {
-	-webkit-box-shadow: 0px 0px 5px 0px red;
-	-moz-box-shadow: 0px 0px 5px 0px red;
 	box-shadow: 0px 0px 5px 0px red;
 }
 .CTATNumberLine--point.CTAT--incorrect {
@@ -662,24 +643,19 @@ input.CTAT--incorrect[type="radio"] {
 \*-------------------------------------------------------*/
 
 .CTAT--hint {
-	-moz-box-shadow: 0px 0px 15px 5px yellow;
-	-webkit-box-shadow: 0px 0px 15px 5px yellow;
 	box-shadow: 0px 0px 15px 5px yellow;
 }
 label.CTAT--hint {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	text-shadow: 0px 0px 5px yellow;
 }
 textarea.CTAT--hint,
 input.CTAT--hint[type="text"] {
 	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 input.CTAT--hint[type="checkbox"],
 input.CTAT--hint[type="radio"] {
-	-webkit-box-shadow: 0px 0px 5px 0px yellow;
-	-moz-box-shadow: 0px 0px 5px 0px yellow;
 	box-shadow: 0px 0px 5px 0px yellow;
 }
 
@@ -688,24 +664,19 @@ input.CTAT--hint[type="radio"] {
 \*-------------------------------------------------------*/
 
 .CTAT--highlight {
-	-moz-box-shadow: 0px 0px 15px 5px yellow;
-	-webkit-box-shadow: 0px 0px 15px 5px yellow;
 	box-shadow: 0px 0px 15px 5px yellow;
 }
 label.CTAT--highlight {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	text-shadow: 0px 0px 5px yellow;
 }
 textarea.CTAT--highlight,
 input.CTAT--highlight[type="text"] {
 	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 input.CTAT--highlight[type="checkbox"],
 input.CTAT--highlight[type="radio"] {
-	-webkit-box-shadow: 0px 0px 5px 0px yellow;
-	-moz-box-shadow: 0px 0px 5px 0px yellow;
 	box-shadow: 0px 0px 5px 0px yellow;
 }
 
@@ -714,27 +685,19 @@ input.CTAT--highlight[type="radio"] {
 \*-------------------------------------------------------*/
 
 .CTAT--correct { /* general correct highlighting */
-	-webkit-box-shadow: 0px 0px 15px 5px limegreen;
-	-moz-box-shadow: 0px 0px 15px 5px limegreen;
 	box-shadow: 0px 0px 15px 5px limegreen;
 }
 textarea.CTAT--correct,
 input.CTAT--correct[type="text"] { /* font color change for text components */
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	color: limegreen;
 }
 label.CTAT--correct { /* labels for checkboxes and radio buttons */
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
 	box-shadow: none;
 	text-shadow: 0px 0px 5px limegreen;
 }
 input.CTAT--correct[type="checkbox"],
 input.CTAT--correct[type="radio"] {
-	-webkit-box-shadow: 0px 0px 5px 0px limegreen;
-	-moz-box-shadow: 0px 0px 5px 0px limegreen;
 	box-shadow: 0px 0px 5px 0px limegreen;
 }
 .CTATNumberLine--point.CTAT--correct {
@@ -755,11 +718,7 @@ input.CTAT--correct[type="radio"] {
 	z-index: 1000;
 }
 .css3-windows-7 .fenster {
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
 	border-radius: 7px;
-	-moz-box-shadow: 0 0 0 1px #EEEEEE inset, 0 0 15px rgba(0, 0, 0, 0.9);
-	-webkit-box-shadow: 0 0 0 1px #EEEEEE inset, 0 0 15px rgba(0, 0, 0, 0.9);
 	box-shadow: 0 0 0 1px #EEEEEE inset, 0 0 15px rgba(0, 0, 0, 0.9);
 	background-color: rgba(160, 160, 160, 0.4);
 	border: 1px solid black;
@@ -785,11 +744,7 @@ input.CTAT--correct[type="radio"] {
 	margin: 0px;
 }
 .css3-windows-7 .fenster .inhalt {
-	-moz-border-radius: 1px;
-	-webkit-border-radius: 1px;
 	border-radius: 1px;
-	-moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.65);
-	-webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.65);
 	box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.65);
 	background-color: white;
 	border: 1px solid #666666;
@@ -832,19 +787,8 @@ input.CTAT--correct[type="radio"] {
 .ui-resizable-ne { cursor: ne-resize; right: 0; top: 0; }
 
 .scrimButton {
-	-moz-box-shadow: inset 0px 1px 0px 0px white;
-	-webkit-box-shadow: inset 0px 1px 0px 0px white;
 	box-shadow: inset 0px 1px 0px 0px white;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #F9F9F9), color-stop(1, #E9E9E9));
-	background: -moz-linear-gradient(top, #F9F9F9 5%, #E9E9E9 100%);
-	background: -webkit-linear-gradient(top, #F9F9F9 5%, #E9E9E9 100%);
-	background: -o-linear-gradient(top, #F9F9F9 5%, #E9E9E9 100%);
-	background: -ms-linear-gradient(top, #F9F9F9 5%, #E9E9E9 100%);
 	background: linear-gradient(to bottom, #F9F9F9 5%, #E9E9E9 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9F9F9', endColorstr='#E9E9E9', GradientType=0);
-	background-color: #F9F9F9;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
 	border-radius: 6px;
 	border: 1px solid #000000;
 	display: inline-block;
@@ -859,14 +803,7 @@ input.CTAT--correct[type="radio"] {
 	text-shadow: 0px 1px 0px white;
 }
 .scrimButton:hover {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #E9E9E9), color-stop(1, #F9F9F9));
-	background: -moz-linear-gradient(top, #E9E9E9 5%, #F9F9F9 100%);
-	background: -webkit-linear-gradient(top, #E9E9E9 5%, #F9F9F9 100%);
-	background: -o-linear-gradient(top, #E9E9E9 5%, #F9F9F9 100%);
-	background: -ms-linear-gradient(top, #E9E9E9 5%, #F9F9F9 100%);
 	background: linear-gradient(to bottom, #E9E9E9 5%, #F9F9F9 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E9E9E9', endColorstr='#F9F9F9', GradientType=0);
-	background-color: #E9E9E9;
 }
 .scrimButton:active {
 	position: relative;

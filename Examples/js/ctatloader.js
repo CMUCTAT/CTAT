@@ -1,8 +1,8 @@
 /**-----------------------------------------------------------------------------
- $Author: vvelsen $
- $Date: 2016-06-03 10:14:55 -0400 (Fri, 03 Jun 2016) $
- $HeadURL: svn://pact-cvs.pact.cs.cmu.edu/usr5/local/svnroot/AuthoringTools/trunk/HTML5/ctatloader.js $
- $Revision: 23631 $
+ $Author: mringenb $
+ $Date: 2016-06-30 12:08:56 -0400 (Thu, 30 Jun 2016) $
+ $HeadURL: svn://sewall@pact-cvs.pact.cs.cmu.edu/usr5/local/svnroot/AuthoringTools/trunk/HTML5/ctatloader.js $
+ $Revision: 23802 $
 
  -
  License:
@@ -231,7 +231,7 @@ function loadCTAT ()
 	{
 		console.log ('(CTATTarget=="Default")');
 	
-		useDebugging=true;
+		//useDebugging=true;
 
 		// CTATConfiguration.set('tutoring_service_communication', 'javascript');
 
@@ -629,7 +629,7 @@ else
  */
 if (window.jQuery) 
 {
-	$(window).load(function() 
+	$(window).on('load', function() 
 	{
 		console.log ("$(window).load("+CTATTarget+")");
 
