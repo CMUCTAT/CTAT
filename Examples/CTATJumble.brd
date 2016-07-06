@@ -10,6 +10,38 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>61e87bd3-a82e-3ebb-30f5-5d89382d013e</transaction_id>
+                <Selection>
+                    <value>jumble1</value>
+                </Selection>
+                <Action>
+                    <value>SetOrder</value>
+                </Action>
+                <Input>
+                    <value>jumble1b;jumble1a;jumble1c</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>f8ec281a-f57b-e131-3f83-516d5bb32359</transaction_id>
+                <Selection>
+                    <value>jumble1_submit</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>Submit</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,15 +52,15 @@
         <text>CTATJumble</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>606</x>
-            <y>30</y>
+            <x>117</x>
+            <y>29</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>646</x>
+            <x>127</x>
             <y>140</y>
         </dimension>
     </node>
@@ -36,7 +68,7 @@
         <text>Done</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>646</x>
+            <x>128</x>
             <y>250</y>
         </dimension>
     </node>

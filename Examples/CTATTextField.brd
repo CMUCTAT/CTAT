@@ -10,6 +10,38 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>88e0daef-5cf9-be96-1daa-cf8e41fe3ea2</transaction_id>
+                <Selection>
+                    <value>tutor_text</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextArea</value>
+                </Action>
+                <Input>
+                    <value>&lt;em&gt;Click the button&lt;/em&gt; to have the tutor change this message.</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>6b2c4d3e-cde3-8a6e-8344-5410fa0b89f1</transaction_id>
+                <Selection>
+                    <value>button</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>Tutor, are you there?</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,32 +52,32 @@
         <text>CTATTextField</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>309</x>
-            <y>30</y>
+            <x>97</x>
+            <y>31</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>140</y>
+            <x>130</x>
+            <y>141</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>250</y>
+            <x>130</x>
+            <y>251</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>4</uniqueID>
         <dimension>
-            <x>370</x>
-            <y>378</y>
+            <x>136</x>
+            <y>376</y>
         </dimension>
     </node>
     <edge>

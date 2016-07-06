@@ -20,48 +20,48 @@
         <text>CTATSubmitButton</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>291</x>
-            <y>30</y>
+            <x>69</x>
+            <y>29</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>140</y>
+            <x>120</x>
+            <y>139</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>250</y>
+            <x>120</x>
+            <y>249</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state3</text>
         <uniqueID>4</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>360</y>
+            <x>120</x>
+            <y>359</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state4</text>
         <uniqueID>5</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>470</y>
+            <x>120</x>
+            <y>469</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>6</uniqueID>
         <dimension>
-            <x>346</x>
-            <y>580</y>
+            <x>124</x>
+            <y>579</y>
         </dimension>
     </node>
     <edge>

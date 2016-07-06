@@ -10,6 +10,38 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>2b22b39c-7e73-1e2d-09a6-918a65571044</transaction_id>
+                <Selection>
+                    <value>combo2</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>----,oui,non</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>aa31f28f-d31f-2fd9-a070-2ec017eab1f9</transaction_id>
+                <Selection>
+                    <value>combo3</value>
+                </Selection>
+                <Action>
+                    <value>setLabels</value>
+                </Action>
+                <Input>
+                    <value>oui;non</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,40 +52,40 @@
         <text>CTATComboBox</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>323</x>
-            <y>30</y>
+            <x>108</x>
+            <y>29</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>361</x>
-            <y>140</y>
+            <x>146</x>
+            <y>139</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>361</x>
-            <y>250</y>
+            <x>146</x>
+            <y>249</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state3</text>
         <uniqueID>4</uniqueID>
         <dimension>
-            <x>361</x>
-            <y>360</y>
+            <x>146</x>
+            <y>359</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>5</uniqueID>
         <dimension>
-            <x>365</x>
-            <y>470</y>
+            <x>150</x>
+            <y>469</y>
         </dimension>
     </node>
     <edge>

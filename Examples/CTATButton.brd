@@ -10,6 +10,38 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>ac551868-9ace-ed53-dc2c-0d6fba317b8f</transaction_id>
+                <Selection>
+                    <value>button1</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>Click</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>b1574d1c-ca99-b7e6-c99e-ddcff97f8191</transaction_id>
+                <Selection>
+                    <value>button2</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>&lt;img src="skindata/CTAT-icon.svg"&gt;</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>

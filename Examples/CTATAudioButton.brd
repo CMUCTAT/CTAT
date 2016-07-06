@@ -6,7 +6,39 @@
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartProblem</MessageType>
-                <ProblemName>CTATTextInput</ProblemName>
+                <ProblemName>CTATAudioButton</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>c397bd77-615b-066f-1a45-d77b1d6c0e50</transaction_id>
+                <Selection>
+                    <value>button1</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>Listen</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>32548f09-7b16-350f-25ab-6874f077f300</transaction_id>
+                <Selection>
+                    <value>button1</value>
+                </Selection>
+                <Action>
+                    <value>setSource</value>
+                </Action>
+                <Input>
+                    <value>https://drive.google.com/uc?export=view&amp;id=0BwGsdDsj8yYcTXZFc2hHZUx5VW8</value>
+                </Input>
             </properties>
         </message>
         <message>
@@ -17,27 +49,19 @@
         </message>
     </startNodeMessages>
     <node locked="false" doneState="false">
-        <text>CTATTextInput</text>
+        <text>CTATAudioButton</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>88</x>
-            <y>27</y>
-        </dimension>
-    </node>
-    <node locked="false" doneState="false">
-        <text>state1</text>
-        <uniqueID>2</uniqueID>
-        <dimension>
-            <x>122</x>
-            <y>137</y>
+            <x>106</x>
+            <y>30</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
-        <uniqueID>3</uniqueID>
+        <uniqueID>2</uniqueID>
         <dimension>
-            <x>126</x>
-            <y>247</y>
+            <x>156</x>
+            <y>140</y>
         </dimension>
     </node>
     <edge>
@@ -50,67 +74,7 @@
                 <verb>NotePropertySet</verb>
                 <properties>
                     <MessageType>InterfaceAction</MessageType>
-                    <transaction_id>f153a81c-7db3-39b4-4e9e-d4b0092f9c9b</transaction_id>
-                    <Selection>
-                        <value>input</value>
-                    </Selection>
-                    <Action>
-                        <value>UpdateTextField</value>
-                    </Action>
-                    <Input>
-                        <value>1</value>
-                    </Input>
-                </properties>
-            </message>
-            <buggyMessage>No, this is not correct.</buggyMessage>
-            <successMessage></successMessage>
-            <hintMessage>Please enter '1' in the highlighted field.</hintMessage>
-            <callbackFn></callbackFn>
-            <actionType>Correct Action</actionType>
-            <oldActionType>Correct Action</oldActionType>
-            <checkedStatus>Never Checked</checkedStatus>
-            <matchers Concatenation="true">
-                <Selection>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">input</matcherParameter>
-                    </matcher>
-                </Selection>
-                <Action>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">UpdateTextField</matcherParameter>
-                    </matcher>
-                </Action>
-                <Input>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">1</matcherParameter>
-                    </matcher>
-                </Input>
-                <Actor linkTriggered="false">Student</Actor>
-            </matchers>
-        </actionLabel>
-        <preCheckedStatus>No-Applicable</preCheckedStatus>
-        <rule>
-            <text>unnamed</text>
-            <indicator>-1</indicator>
-        </rule>
-        <sourceID>1</sourceID>
-        <destID>2</destID>
-        <traversalCount>0</traversalCount>
-    </edge>
-    <edge>
-        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
-            <studentHintRequest></studentHintRequest>
-            <stepSuccessfulCompletion></stepSuccessfulCompletion>
-            <stepStudentError></stepStudentError>
-            <uniqueID>3</uniqueID>
-            <message>
-                <verb>NotePropertySet</verb>
-                <properties>
-                    <MessageType>InterfaceAction</MessageType>
-                    <transaction_id>c53f294d-e1e4-b6b8-d210-c62376bc2696</transaction_id>
+                    <transaction_id>2122a46a-c002-19e7-9d30-74d2823606dc</transaction_id>
                     <Selection>
                         <value>done</value>
                     </Selection>
@@ -124,7 +88,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <hintMessage>The CTATAudioButton here is untutored. Click on the highlighted button when you are done playing with the CTATAudioButton.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -156,8 +120,8 @@
             <text>unnamed</text>
             <indicator>-1</indicator>
         </rule>
-        <sourceID>2</sourceID>
-        <destID>3</destID>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
         <traversalCount>0</traversalCount>
     </edge>
     <EdgesGroups ordered="true"></EdgesGroups>

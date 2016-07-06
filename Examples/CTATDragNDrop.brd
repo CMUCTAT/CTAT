@@ -10,6 +10,38 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>962d2f46-7620-81f4-1a7b-29c8c1363af7</transaction_id>
+                <Selection>
+                    <value>source</value>
+                </Selection>
+                <Action>
+                    <value>SetChildren</value>
+                </Action>
+                <Input>
+                    <value>dndcircle;dndimg;dndtext;dndtri</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>f1c596cb-f050-3f7f-9276-bb837cee1a45</transaction_id>
+                <Selection>
+                    <value>submit</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>Submit</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -140,7 +172,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'dndtext' in the highlighted element.</hintMessage>
+            <hintMessage>Please move "Square" to the highlighted element.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -200,7 +232,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'dndtri' in the highlighted element.</hintMessage>
+            <hintMessage>Please move 'triangle' to the highlighted element.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>

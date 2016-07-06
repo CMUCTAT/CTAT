@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
+<!--<script src="js/ctat.min.js"></script>-->
 <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
 <script>
 function ctatOnload() {
@@ -22,6 +23,16 @@ function ctatOnload() {
   .small_button { font-size:10px; }
   .CTAT-numeric-stepper::-webkit-inner-spin-button,
   .CTAT-numeric-stepper::-webkit-outer-spin-button { opacity: 1; }
+  #hint-box {
+    position:fixed;
+    bottom:10px;
+    background-color: cornsilk;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    margin: 0 auto;
+  }
 </style>
 </head>
 <body>
@@ -50,12 +61,15 @@ function ctatOnload() {
     <div>
       <div class="ctat_example">
 	Setting minimum and maximum values:
-	<div id="numberLineMinMax" class="CTATNumberLine" data-ctat-minimum="-2" data-ctat-maximum="2"></div>
+        <div id="numberLineMinMax" class="CTATNumberLine"
+	  data-ctat-minimum="-2" data-ctat-maximum="2"
+	  data-ctat-enabled="false"></div>
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLineMinMax" class="CTATNumberLine"
      data-ctat-minimum="-2"
-     data-ctat-maximum="2"&gt;
+     data-ctat-maximum="2"
+     data-ctat-enabled="false"&gt;
 &lt;/div&gt;
 	</pre>
       </div>
@@ -65,12 +79,14 @@ function ctatOnload() {
       <div class="ctat_example">
 	Setting step values:
 	<div id="numberLineStep" class="CTATNumberLine"
-	     data-ctat-minimum="0" data-ctat-maximum="1"
-	     data-ctat-large-tick-step="0.4"
-	     data-ctat-small-tick-step="1/3"></div>
+	  data-ctat-minimum="0" data-ctat-maximum="1"
+	  data-ctat-enabled="false"
+	  data-ctat-large-tick-step="0.4"
+	  data-ctat-small-tick-step="1/3"></div>
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLineStep" class="CTATNumberLine"
+     data-ctat-enabled="false"
      data-ctat-minimum="0"
      data-ctat-maximum="1"
      data-ctat-large-tick-step="0.4"
@@ -85,14 +101,16 @@ function ctatOnload() {
     <div>
       <div class="ctat_example">
 	Setting denominator:
-	<div id="numberLineDenom" class="CTATNumberLine"
-	     data-ctat-minimum="0" data-ctat-maximum="1"
-	     data-ctat-large-tick-step="0"
-	     data-ctat-small-tick-step="1"
-	     data-ctat-denominator="4"></div>
+        <div id="numberLineDenom" class="CTATNumberLine"
+	  data-ctat-enabled="false"
+	  data-ctat-minimum="0" data-ctat-maximum="1"
+	  data-ctat-large-tick-step="0"
+	  data-ctat-small-tick-step="1"
+	  data-ctat-denominator="4"></div>
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLineDenom" class="CTATNumberLine"
+     data-ctat-enabled="false"
      data-ctat-minimum="0"
      data-ctat-maximum="1"
      data-ctat-large-tick-step="0"
@@ -111,10 +129,11 @@ function ctatOnload() {
       <div class="ctat_example">
 	Setting point size:
 	<div id="numberLinePoint" class="CTATNumberLine"
-	     data-ctat-minimum="0" data-ctat-maximum="1"
-	     data-ctat-large-tick-step="0"
-	     data-ctat-small-tick-step="1"
-	     data-ctat-point-size="12"></div>
+	  data-ctat-minimum="0" data-ctat-maximum="1"
+	  data-ctat-large-tick-step="0"
+	  data-ctat-small-tick-step="1"
+	  data-ctat-tutor="false"
+	  data-ctat-point-size="12"></div>
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLinePoint" class="CTATNumberLine"
@@ -122,6 +141,7 @@ function ctatOnload() {
      data-ctat-maximum="1"
      data-ctat-large-tick-step="0"
      data-ctat-small-tick-step="1"
+     data-ctat-tutor="false"
      data-ctat-point-size="12"&gt;
 &lt;/div&gt;
 	</pre>
@@ -155,11 +175,14 @@ function ctatOnload() {
     <div>
       <div class="ctat_example">
 	Setting rotation:
-	<div id="numberLineRot" class="CTATNumberLine" style="width:180px;height:200px" 
-	     data-ctat-rotation="60"></div>
+        <div id="numberLineRot" class="CTATNumberLine"
+	  style="width:180px;height:200px"
+	  data-ctat-tutor="false"
+	  data-ctat-rotation="60"></div>
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLineRot" class="CTATNumberLine"
+     data-ctat-tutor="false"
      data-ctat-rotation="60"&gt;
 &lt;/div&gt;
 	</pre>
@@ -201,7 +224,8 @@ function ctatOnload() {
     <div>
       <div class="ctat_example">
 	Controlling tick marks:
-	<div id="numberLineCTick" class="CTATNumberLine"
+        <div id="numberLineCTick" class="CTATNumberLine"
+	     data-ctat-tutor="false" data-ctat-enabled="false"
 	     data-ctat-minimum="0"
 	     data-ctat-maximum="3"
 	     data-ctat-large-tick-step="1"
@@ -222,6 +246,8 @@ function ctatOnload() {
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLineRot" class="CTATNumberLine"
+     data-ctat-tutor="false"
+     data-ctat-enabled="false"
      data-ctat-minimum="0"
      data-ctat-maximum="3"
      data-ctat-large-tick-step="1"
@@ -251,9 +277,10 @@ function ctatOnload() {
       </div>
     </div>
 
+    <div style="height:200px;"></div>
     <div id="hint-box">
       <div id="HintWindow" class="CTATHintWindow"></div>
-      <div style="display:inline-block;float: right;">
+      <div>
 	<div id="hint-button" class="CTATHintButton"></div>
 	<div id="done-button" class="CTATDoneButton"></div>
       </div>

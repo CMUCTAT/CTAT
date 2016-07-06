@@ -72,7 +72,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'yes: true;no: false' in the highlighted element.</hintMessage>
+            <hintMessage>Please check 'yes' and make sure 'no' is not checked in the highlighted elements.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -132,7 +132,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'yes: true;no: false' in the highlighted element.</hintMessage>
+            <hintMessage>Please check 'yes' and make sure 'no' is not checked in the highlighted elements.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
