@@ -2,17 +2,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CTATCheckBox Example</title>
+<title>CTATNumericStepper Example</title>
 
 <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.min.css"/>
 <link rel="stylesheet" href="css/ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
 <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
 <script>
-  function ctatOnload () {
-    initTutor({"question_file":'CTATCheckBox.brd'});
-  };
+function ctatOnload() {
+      initTutor({"question_file":'CTATNumericStepper.brd'});
+};
 </script>
 <style type="text/css">
 </style>
@@ -24,50 +25,40 @@
 	   alt="CTAT: Cognitive Tutor Authoring Tools"
 	   src="skindata/CTAT_Banner.svg">
     </a>
-    <h1>CTATCheckBox Example</h1>
-    <p>A simple check box example.</p>
+    <h1>CTATNumericStepper Example</h1>
+    <p>A simple numeric stepper example.</p>
     <div>
       <div class="ctat_example">
-	Select only "yes":
-	<div id="check1" class="CTATCheckBox" name="checkGroup">yes</div>
-	<div id="check2" class="CTATCheckBox" name="checkGroup">no</div>
+	Enter the number 5:
+	<div id="stepper" class="CTATNumericStepper" value="0" min="0" max="10" step="1"></div>
       </div>
       <div class="ctat_code">
 	<pre>
-&lt;div id="check1" class="CTATCheckBox"
-     name="checkGroup"&gt;yes&lt;/div&gt;
-&lt;div id="check2" class="CTATCheckBox"
-     name="checkGroup"&gt;no&lt;/div&gt;
+&lt;div id="stepper" class="CTATNumericStepper"
+     value="0" min="0" max="10"&gt;
+&lt;/div&gt;
 	</pre>
       </div>
     </div>
+    <p>Though, using it with a CTATSubmitButton is advised.
     <div>
       <div class="ctat_example">
-	<p>Select only "yes" and click Submit:</p>
-	<div style="display:flex; justify-content: space-between;">
-	<div id="checkA" class="CTATCheckBox" name="submitGroup"
-	     data-ctat-tutor="false">yes</div>
-	<div id="checkB" class="CTATCheckBox" name="submitGroup"
-	     data-ctat-tutor="false">no</div>
-	<div id="submit" class="CTATSubmitButton"
-	     data-ctat-target="submitGroup">Submit</div>
-	</div>
+	Enter the number 5:<br/>
+	<div id="stepper1" class="CTATNumericStepper" value="0" min="0" max="10" step="1" data-ctat-tutor="false"></div><br/>
+	<div id="submit" class="CTATSubmitButton" data-ctat-target="stepper1">Submit</div>
       </div>
       <div class="ctat_code">
 	<pre>
-&lt;div id="checkA" class="CTATCheckBox"
-     data-ctat-tutor="false"
-     name="checkGroup"&gt;yes&lt;/div&gt;
-&lt;div id="checkB" class="CTATCheckBox"
-     data-ctat-tutor="false"
-     name="checkGroup"&gt;no&lt;/div&gt;
+&lt;div id="steppers" class="CTATNumericStepper"
+     value="0" min="0" max="10"&gt;
+&lt;/div&gt;
 &lt;div id="submit" class="CTATSubmitButton"
-     data-ctat-target="submitGroup"&gt;Submit&lt;/div&gt;
+    data-ctat-target="stepper1"&gt;Submit&lt;/div&gt;
 	</pre>
       </div>
     </div>
 
-    <div id="hint-box">
+    <div id="hint-box" style="margin:3px;text-align:right;">
       <div id="HintWindow" class="CTATHintWindow"></div>
       <div style="float: right;">
 	<div id="hint-button" class="CTATHintButton"></div>

@@ -2,20 +2,30 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CTATAudioButton Example</title>
+<title>CTATTextField Example</title>
 
 <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.min.css"/>
 <link rel="stylesheet" href="css/ctat_example.css"/>
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
 <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
 <script>
-  $(function() {
-      initTutor({"question_file":'CTATButton.brd'});
-  });
+function ctatOnload() {
+    initTutor({"question_file":'CTATTextField.brd'});
+    $('#tutor_text').on('CTAT_EXECUTE_SAI', function(e) {
+    	MathJax.Hub.Queue(['Typeset',MathJax.Hub,$('#tutor_text')[0]]);
+    });
+};
 </script>
 <style type="text/css">
+#tutor_text {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px;
+  width: 200px;
+}
 </style>
 </head>
 <body>
@@ -25,21 +35,17 @@
 	   alt="CTAT: Cognitive Tutor Authoring Tools"
 	   src="skindata/CTAT_Banner.svg">
     </a>
-    <h1>CTATAudioButton Example</h1>
-    <p>A simple audio button example.</p>
+    <h1>CTATTextField Example</h1>
+    <p>A simple text field example. Generally, CTATTextFields are designed to
+      display html from the tutoring service and is not generally meant to be
+      student editable.</p>
     <div>
       <div class="ctat_example">
-	Click this button:
-	<div id="button1" class="CTATAudioButton"
-	     data-ctat-tutor="false"
-	     data-ctat-src="https://drive.google.com/uc?export=view&id=0BwGsdDsj8yYcTXZFc2hHZUx5VW8">Listen</div>
+	<div id="tutor_text" class="CTATTextField"><em>Click the button</em> to have the tutor change this message.</div>
+	<div id="button" class="CTATButton" data-ctat-show-feedback="false">Tutor, are you there?</div>
       </div>
       <div class="ctat_code">
-	<pre>
-&lt;div id="button1" class="CTATAudioButton"
-    data-ctat-tutor="false"
-    data-ctat-src="audio.mp3"&gt;
-Listen&lt;/div&gt;</pre>
+	<pre>&lt;div id="tutor_text" class="CTATTextField"&gt;&lt;/div&gt;</pre>
       </div>
     </div>
 

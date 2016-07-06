@@ -4,16 +4,15 @@
 <meta charset="UTF-8">
 <title>CTATNumberLine Examples</title>
 
-<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.min.css"/>
 <link rel="stylesheet" href="css/ctat_example.css"/>
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
-<!--<script src="http://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>-->
-<script src="js/ctat.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
 <script>
-  $(function() {
+function ctatOnload() {
       initTutor({"question_file":'CTATNumberLine.brd'});
-  });
+};
 </script>
 <style type="text/css">
   div.tutor_window { width: 800px; }
@@ -244,8 +243,6 @@
 	<div id="numberLineNumPoints" class="CTATNumberLine"
 	     data-ctat-max-points="3"
 	     data-ctat-snap="true"></div>
-	<!-- <div id="nlnp_submit" class="CTATSubmitButton"
-	     data-ctat-target="numberLineNumPoints"></div> -->
       </div>
       <div class="ctat_code">
 	<pre>&lt;div id="numberLineNumPoints" class="CTATNumberLine"

@@ -6,7 +6,7 @@
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartProblem</MessageType>
-                <ProblemName>CTATNumberLine</ProblemName>
+                <ProblemName>CTATSubmitButton</ProblemName>
             </properties>
         </message>
         <message>
@@ -17,43 +17,51 @@
         </message>
     </startNodeMessages>
     <node locked="false" doneState="false">
-        <text>CTATNumberLine</text>
+        <text>CTATSubmitButton</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>233</x>
-            <y>34</y>
+            <x>291</x>
+            <y>30</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>133</x>
-            <y>144</y>
+            <x>342</x>
+            <y>140</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>138</x>
-            <y>277</y>
+            <x>342</x>
+            <y>250</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state3</text>
         <uniqueID>4</uniqueID>
         <dimension>
-            <x>135</x>
-            <y>402</y>
+            <x>342</x>
+            <y>360</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state4</text>
         <uniqueID>5</uniqueID>
         <dimension>
-            <x>394</x>
-            <y>138</y>
+            <x>342</x>
+            <y>470</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>346</x>
+            <y>580</y>
         </dimension>
     </node>
     <edge>
@@ -61,26 +69,27 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>4</uniqueID>
+            <uniqueID>1</uniqueID>
             <message>
-                <verb>SendNoteProperty</verb>
+                <verb>NotePropertySet</verb>
                 <properties>
-                    <MessageType>CorrectAction</MessageType>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>13599c7d-ce2d-1467-9a38-f6d9326c5d11</transaction_id>
                     <Selection>
-                        <value>numberLineNumPoints</value>
+                        <value>submitGroup</value>
                     </Selection>
                     <Action>
-                        <value>AddPoint</value>
+                        <value>UpdateCheckBox</value>
                     </Action>
                     <Input>
-                        <value>2</value>
+                        <value>yes: true;oui: true;no: false</value>
                     </Input>
-                    <transaction_id>Ta3a1c6bb-f3d9-47eb-a580-b0d8d8bf23a7</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <hintMessage>Select the positive words.</hintMessage>
+            <hintMessage>Please select "yes" and "oui" in the highlighted element.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -89,19 +98,80 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
+                        <matcherParameter name="single">submitGroup</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">AddPoint</matcherParameter>
+                        <matcherParameter name="single">UpdateCheckBox</matcherParameter>
                     </matcher>
                 </Action>
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">2</matcherParameter>
+                        <matcherParameter name="single">yes: true;oui: true;no: false</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>9f9c5bc2-197a-8f3f-4333-0ef77c1fd091</transaction_id>
+                    <Selection>
+                        <value>pie</value>
+                    </Selection>
+                    <Action>
+                        <value>SetPieces</value>
+                    </Action>
+                    <Input>
+                        <value>1/2+(0*1/4)+(0*1/8)</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Make 1/2 in the highlighted element.</hintMessage>
+            <hintMessage>Please click on wedges until only the 1/2 is selected in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">pie</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">SetPieces</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">1/2+(0*1/4)+(0*1/8)</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -121,26 +191,27 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>6</uniqueID>
+            <uniqueID>5</uniqueID>
             <message>
-                <verb>SendNoteProperty</verb>
+                <verb>NotePropertySet</verb>
                 <properties>
-                    <MessageType>CorrectAction</MessageType>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>abb1fbb9-9739-714e-3433-346a53f22749</transaction_id>
                     <Selection>
-                        <value>numberLineNumPoints</value>
+                        <value>bar</value>
                     </Selection>
                     <Action>
-                        <value>AddPoint</value>
+                        <value>SetPieces</value>
                     </Action>
                     <Input>
-                        <value>3</value>
+                        <value>1/2+(0*1/4)+(0*1/8)</value>
                     </Input>
-                    <transaction_id>Ta3a1c6bb-f3d9-47eb-a580-b0d8d8bf23a7</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <hintMessage>Make 1/2 in the highlighted element.</hintMessage>
+            <hintMessage>Please click on the pieces until only the 1/2 is selected in the highlighted element.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -149,19 +220,19 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
+                        <matcherParameter name="single">bar</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">AddPoint</matcherParameter>
+                        <matcherParameter name="single">SetPieces</matcherParameter>
                     </matcher>
                 </Action>
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">3</matcherParameter>
+                        <matcherParameter name="single">1/2+(0*1/4)+(0*1/8)</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -181,26 +252,28 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>10</uniqueID>
+            <uniqueID>7</uniqueID>
             <message>
-                <verb>SendNoteProperty</verb>
+                <verb>NotePropertySet</verb>
                 <properties>
-                    <MessageType>CorrectAction</MessageType>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>3012e7a3-1271-3cad-ee88-b30cf66b5343</transaction_id>
                     <Selection>
-                        <value>numberLineNumPoints</value>
+                        <value>line</value>
                     </Selection>
                     <Action>
-                        <value>Points</value>
+                        <value>set_denominator</value>
                     </Action>
                     <Input>
-                        <value>1;2;3</value>
+                        <value>4</value>
                     </Input>
-                    <transaction_id>Ta3a1c6bb-f3d9-47eb-a580-b0d8d8bf23a7</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <hintMessage>Use the number stepper to make ticks at 1/4 intervals.</hintMessage>
+            <hintMessage>The denominator should be 4.</hintMessage>
+            <hintMessage>Please provide your answer 4 in the highlighted element.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -209,19 +282,19 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
+                        <matcherParameter name="single">line</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">Points</matcherParameter>
+                        <matcherParameter name="single">set_denominator</matcherParameter>
                     </matcher>
                 </Action>
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">1;2;3</matcherParameter>
+                        <matcherParameter name="single">4</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -232,35 +305,35 @@
             <text>unnamed</text>
             <indicator>-1</indicator>
         </rule>
-        <sourceID>1</sourceID>
+        <sourceID>4</sourceID>
         <destID>5</destID>
         <traversalCount>0</traversalCount>
     </edge>
     <edge>
-        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>1</uniqueID>
+            <uniqueID>9</uniqueID>
             <message>
-                <verb>SendNoteProperty</verb>
+                <verb>NotePropertySet</verb>
                 <properties>
-                    <MessageType>CorrectAction</MessageType>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>265dca42-c9e4-1779-3914-aaf91b622917</transaction_id>
                     <Selection>
-                        <value>numberLineNumPoints</value>
+                        <value>done</value>
                     </Selection>
                     <Action>
-                        <value>AddPoint</value>
+                        <value>ButtonPressed</value>
                     </Action>
                     <Input>
-                        <value>1</value>
+                        <value>-1</value>
                     </Input>
-                    <transaction_id>Ta3a1c6bb-f3d9-47eb-a580-b0d8d8bf23a7</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <hintMessage>Please click on the highlighted button.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -269,19 +342,19 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
+                        <matcherParameter name="single">done</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">AddPoint</matcherParameter>
+                        <matcherParameter name="single">ButtonPressed</matcherParameter>
                     </matcher>
                 </Action>
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">1</matcherParameter>
+                        <matcherParameter name="single">-1</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -292,8 +365,8 @@
             <text>unnamed</text>
             <indicator>-1</indicator>
         </rule>
-        <sourceID>1</sourceID>
-        <destID>2</destID>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
         <traversalCount>0</traversalCount>
     </edge>
     <EdgesGroups ordered="true"></EdgesGroups>

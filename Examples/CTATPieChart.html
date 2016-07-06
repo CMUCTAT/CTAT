@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <title>CTATPieChart Example</title>
 
-<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.min.css"/>
 <link rel="stylesheet" href="css/ctat_example.css"/>
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
-<script src="js/ctat.min.js"></script>
-<script src="js/ctatloader.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
 <script>
 function ctatOnload() {
     initTutor({"question_file":'CTATPieChart.brd'});
@@ -42,8 +42,7 @@ function ctatOnload() {
 	   src="skindata/CTAT_Banner.svg">
     </a>
     <h1>CTATPieChart Example</h1>
-    <p>A simple CTATPieChart example for showing some basic functionality.
-      Use the submit button to submit the fraction bar for grading.</p>
+    <p>A simple CTATPieChart example for showing some basic functionality.</p>
     <div>
       <div class="ctat_example" style="max-width:45%;">
 	Click on the pieced until only 1/2 is selected.
@@ -92,10 +91,10 @@ function ctatOnload() {
       <div class="ctat_code">
 	<pre>
 &lt;div id="piechart2" class="CTATPieChart"
-     data-ctat-tutor="false"
-     data-ctat-ctrl-denominator="den_inc;den_dec"
-     data-ctat-ctrl-partition="part_inc;part_dec"
-     data-ctat-ctrl-numerator="num_inc;num_dec"&gt;
+   data-ctat-tutor="false"
+   data-ctat-ctrl-denominator="den_inc;den_dec"
+   data-ctat-ctrl-partition="part_inc;part_dec"
+   data-ctat-ctrl-numerator="num_inc;num_dec"&gt;
 &lt;/div&gt;
 	</pre>
       </div>
