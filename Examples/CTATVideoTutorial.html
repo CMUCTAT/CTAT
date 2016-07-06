@@ -1,0 +1,51 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/CTAT.css">
+	
+<style>
+html,body { width: 100%; height: 100%; margin: 0px; padding: 0px; }
+</style>
+	
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
+	
+<script>
+	useDebugging=true;
+
+	var myVars = 
+	{
+		question_file: "CTATVideoTutorial.brd"
+	}; 
+
+	function ctatOnload ()
+	{
+		initTutor(myVars);
+	}
+</script>
+</head>
+<body>
+
+<div id="container" style="display: table; width:640; height:550px; border: 1px solid black; border-spacing: 2px;">
+    <div style="display: table-row; height:100%;">
+		<div id="videoplayer" class="CTATVideo" data-ctat-controls="true" data-ctat-autoplay="false" src="CTAT_HTML_Wizard_01.mp4" style="width: 620px; height: 500px; border: 1px solid black;"> 
+		</div>
+    </div>
+    <div style="display: table-row; height: 125px;">
+      <div style="display: table-cell; border: 0px solid black; vertical-align: middle;">
+        <div id="HintWindow" class="CTATHintWindow" style="width: 100%; height: 100%"></div>    
+      </div>
+      <div style="display: table-cell; width: 60px;">
+        <div style="border: 0px solid black; margin-bottom: 2px;">
+            <div id="hint-button" class="CTATHintButton"></div>
+        </div>
+        <div style="border: 0px solid black;">
+            <div id="done-button" class="CTATDoneButton"></div> 
+        </div>
+      </div>
+    </div> 
+</div>
+
+</body>
+</html>

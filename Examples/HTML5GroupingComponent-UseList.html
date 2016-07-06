@@ -1,0 +1,90 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="css/CTAT.css"/>
+<link rel="stylesheet" href="css/ctat_example.css"/>
+	
+<style>
+html,body { width: 100%; height: 100%; margin: 0px; padding: 0px; }
+
+.group
+{
+	position: relative;
+	margin: 2px; 
+	padding: 2px; 
+	background: #cccccc; 
+	width: 100%; 
+	height: 300px;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 3px ridge #000000;
+}
+
+</style>
+	
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/ctat.min.js"></script>
+<script src="js/ctatloader.js"></script>
+	
+<script>
+	useDebugging=true;
+
+	var myVars = 
+	{
+		question_file: "HTML5GroupingComponent.brd",
+		tutoring_service_communication: "javascript"
+	}; 
+
+	function ctatOnload ()
+	{
+		initTutor(myVars);
+	}
+</script>
+</head>
+<body>
+
+<div id="container" style="display: table; width:550px; height:450px; border: 1px solid black; border-spacing: 2px;">
+    <div style="display: table-row; height:100%;">
+		<div id="group" class="CTATGroupingComponent" style="width: 0px; height: 0px; display: none;" data-ctat-use-componentlist="true" data-ctat-componentlist="firstNumConv,firstDenConv,secNumConv,secDenConv">		
+		</div>
+		
+		<div id="givenFractions">
+		   <div id="firstNumGiven" class="CTATTextArea" style="position: absolute; left: 40px; top: 10px; z-index: 18; width: 30px; height: 30px;"></div>
+		   <div id="firstDenGiven" class="CTATTextArea" style="position: absolute; left: 40px; top: 50px; z-index: 18; width: 30px; height: 30px;"></div>
+		   <div id="secNumGiven" class="CTATTextArea" style="position: absolute; left: 40px; top: 110px; z-index: 18; width: 30px; height: 30px;"></div>
+		   <div id="secDenGiven" class="CTATTextArea" style="position: absolute; left: 40px; top: 150px; z-index: 18; width: 30px; height: 30px;"></div>
+		</div>
+
+		<div id="convertedFractions">
+		   <div id="firstNumConv" class="CTATTextArea" style="position: absolute; left: 140px; top: 10px; z-index: 18; width: 30px; height: 30px;"></div>
+		   <div id="firstDenConv" class="CTATTextArea" style="position: absolute; left: 140px; top: 50px; z-index: 18; width: 30px; height: 30px;"></div>
+		   <div id="secNumConv" class="CTATTextArea" style="position: absolute; left: 140px; top: 110px; z-index: 18; width: 30px; height: 30px;"></div>
+		   <div id="secDenConv" class="CTATTextArea" style="position: absolute; left: 140px; top: 150px; z-index: 18; width: 30px; height: 30px;"></div>
+		</div>
+
+		<div id="answerConv">
+		   <div id="ansNum1" class="CTATTextArea" style="position: absolute; left: 140px; top: 210px; z-index: 18; width: 30px; height: 30px;"></div>
+		   <div id="ansDen1" class="CTATTextArea" style="position: absolute; left: 140px; top: 250px; z-index: 18; width: 30px; height: 30px;"></div>
+		</div>   
+
+		<div id="answerFinal">
+		</div>		
+    </div>
+    <div style="display: table-row; height: 125px;">
+      <div style="display: table-cell; border: 0px solid black; vertical-align: middle;">
+        <div id="HintWindow" class="CTATHintWindow" style="width: 100%; height: 100%"></div>    
+      </div>
+      <div style="display: table-cell; width: 60px;">
+        <div style="border: 0px solid black; margin-bottom: 2px;">
+            <div id="hint-button" class="CTATHintButton"></div>
+        </div>
+        <div style="border: 0px solid black;">
+            <div id="done-button" class="CTATDoneButton"></div> 
+        </div>
+      </div>
+    </div> 
+</div>
+
+</body>
+</html>
