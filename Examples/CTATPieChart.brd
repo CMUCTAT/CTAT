@@ -10,6 +10,134 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>cb83bb8c-3e7d-baff-76d6-0a21ac8b7f6d</transaction_id>
+                <Selection>
+                    <value>piechart1</value>
+                </Selection>
+                <Action>
+                    <value>SetPieces</value>
+                </Action>
+                <Input>
+                    <value>1/2+1/4+(0*1/8)</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>2b16af03-36e8-61ac-d915-5a8f16fb6333</transaction_id>
+                <Selection>
+                    <value>piechart2</value>
+                </Selection>
+                <Action>
+                    <value>SetPieces</value>
+                </Action>
+                <Input>
+                    <value>1/2+(0*1/2)</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>5fb69c0e-694b-690d-6728-49a4bdc9298c</transaction_id>
+                <Selection>
+                    <value>den_inc</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>den_inc</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>5122cc2a-92a6-5ad0-d135-d97f86d9c160</transaction_id>
+                <Selection>
+                    <value>den_dec</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>den_dec</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>8c164b18-28e8-ff96-999f-98f2cad711c2</transaction_id>
+                <Selection>
+                    <value>part_inc</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>part_inc</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1959f82e-25a8-a2f1-a1ed-bf8a2872a567</transaction_id>
+                <Selection>
+                    <value>part_dec</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>part_dec</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>f067ab86-62f1-f997-b289-362d3e296fb2</transaction_id>
+                <Selection>
+                    <value>num_inc</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>num_inc</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>0bf44664-db01-88f0-925a-971dc3a69dde</transaction_id>
+                <Selection>
+                    <value>num_dec</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>num_dec</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,24 +148,24 @@
         <text>CTATPieChart</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>319</x>
-            <y>30</y>
+            <x>69</x>
+            <y>27</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>361</x>
-            <y>140</y>
+            <x>111</x>
+            <y>137</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>365</x>
-            <y>250</y>
+            <x>115</x>
+            <y>247</y>
         </dimension>
     </node>
     <edge>
@@ -64,7 +192,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer '1/2+(0*1/4)+(0*1/8)' in the highlighted element.</hintMessage>
+            <hintMessage>Please click on the wedges until only the 1/2 wedge is selected in the highlighted element.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>

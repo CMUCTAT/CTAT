@@ -10,6 +10,38 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>8e0da5e7-3834-6aed-21f9-0afeaebf0bd9</transaction_id>
+                <Selection>
+                    <value>rbutton1</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>yes</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>2818ea06-ad26-8414-7391-188e4ee07785</transaction_id>
+                <Selection>
+                    <value>rbutton2</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>no</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,24 +52,24 @@
         <text>CTATRadioButton</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>192</x>
-            <y>38</y>
+            <x>62</x>
+            <y>35</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>220</x>
-            <y>171</y>
+            <x>90</x>
+            <y>168</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>Done</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>221</x>
-            <y>284</y>
+            <x>91</x>
+            <y>281</y>
         </dimension>
     </node>
     <edge>

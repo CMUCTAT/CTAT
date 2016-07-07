@@ -10,6 +10,22 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>a60f6c19-371a-c73c-3823-42eeada1e066</transaction_id>
+                <Selection>
+                    <value>submit</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>Submit</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,32 +36,32 @@
         <text>CTATTextArea</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>310</x>
-            <y>30</y>
+            <x>52</x>
+            <y>31</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>140</y>
+            <x>84</x>
+            <y>141</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>250</y>
+            <x>84</x>
+            <y>251</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>5</uniqueID>
         <dimension>
-            <x>346</x>
-            <y>360</y>
+            <x>88</x>
+            <y>361</y>
         </dimension>
     </node>
     <edge>
@@ -72,8 +88,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '1
-2' in the highlighted field.</hintMessage>
+            <hintMessage>Please enter '1' in the highlighted field.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -137,11 +152,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please enter '1
-2
-3
-4
-' in the highlighted field.</hintMessage>
+            <hintMessage>Enter anything in the highlighted field. This component uses the 'Any Match' rule on the Input.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>

@@ -10,6 +10,150 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>946eec1f-e2ae-8de9-f3c5-b02c5aea436f</transaction_id>
+                <Selection>
+                    <value>fractionbar1</value>
+                </Selection>
+                <Action>
+                    <value>SetPieces</value>
+                </Action>
+                <Input>
+                    <value>1/2+1/4+(0*1/8)</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>577f836a-6cb3-683d-9105-eb76265dc91c</transaction_id>
+                <Selection>
+                    <value>fractionbar2</value>
+                </Selection>
+                <Action>
+                    <value>SetPieces</value>
+                </Action>
+                <Input>
+                    <value>1/2+(0*1/2)</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>77b17547-3d4e-e4f0-50cd-1dbf1ab5823e</transaction_id>
+                <Selection>
+                    <value>den_inc</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>den_inc</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>2d94b1d2-a5dc-c5a8-b396-60d8ace4ab38</transaction_id>
+                <Selection>
+                    <value>den_dec</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>den_dec</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>928bdc3f-9c43-ace5-9dda-7656ab4d5270</transaction_id>
+                <Selection>
+                    <value>part_inc</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>part_inc</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>44865635-f4dd-fa28-105a-f734d15ca06e</transaction_id>
+                <Selection>
+                    <value>part_dec</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>part_dec</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>9a564c14-72ea-5278-0fb0-2015a7c5da81</transaction_id>
+                <Selection>
+                    <value>num_inc</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>num_inc</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>bac4976d-6215-d728-f734-3d29a0cc3242</transaction_id>
+                <Selection>
+                    <value>num_dec</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>num_dec</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>563dca89-c3bf-1e0e-be79-25e2d570c2c3</transaction_id>
+                <Selection>
+                    <value>fractionbar3</value>
+                </Selection>
+                <Action>
+                    <value>SetPieces</value>
+                </Action>
+                <Input>
+                    <value>1/2+1/4+(0*1/8)</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,24 +164,24 @@
         <text>CTATFractionBar</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>319</x>
-            <y>30</y>
+            <x>115</x>
+            <y>28</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>361</x>
-            <y>140</y>
+            <x>157</x>
+            <y>138</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>365</x>
-            <y>250</y>
+            <x>161</x>
+            <y>248</y>
         </dimension>
     </node>
     <edge>
@@ -64,7 +208,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer '1/2+(0*1/4)+(0*1/8)' in the highlighted element.</hintMessage>
+            <hintMessage>Please click on the pieces in the highlighted element until only the 1/2 sized piece is selected as indicated by the darker color.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -124,7 +268,7 @@
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <hintMessage>Please click on the highlighted button when you are done playing with the second fraction bar.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>

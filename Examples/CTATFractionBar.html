@@ -43,11 +43,10 @@ function ctatOnload() {
 	   src="skindata/CTAT_Banner.svg">
     </a>
     <h1>CTATFractionBar Example</h1>
-    <p>A simple CTATFractionBar example for showing some basic functionality.
-      Use the submit button to submit the fraction bar for grading.</p>
+    <p>A simple CTATFractionBar example for showing some basic functionality.</p>
     <div>
       <div class="ctat_example" style="max-width:45%;">
-	Click on the pieced until only 1/2 is selected.
+	Click on the pieces until only 1/2 is selected.
 	<div id="fractionbar1" class="CTATFractionBar">
 	</div>
       </div>
@@ -93,6 +92,7 @@ function ctatOnload() {
       <div class="ctat_code">
 	<pre>
 &lt;div id="fractionbar2" class="CTATFractionBar"
+     data-ctat-value="1/2+(0*1/2)"
      data-ctat-tutor="false"
      data-ctat-ctrl-denominator="den_inc;den_dec"
      data-ctat-ctrl-partition="part_inc;part_dec"
@@ -103,7 +103,7 @@ function ctatOnload() {
     </div><hr/>
     <div>
       <div class="ctat_example" style="max-width:45%;">
-	Showing fraction labels:
+	Fraction labels enabled on a noninteractive fraction bar:
 	<div id="fractionbar3" class="CTATFractionBar"
 	     data-ctat-tutor="false"
 	     data-ctat-enabled="false">
@@ -111,7 +111,9 @@ function ctatOnload() {
       </div>
       <div class="ctat_code">
 	CSS:
-	<pre>#fractionbar3 .CTAT-fraction-bar--label { display: initial; }</pre>
+	<pre>#fractionbar3 .CTAT-fraction-bar--label {
+    display: initial;
+}</pre>
 	HTML:
 	<pre>
 &lt;div id="fractionbar3" class="CTATFractionBar"&gt;

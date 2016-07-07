@@ -10,6 +10,630 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>d8a97878-2c7c-f2b7-6d7a-d7a652c1fe72</transaction_id>
+                <Selection>
+                    <value>nlTick_small</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>1/2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1d68ed67-3f90-afda-a5bd-50ec0f01fcb5</transaction_id>
+                <Selection>
+                    <value>numberLineMinMax</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>-2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>78c49199-89cc-69d3-0b3c-32eb57b8a936</transaction_id>
+                <Selection>
+                    <value>numberLineMinMax</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>e51c0050-357e-d1b5-5cf6-4aaddbb06acb</transaction_id>
+                <Selection>
+                    <value>numberLineStep</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>f36ff9db-c5a1-7199-f518-e50484131eda</transaction_id>
+                <Selection>
+                    <value>numberLineStep</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>39791e46-870b-d922-6df0-19ebd5e8174d</transaction_id>
+                <Selection>
+                    <value>numberLineStep</value>
+                </Selection>
+                <Action>
+                    <value>set_large_step</value>
+                </Action>
+                <Input>
+                    <value>0.4</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7aba5956-f25a-8f59-4904-10ed03c90dfd</transaction_id>
+                <Selection>
+                    <value>numberLineStep</value>
+                </Selection>
+                <Action>
+                    <value>set_small_step</value>
+                </Action>
+                <Input>
+                    <value>1/3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>72db509d-27b7-daa7-247a-9d5b9d25f6e2</transaction_id>
+                <Selection>
+                    <value>numberLineDenom</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>f265a5ac-bcba-8433-d116-a0b0c8c7cb3b</transaction_id>
+                <Selection>
+                    <value>numberLineDenom</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>c4b0d2c2-1128-81ee-eab4-8c7b21f88d36</transaction_id>
+                <Selection>
+                    <value>numberLineDenom</value>
+                </Selection>
+                <Action>
+                    <value>set_large_step</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>ac84ac73-5a8b-5f7a-14e3-ef1f4442f3c9</transaction_id>
+                <Selection>
+                    <value>numberLineDenom</value>
+                </Selection>
+                <Action>
+                    <value>set_small_step</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1f96053a-1045-1824-0817-735d0c274054</transaction_id>
+                <Selection>
+                    <value>numberLineDenom</value>
+                </Selection>
+                <Action>
+                    <value>set_denominator</value>
+                </Action>
+                <Input>
+                    <value>4</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>19043c56-0a8e-0d0c-f718-67bb03343a01</transaction_id>
+                <Selection>
+                    <value>numberLinePoint</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>a556a108-6984-368f-30c7-fd4229a54f46</transaction_id>
+                <Selection>
+                    <value>numberLinePoint</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>e6ca131b-64d3-bf27-3b2c-3e2eaa428590</transaction_id>
+                <Selection>
+                    <value>numberLinePoint</value>
+                </Selection>
+                <Action>
+                    <value>set_large_step</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>42ccb6ef-dbfc-6538-c202-fcd4365d5564</transaction_id>
+                <Selection>
+                    <value>numberLinePoint</value>
+                </Selection>
+                <Action>
+                    <value>set_small_step</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>ad87608f-60da-26f5-bb06-dbee96a39066</transaction_id>
+                <Selection>
+                    <value>numberLineSnap</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>b9a69fa2-9b5c-aba5-3938-5ccfbdf72f12</transaction_id>
+                <Selection>
+                    <value>numberLineSnap</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>647f12f5-72ff-63f9-23e6-24389b7215c8</transaction_id>
+                <Selection>
+                    <value>numberLineSnap</value>
+                </Selection>
+                <Action>
+                    <value>set_large_step</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>8919279d-1609-eb03-863e-e0fa173b66d4</transaction_id>
+                <Selection>
+                    <value>numberLineSnap</value>
+                </Selection>
+                <Action>
+                    <value>set_small_step</value>
+                </Action>
+                <Input>
+                    <value>1/3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>ae52c741-0422-9bb1-4e23-650ad17b6e45</transaction_id>
+                <Selection>
+                    <value>numberLineBounds</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>60cda204-01c1-0c9a-2521-871efa2ab0b7</transaction_id>
+                <Selection>
+                    <value>numberLineBounds</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>5d2f8b0b-4bd5-2b39-da11-7f642d820ea6</transaction_id>
+                <Selection>
+                    <value>numberLineBounds_min</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>-3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>863a1044-94c6-e632-bd58-f7d3aa6853dd</transaction_id>
+                <Selection>
+                    <value>numberLineBounds_min</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>ce0e0bbe-b629-76ed-b1d2-1da08cdc73ce</transaction_id>
+                <Selection>
+                    <value>numberLineBounds_min</value>
+                </Selection>
+                <Action>
+                    <value>Update</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>a40cc051-e4f0-217c-0aaa-75c6dc5914d3</transaction_id>
+                <Selection>
+                    <value>numberLineBounds_max</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>5a4a1fb0-358e-208d-64c4-e650a1706b89</transaction_id>
+                <Selection>
+                    <value>numberLineBounds_max</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>10</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>bd0a33c2-9488-ac34-87f7-e305fa77eb5e</transaction_id>
+                <Selection>
+                    <value>numberLineBounds_max</value>
+                </Selection>
+                <Action>
+                    <value>Update</value>
+                </Action>
+                <Input>
+                    <value>3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>96c6421e-dff4-cd7d-d963-5af23fc3be7c</transaction_id>
+                <Selection>
+                    <value>numberLineCTick</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>5bbe60da-2343-3a70-fb05-86f52d48b476</transaction_id>
+                <Selection>
+                    <value>numberLineCTick</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>a054f046-6b0a-e64d-93ad-0d416ed020e2</transaction_id>
+                <Selection>
+                    <value>numberLineCTick</value>
+                </Selection>
+                <Action>
+                    <value>set_large_step</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>089ab464-4072-b1a0-5eb2-380ffd3d9cd9</transaction_id>
+                <Selection>
+                    <value>numberLineCTick</value>
+                </Selection>
+                <Action>
+                    <value>set_small_step</value>
+                </Action>
+                <Input>
+                    <value>1/2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>f5c31424-f5f6-15c7-2dba-a00c835f17bb</transaction_id>
+                <Selection>
+                    <value>nlTick_inc</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>+</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>bf0c3d85-216d-b85b-de84-50ed3d793462</transaction_id>
+                <Selection>
+                    <value>nlTick_dec</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>&#8722;</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>29fc2513-d9ad-99f4-b554-580de3bd47e9</transaction_id>
+                <Selection>
+                    <value>nlTick_small</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>1/2</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1bcdf893-13c4-67b6-6d23-5e03352ab1f9</transaction_id>
+                <Selection>
+                    <value>nlTick_denom</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>e2ebbc5e-b54f-5cd2-2f02-bcf46f086dda</transaction_id>
+                <Selection>
+                    <value>nlTick_denom</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>10</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>d9b92eaa-d7d3-59a2-f4b0-99bfd1fc2a56</transaction_id>
+                <Selection>
+                    <value>nlTick_denom</value>
+                </Selection>
+                <Action>
+                    <value>Update</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>b131ca0d-af23-5bd1-d219-254320125702</transaction_id>
+                <Selection>
+                    <value>numberLineNumPoints</value>
+                </Selection>
+                <Action>
+                    <value>set_max_user_entries</value>
+                </Action>
+                <Input>
+                    <value>3</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,40 +644,64 @@
         <text>CTATNumberLine</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>233</x>
-            <y>34</y>
+            <x>108</x>
+            <y>30</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>133</x>
-            <y>144</y>
+            <x>135</x>
+            <y>140</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>138</x>
-            <y>277</y>
+            <x>168</x>
+            <y>265</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state3</text>
         <uniqueID>4</uniqueID>
         <dimension>
-            <x>135</x>
-            <y>402</y>
+            <x>168</x>
+            <y>375</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state4</text>
         <uniqueID>5</uniqueID>
         <dimension>
-            <x>394</x>
-            <y>138</y>
+            <x>168</x>
+            <y>485</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>168</x>
+            <y>595</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state6</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>168</x>
+            <y>705</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>8</uniqueID>
+        <dimension>
+            <x>172</x>
+            <y>815</y>
         </dimension>
     </node>
     <edge>
@@ -61,26 +709,26 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>4</uniqueID>
+            <uniqueID>1</uniqueID>
             <message>
-                <verb>SendNoteProperty</verb>
+                <verb>NotePropertySet</verb>
                 <properties>
-                    <MessageType>CorrectAction</MessageType>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>6a20aaef-39b7-b461-14e7-708b19cf1cff</transaction_id>
                     <Selection>
-                        <value>numberLineNumPoints</value>
+                        <value>numberLineDefault</value>
                     </Selection>
                     <Action>
                         <value>AddPoint</value>
                     </Action>
                     <Input>
-                        <value>2</value>
+                        <value>1</value>
                     </Input>
-                    <transaction_id>Ta3a1c6bb-f3d9-47eb-a580-b0d8d8bf23a7</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <hintMessage>Please click close to '1' in the highlighted element.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -89,7 +737,68 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
+                        <matcherParameter name="single">numberLineDefault</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">AddPoint</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>RangeMatcher</matcherType>
+                        <matcherParameter name="minimum"> 0.9 </matcherParameter>
+                        <matcherParameter name="maximum"> 1.1 </matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>3fcf48b1-4e92-acd7-6c30-6f0d13270d1e</transaction_id>
+                    <Selection>
+                        <value>numberLineSnap</value>
+                    </Selection>
+                    <Action>
+                        <value>AddPoint</value>
+                    </Action>
+                    <Input>
+                        <value>2/3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please place a point at 2/3 in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">numberLineSnap</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
@@ -101,7 +810,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">2</matcherParameter>
+                        <matcherParameter name="single">2/3</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -121,26 +830,27 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>6</uniqueID>
+            <uniqueID>8</uniqueID>
             <message>
-                <verb>SendNoteProperty</verb>
+                <verb>NotePropertySet</verb>
                 <properties>
-                    <MessageType>CorrectAction</MessageType>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>af8787c4-6b62-9b73-2ddd-09c4e66095db</transaction_id>
                     <Selection>
-                        <value>numberLineNumPoints</value>
+                        <value>numberLineBounds</value>
                     </Selection>
                     <Action>
                         <value>AddPoint</value>
                     </Action>
                     <Input>
-                        <value>3</value>
+                        <value>-3</value>
                     </Input>
-                    <transaction_id>Ta3a1c6bb-f3d9-47eb-a580-b0d8d8bf23a7</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <hintMessage>Please provide your answer '-3' in the highlighted element.</hintMessage>
+            <hintMessage>Use the Minimum controller to make -3 available.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -149,7 +859,7 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
+                        <matcherParameter name="single">numberLineBounds</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
@@ -161,7 +871,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">3</matcherParameter>
+                        <matcherParameter name="single">-3</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
@@ -181,71 +891,12 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>10</uniqueID>
+            <uniqueID>11</uniqueID>
             <message>
-                <verb>SendNoteProperty</verb>
+                <verb>NotePropertySet</verb>
                 <properties>
-                    <MessageType>CorrectAction</MessageType>
-                    <Selection>
-                        <value>numberLineNumPoints</value>
-                    </Selection>
-                    <Action>
-                        <value>Points</value>
-                    </Action>
-                    <Input>
-                        <value>1;2;3</value>
-                    </Input>
-                    <transaction_id>Ta3a1c6bb-f3d9-47eb-a580-b0d8d8bf23a7</transaction_id>
-                </properties>
-            </message>
-            <buggyMessage>No, this is not correct.</buggyMessage>
-            <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
-            <callbackFn></callbackFn>
-            <actionType>Correct Action</actionType>
-            <oldActionType>Correct Action</oldActionType>
-            <checkedStatus>Never Checked</checkedStatus>
-            <matchers Concatenation="true">
-                <Selection>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
-                    </matcher>
-                </Selection>
-                <Action>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">Points</matcherParameter>
-                    </matcher>
-                </Action>
-                <Input>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">1;2;3</matcherParameter>
-                    </matcher>
-                </Input>
-                <Actor linkTriggered="false">Student</Actor>
-            </matchers>
-        </actionLabel>
-        <preCheckedStatus>No-Applicable</preCheckedStatus>
-        <rule>
-            <text>unnamed</text>
-            <indicator>-1</indicator>
-        </rule>
-        <sourceID>1</sourceID>
-        <destID>5</destID>
-        <traversalCount>0</traversalCount>
-    </edge>
-    <edge>
-        <actionLabel preferPathMark="false" minTraversals="1" maxTraversals="1">
-            <studentHintRequest></studentHintRequest>
-            <stepSuccessfulCompletion></stepSuccessfulCompletion>
-            <stepStudentError></stepStudentError>
-            <uniqueID>1</uniqueID>
-            <message>
-                <verb>SendNoteProperty</verb>
-                <properties>
-                    <MessageType>CorrectAction</MessageType>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>fac1a37d-25a3-b178-3493-80817fc4858a</transaction_id>
                     <Selection>
                         <value>numberLineNumPoints</value>
                     </Selection>
@@ -255,12 +906,11 @@
                     <Input>
                         <value>1</value>
                     </Input>
-                    <transaction_id>Ta3a1c6bb-f3d9-47eb-a580-b0d8d8bf23a7</transaction_id>
                 </properties>
             </message>
             <buggyMessage>No, this is not correct.</buggyMessage>
             <successMessage></successMessage>
-            <hintMessage>Please provide your answer 'No_Value' in the highlighted element.</hintMessage>
+            <hintMessage>Please add a point at 1 in the highlighted element.</hintMessage>
             <callbackFn></callbackFn>
             <actionType>Correct Action</actionType>
             <oldActionType>Correct Action</oldActionType>
@@ -292,10 +942,195 @@
             <text>unnamed</text>
             <indicator>-1</indicator>
         </rule>
-        <sourceID>1</sourceID>
-        <destID>2</destID>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
         <traversalCount>0</traversalCount>
     </edge>
-    <EdgesGroups ordered="true"></EdgesGroups>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>13</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>cf95c1b3-7a9f-9031-6736-88306d63bdcd</transaction_id>
+                    <Selection>
+                        <value>numberLineNumPoints</value>
+                    </Selection>
+                    <Action>
+                        <value>AddPoint</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please add a point at 2 in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">AddPoint</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">2</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>15</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>45b210e8-f722-aee3-871e-c6a52d80e1a7</transaction_id>
+                    <Selection>
+                        <value>numberLineNumPoints</value>
+                    </Selection>
+                    <Action>
+                        <value>AddPoint</value>
+                    </Action>
+                    <Input>
+                        <value>3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please add a point at 3 in the highlighted element.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">numberLineNumPoints</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">AddPoint</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">3</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>17</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>2d0805ee-3df9-2106-dfa7-974f2ab90ce8</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please click on the highlighted button.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">done</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">ButtonPressed</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">-1</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>7</sourceID>
+        <destID>8</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
+    <EdgesGroups ordered="true">
+        <group name="Multipoint" ordered="false" reenterable="true">
+            <link id="11"/>
+            <link id="15"/>
+            <link id="13"/></group>
+    </EdgesGroups>
 </stateGraph>
 

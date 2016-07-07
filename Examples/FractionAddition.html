@@ -5,10 +5,11 @@
   <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.min.css"/>
   <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
   <script>
-  $(function() {
-      initTutor({"question_file":"FractionAddition.brd"});
-  });
+function ctatOnload() {
+      initTutor({"question_file":'FractionAddition.brd'});
+};
   </script>
   <style type="text/css">
     .CTATTextInput {

@@ -10,6 +10,150 @@
             </properties>
         </message>
         <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>2607d0e3-e4ef-baec-0ed1-a479defaec06</transaction_id>
+                <Selection>
+                    <value>stepper</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>a2ba7851-4567-e616-15c9-4db470b15329</transaction_id>
+                <Selection>
+                    <value>stepper</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>10</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>54a9c6d3-c0a9-8cab-f655-c3471f876f2a</transaction_id>
+                <Selection>
+                    <value>stepper</value>
+                </Selection>
+                <Action>
+                    <value>set_step</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>6ede4ba7-e74a-532d-ec34-b9dc03b126e9</transaction_id>
+                <Selection>
+                    <value>stepper</value>
+                </Selection>
+                <Action>
+                    <value>Update</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>1eadf349-4b9f-49b3-84b5-b00b885fa136</transaction_id>
+                <Selection>
+                    <value>stepper1</value>
+                </Selection>
+                <Action>
+                    <value>set_minimum</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>68df40a2-748a-b3d9-fae2-865b900a4fe7</transaction_id>
+                <Selection>
+                    <value>stepper1</value>
+                </Selection>
+                <Action>
+                    <value>set_maximum</value>
+                </Action>
+                <Input>
+                    <value>10</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>63fed2e5-1db9-64b1-1e4d-a1f15c884642</transaction_id>
+                <Selection>
+                    <value>stepper1</value>
+                </Selection>
+                <Action>
+                    <value>set_step</value>
+                </Action>
+                <Input>
+                    <value>1</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>af1d4ea7-f634-4ed9-23fe-71b7beb816b5</transaction_id>
+                <Selection>
+                    <value>stepper1</value>
+                </Selection>
+                <Action>
+                    <value>Update</value>
+                </Action>
+                <Input>
+                    <value>0</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>7a015ac9-21a4-eba8-b0ae-76212f8f6272</transaction_id>
+                <Selection>
+                    <value>submit</value>
+                </Selection>
+                <Action>
+                    <value>setText</value>
+                </Action>
+                <Input>
+                    <value>Submit</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
             <verb>SendNoteProperty</verb>
             <properties>
                 <MessageType>StartStateEnd</MessageType>
@@ -20,32 +164,32 @@
         <text>CTATNumericStepper</text>
         <uniqueID>1</uniqueID>
         <dimension>
-            <x>282</x>
-            <y>30</y>
+            <x>51</x>
+            <y>33</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>140</y>
+            <x>111</x>
+            <y>143</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>342</x>
-            <y>250</y>
+            <x>111</x>
+            <y>253</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>4</uniqueID>
         <dimension>
-            <x>346</x>
-            <y>360</y>
+            <x>115</x>
+            <y>363</y>
         </dimension>
     </node>
     <edge>
