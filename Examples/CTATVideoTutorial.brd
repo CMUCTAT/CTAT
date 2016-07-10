@@ -53,7 +53,7 @@
                     <transaction_id>ab8ae213-9252-4933-9fa6-53df36685d52</transaction_id>
                     <Selection>
                         <value>videoplayer</value>
-                        <value>http%3A%2F%2Flocalhost%3A11003%2FCTAT_HTML_Wizard_01.mp4</value>
+                        <value>http%3A%2F%2Flocalhost%3A11003%2FCTAT_HTML_Wizard_01_1.mp4</value>
                         <value>00:02:52.000</value>
                     </Selection>
                     <Action>
@@ -75,7 +75,7 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">videoplayerhttp%3A%2F%2Flocalhost%3A11003%2FCTAT_HTML_Wizard_01.mp400:02:52.000</matcherParameter>
+                        <matcherParameter name="single">videoplayerhttp%3A%2F%2Flocalhost%3A11003%2FCTAT_HTML_Wizard_01_1.mp400:02:52.000</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
