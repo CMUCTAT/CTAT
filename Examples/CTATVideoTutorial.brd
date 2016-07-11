@@ -54,7 +54,7 @@
                     <Selection>
                         <value>videoplayer</value>
                         <value>http%3A%2F%2Flocalhost%3A11003%2FCTAT_HTML_Wizard_01_1.mp4</value>
-                        <value>00:02:52.000</value>
+                        <value>00:02:56.000</value>
                     </Selection>
                     <Action>
                         <value>play</value>
@@ -75,7 +75,7 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">videoplayerhttp%3A%2F%2Flocalhost%3A11003%2FCTAT_HTML_Wizard_01_1.mp400:02:52.000</matcherParameter>
+                        <matcherParameter name="single">videoplayerhttp%3A%2F%2Flocalhost%3A11003%2FCTAT_HTML_Wizard_01_1.mp400:02:56.000</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
