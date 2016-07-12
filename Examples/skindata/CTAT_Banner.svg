@@ -4,7 +4,7 @@
      font-size="50px" font-family="sans-serif">
    <desc>CTAT: Cognitive Tutor Authoring Tools, Software for authoring intelligent tutor behavior</desc>
    <defs>
-    <link xmlns="http://www.w3.org/1999/xhtml" href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css' />
+    <link xmlns="http://www.w3.org/1999/xhtml" href='//fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css' />
     <style type="text/css">
       .logo { text-anchor: middle; font: 50px 'Josefin Sans',sans-serif; stroke: white; fill: white; }
       .tutor { font-weight: 700; stroke: orange; fill: orange; }
