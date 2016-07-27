@@ -1,0 +1,25 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Javascript files
+*.js text
+*.css text
+
+# XML like files
+*.html text
+*.xml text
+*.svg text
+
+# Python
+*.py text
+
+# binary images
+*.png binary
+*.jpg binary
+*.mp4 binary
+
+*.pdf  diff=astextplain
+*.PDF	 diff=astextplain
+
+# CTAT
+*.brd	linguist-language=XML
