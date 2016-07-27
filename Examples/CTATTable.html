@@ -15,13 +15,13 @@ function ctatOnload ()
 {
     initTutor({question_file: "CTATTable.brd"});
 }
- 
+
 function add_row(tableName)
 {
      var table = CTATShellTools.findComponent(tableName);
      table[0].addRow();
 }
- 
+
 function add_col(tableName)
 {
      var table = CTATShellTools.findComponent(tableName);
@@ -40,7 +40,7 @@ function add_col(tableName)
 	   alt="CTAT: Cognitive Tutor Authoring Tools"
 	   src="skindata/CTAT_Banner.svg">
     </a>
-    
+
     <h1>CTATTable Example</h1>
     <p>A simple table example.</p>
     <div>
@@ -51,7 +51,7 @@ function add_col(tableName)
       <div style="display: flex;">
       <div class="ctat_example" style="display:flex; flex-direction: column;">
 	<div id="expanding_table" class="CTATTable"
-	     data-ctat-num-rows="5" data-ctat-num-cols="5" 
+	     data-ctat-num-rows="5" data-ctat-num-cols="5"
 	     data-ctat-has-header="true">
 	</div>
 	<div style="display: flex;">
@@ -63,7 +63,7 @@ function add_col(tableName)
 	<pre>
 &lt;div id="my_table" class="CTATTable"
      data-ctat-num-rows="5"
-     data-ctat-num-cols="5" 
+     data-ctat-num-cols="5"
      data-ctat-has-header="true"&gt;
 &lt;/div&gt;
 	  </pre>
@@ -79,7 +79,7 @@ function add_col(tableName)
       <pre>#const_table .CTATTable--row { flex: 1 1; }</pre>
       <div class="ctat_example">
 	<div id="const_table" class="CTATTable"
-	     data-ctat-num-rows="5" data-ctat-num-cols="5" 
+	     data-ctat-num-rows="5" data-ctat-num-cols="5"
 	     data-ctat-has-header="true"
 	     style="width: 250px; height: 200px;">
 	</div>
@@ -93,7 +93,7 @@ function add_col(tableName)
 	<pre>
 &lt;div id="const_table" class="CTATTable"
      data-ctat-num-rows="5"
-     data-ctat-num-cols="5" 
+     data-ctat-num-cols="5"
      data-ctat-has-header="true"
      style="width: 250px; height: 200px;"&gt;
 &lt;/div&gt;
