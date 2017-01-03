@@ -13,7 +13,7 @@
             <verb>NotePropertySet</verb>
             <properties>
                 <MessageType>InterfaceAction</MessageType>
-                <transaction_id>2b22b39c-7e73-1e2d-09a6-918a65571044</transaction_id>
+                <transaction_id>a157d78b-e522-7eda-d2bf-c8fca5f1214f</transaction_id>
                 <Selection>
                     <value>combo2</value>
                 </Selection>
@@ -22,22 +22,6 @@
                 </Action>
                 <Input>
                     <value>----,oui,non</value>
-                </Input>
-            </properties>
-        </message>
-        <message>
-            <verb>NotePropertySet</verb>
-            <properties>
-                <MessageType>InterfaceAction</MessageType>
-                <transaction_id>aa31f28f-d31f-2fd9-a070-2ec017eab1f9</transaction_id>
-                <Selection>
-                    <value>combo3</value>
-                </Selection>
-                <Action>
-                    <value>setLabels</value>
-                </Action>
-                <Input>
-                    <value>oui;non</value>
                 </Input>
             </properties>
         </message>
@@ -60,32 +44,24 @@
         <text>state1</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>146</x>
-            <y>139</y>
+            <x>148</x>
+            <y>114</y>
         </dimension>
     </node>
     <node locked="false" doneState="false">
         <text>state2</text>
         <uniqueID>3</uniqueID>
         <dimension>
-            <x>146</x>
-            <y>249</y>
-        </dimension>
-    </node>
-    <node locked="false" doneState="false">
-        <text>state3</text>
-        <uniqueID>4</uniqueID>
-        <dimension>
-            <x>146</x>
-            <y>359</y>
+            <x>148</x>
+            <y>194</y>
         </dimension>
     </node>
     <node locked="false" doneState="true">
         <text>Done</text>
         <uniqueID>5</uniqueID>
         <dimension>
-            <x>150</x>
-            <y>469</y>
+            <x>151</x>
+            <y>274</y>
         </dimension>
     </node>
     <edge>
@@ -213,66 +189,6 @@
             <studentHintRequest></studentHintRequest>
             <stepSuccessfulCompletion></stepSuccessfulCompletion>
             <stepStudentError></stepStudentError>
-            <uniqueID>5</uniqueID>
-            <message>
-                <verb>NotePropertySet</verb>
-                <properties>
-                    <MessageType>InterfaceAction</MessageType>
-                    <transaction_id>8147daff-e3a4-695f-7992-0224ba112d7a</transaction_id>
-                    <Selection>
-                        <value>combo3</value>
-                    </Selection>
-                    <Action>
-                        <value>UpdateComboBox</value>
-                    </Action>
-                    <Input>
-                        <value>oui</value>
-                    </Input>
-                </properties>
-            </message>
-            <buggyMessage>No, this is not correct.</buggyMessage>
-            <successMessage></successMessage>
-            <hintMessage>Please select 'oui' from the highlighted menu.</hintMessage>
-            <callbackFn></callbackFn>
-            <actionType>Correct Action</actionType>
-            <oldActionType>Correct Action</oldActionType>
-            <checkedStatus>Never Checked</checkedStatus>
-            <matchers Concatenation="true">
-                <Selection>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">combo3</matcherParameter>
-                    </matcher>
-                </Selection>
-                <Action>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">UpdateComboBox</matcherParameter>
-                    </matcher>
-                </Action>
-                <Input>
-                    <matcher>
-                        <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">oui</matcherParameter>
-                    </matcher>
-                </Input>
-                <Actor linkTriggered="false">Student</Actor>
-            </matchers>
-        </actionLabel>
-        <preCheckedStatus>No-Applicable</preCheckedStatus>
-        <rule>
-            <text>unnamed</text>
-            <indicator>-1</indicator>
-        </rule>
-        <sourceID>3</sourceID>
-        <destID>4</destID>
-        <traversalCount>0</traversalCount>
-    </edge>
-    <edge>
-        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
-            <studentHintRequest></studentHintRequest>
-            <stepSuccessfulCompletion></stepSuccessfulCompletion>
-            <stepStudentError></stepStudentError>
             <uniqueID>7</uniqueID>
             <message>
                 <verb>NotePropertySet</verb>
@@ -324,7 +240,7 @@
             <text>unnamed</text>
             <indicator>-1</indicator>
         </rule>
-        <sourceID>4</sourceID>
+        <sourceID>3</sourceID>
         <destID>5</destID>
         <traversalCount>0</traversalCount>
     </edge>
