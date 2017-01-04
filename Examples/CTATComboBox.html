@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.min.css"/>
 <link rel="stylesheet" href="css/ctat_example.css"/>
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/jquery.min.js"></script>
 <!-- cdn.rawgit.com/CMUCTAT/CTAT/<tag>/Examples/ctat.min.js -->
 <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
 <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
@@ -50,7 +50,8 @@ function ctatOnload() {
     <hr/>
     <div>
       <div class="ctat_example">
-	A select where the options are set with an attribute:
+	<p>A select where the options are set with an attribute:</p>
+	Select "oui":
 	<div id="combo2" class="CTATComboBox" data-ctat-labels="----,oui,non">
 	</div>
       </div>
@@ -61,30 +62,12 @@ function ctatOnload() {
 &lt;/div&gt;</pre>
       </div>
     </div>
-    <hr/>
-    <div>
-      <div class="ctat_example">
-	A select using both ways of setting options:
-	<div id="combo3" class="CTATComboBox" data-ctat-labels="oui;non"
-	     data-ctat-split-on=";">
-	  <option>----</option>
-	</div>
-      </div>
-      <div class="ctat_code">
-	<pre>
-&lt;div id="combo2" class="CTATComboBox"
-     data-ctat-labels="oui;non"
-     data-ctat-split-on=";"&gt;
-  &lt;option&gt;----&lt;/option&gt;
-&lt;/div&gt;</pre>
-      </div>
-    </div>
 
     <div id="hint-box" style="margin:3px;text-align:right;">
       <div id="HintWindow" class="CTATHintWindow"></div>
       <div style="float:right;">
 	<div id="hint-button" class="CTATHintButton"></div>
-	<div id="done-button" class="CTATDoneButton"></div>
+	<div id="done" class="CTATDoneButton"></div>
       </div>
     </div>
   </div>
