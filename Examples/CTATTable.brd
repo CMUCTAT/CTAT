@@ -13,6 +13,102 @@
             <verb>NotePropertySet</verb>
             <properties>
                 <MessageType>InterfaceAction</MessageType>
+                <transaction_id>6c622cb3-bbbc-bea7-8ddb-0cf5a41ac200</transaction_id>
+                <Selection>
+                    <value>expanding_table</value>
+                </Selection>
+                <Action>
+                    <value>setNumRows</value>
+                </Action>
+                <Input>
+                    <value>5</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>573fbb25-62e5-ba90-bdcf-35729f71aee3</transaction_id>
+                <Selection>
+                    <value>expanding_table</value>
+                </Selection>
+                <Action>
+                    <value>setNumCols</value>
+                </Action>
+                <Input>
+                    <value>5</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>8caaa277-640a-488c-c94d-c182fd6c2b71</transaction_id>
+                <Selection>
+                    <value>expanding_table</value>
+                </Selection>
+                <Action>
+                    <value>set_first_row_is_header</value>
+                </Action>
+                <Input>
+                    <value>true</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>313e7e32-0303-0d3e-6a6e-59e43854fd2b</transaction_id>
+                <Selection>
+                    <value>const_table</value>
+                </Selection>
+                <Action>
+                    <value>setNumRows</value>
+                </Action>
+                <Input>
+                    <value>5</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>ffc6946d-ed04-76a1-1b1e-4a4162f9e399</transaction_id>
+                <Selection>
+                    <value>const_table</value>
+                </Selection>
+                <Action>
+                    <value>setNumCols</value>
+                </Action>
+                <Input>
+                    <value>5</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>81f65ff8-c9fa-7e43-d539-78da1c31be38</transaction_id>
+                <Selection>
+                    <value>const_table</value>
+                </Selection>
+                <Action>
+                    <value>set_first_row_is_header</value>
+                </Action>
+                <Input>
+                    <value>true</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
                 <transaction_id>fe882c54-86d1-f78f-3db4-78592cf16acb</transaction_id>
                 <Selection>
                     <value>expanding_table.R0C0</value>
@@ -188,10 +284,78 @@
         <text>Done</text>
         <uniqueID>2</uniqueID>
         <dimension>
-            <x>215</x>
-            <y>140</y>
+            <x>206</x>
+            <y>197</y>
         </dimension>
     </node>
+    <node locked="false" doneState="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>198</x>
+            <y>112</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>ebb910f3-4eac-9aae-8e91-f7ecddd519c4</transaction_id>
+                    <Selection>
+                        <value>expanding_table.R1C0</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextArea</value>
+                    </Action>
+                    <Input>
+                        <value>x</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Please enter 'x' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>Never Checked</checkedStatus>
+            <matchers Concatenation="true">
+                <Selection>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">expanding_table.R1C0</matcherParameter>
+                    </matcher>
+                </Selection>
+                <Action>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">UpdateTextArea</matcherParameter>
+                    </matcher>
+                </Action>
+                <Input>
+                    <matcher>
+                        <matcherType>ExactMatcher</matcherType>
+                        <matcherParameter name="single">x</matcherParameter>
+                    </matcher>
+                </Input>
+                <Actor linkTriggered="false">Student</Actor>
+            </matchers>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+    </edge>
     <edge>
         <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
             <studentHintRequest></studentHintRequest>
@@ -248,7 +412,7 @@
             <text>unnamed</text>
             <indicator>-1</indicator>
         </rule>
-        <sourceID>1</sourceID>
+        <sourceID>3</sourceID>
         <destID>2</destID>
         <traversalCount>0</traversalCount>
     </edge>
