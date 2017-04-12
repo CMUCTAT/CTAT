@@ -7,53 +7,51 @@
   <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
   <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
   <script>
-function ctatOnload() {
+    function ctatOnload() {
       initTutor({"question_file":'FractionAddition.brd'});
-};
+    };
   </script>
   <style type="text/css">
-    .CTATTextInput {
-      width: 34px;
-      height: 30px;
-      margin: 0px 5px 2px 5px;
-    }
+    .CTATTextInput input { text-align: center; }
+    .CTATTextInput { font-family: Arial; font-size:20px; width: 34px; height: 30px; margin: 0px 5px 2px 5px; }
+    .misc-text { text-align: center; font-family: Arial; }
   </style>
 </head>
 <body>
 <div style="position:relative; width: 640px; height: 500px; border: 1px solid black; margin: 0 auto; overflow: hidden;">
   <div style="float: left; width: 270px;">
-    <div id="givensPlus" class="misc-text" style="position: absolute; left: 15px; top: 180px;">+</div>
-    <div style="font-size:small; text-align: left; position:absolute; left: 36px; top:20px;">Given<br/>Fractions</div>
+    <div id="givensPlus" class="misc-text" style="font-size: 20px; position: absolute; left: 15px; top: 180px;">+</div>
+    <div class="misc-text" style="font-size:small; position:absolute; left: 36px; top:18px;">Given<br/>Fractions</div>
     <div style="position: absolute; left: 40px; top: 52px;">
       <div>
-	<div id="firstNumGiven" class="CTATTextInput"></div>
-	<hr class="fraction-bar"/>
-	<div id="firstDenGiven" class="CTATTextInput"></div>
+	    <div id="firstNumGiven" class="CTATTextInput"></div>
+	    <hr class="fraction-bar"/>
+	    <div id="firstDenGiven" class="CTATTextInput"></div>
       </div>
       <br/>
 
       <div style="position: absolute: left: 40px; top: 110px;">
-	<div id="secNumGiven" class="CTATTextInput"></div>
-	<hr class="fraction-bar"/>
-	<div id="secDenGiven" class="CTATTextInput"></div>
+	    <div id="secNumGiven" class="CTATTextInput"></div>
+	    <hr class="fraction-bar"/>
+	    <div id="secDenGiven" class="CTATTextInput"></div>
       </div>
     </div>
 
-    <div id="firstConvEq" class="misc-text" style="position: absolute; left: 95px; top: 80px;">=</div>
-    <div id="secConvEq" class="misc-text" style="position: absolute; left: 95px; top: 180px;">=</div>
+    <div id="firstConvEq" class="misc-text" style="font-size: 20px; position: absolute; left: 95px; top: 80px;">=</div>
+    <div id="secConvEq" class="misc-text" style="font-size: 20px; position: absolute; left: 95px; top: 180px;">=</div>
 
-    <div style="font-size:small; position:absolute; top:20px; left: 114px;">Converted<br/>Fractions</div>
+    <div class="misc-text" style="font-size:small; position:absolute; top:18px; left: 114px;">Converted<br/>Fractions</div>
     <div style="position: absolute; top: 52px; left: 120px;">
       <div>
-	<div id="firstNumConv" class="CTATTextInput" tabindex="4"></div>
-	<hr class="fraction-bar"/>
-	<div id="firstDenConv" class="CTATTextInput" tabindex="1"></div>
+	    <div id="firstNumConv" class="CTATTextInput" tabindex="4"></div>
+	    <hr class="fraction-bar"/>
+	    <div id="firstDenConv" class="CTATTextInput" tabindex="1"></div>
       </div>
       <br/>
       <div>
-	<div id="secNumConv" class="CTATTextInput" tabindex="5"></div>
-	<hr class="fraction-bar"/>
-	<div id="secDenConv" class="CTATTextInput" tabindex="2"></div>
+	    <div id="secNumConv" class="CTATTextInput" tabindex="5"></div>
+	    <hr class="fraction-bar"/>
+	    <div id="secDenConv" class="CTATTextInput" tabindex="2"></div>
       </div>
     </div>
 
@@ -63,19 +61,20 @@ function ctatOnload() {
       <div id="ansDen1" class="CTATTextInput" tabindex="3"></div>
     </div>
 
-    <div id="finalEq" class="misc-text" style="position: absolute; left: 175px; top: 279px; z-index: 18;">=</div>
+    <div class="misc-text" style="font-size:small; position:absolute; top:217px; left: 195px;">Simplified<br/>Answer</div>
+    <div id="finalEq" class="misc-text" style="font-size: 20px; position: absolute; left: 175px; top: 279px;">=</div>
     <div style="position: absolute; top: 250px; left: 200px">
       <div id="ansNumFinal1" class="CTATTextInput" tabindex="8"></div>
       <hr class="fraction-bar"/>
       <div id="ansDenFinal1" class="CTATTextInput" tabindex="7"></div>
     </div>
     <div style="position: absolute; bottom: 0; width: 200px; left: 35px;">
-      <p style="font-size: large; text-align: center; font-weight: bold;">Perform the Fraction Addition Problem</p>
-      <p style="text-align: left; font-weight: bold; font-size: 0.9em;">To get tutor help, click on the Hint and Next buttons.</p>
+      <p class="misc-text" style="font-size: large; font-weight: bold;">Perform the Fraction Addition Problem</p>
+      <p class="misc-text" style="font-weight: bold; font-size: 0.9em;">To get tutor help, click on the Hint and Next buttons.</p>
     </div>
   </div>
 
-  <div style="float: right; width: 350px; height: 100%; padding: 10px; background-color: ghostwhite; border-left: 3px solid grey;">
+  <div style="float: right; width: 350px; height: 100%; padding: 10px; background-color: ghostwhite; border-left: 2px solid grey;">
     <div id="skills" class="CTATSkillWindow" style="width: 100%;" data-ctat-threshold="0.85"></div>
     <br>
     <div id="HintWindow" class="CTATHintWindow" style="width: 100%;"></div>
