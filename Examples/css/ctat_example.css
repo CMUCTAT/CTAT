@@ -32,6 +32,9 @@ div.ctat_code {
 #done-button {
     margin: 0 5px 0px 5px
 }
+#done {
+    margin: 0 5px 0px 5px
+}
 #HintWindow {
     display: inline-flex;
 }
