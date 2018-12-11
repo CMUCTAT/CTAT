@@ -1,0 +1,295 @@
+/*.major {
+	margin: 0px;
+	position: relative;
+	height: 100vh;
+	background-color: black;
+}*/
+
+@font-face {
+    font-family: "sentinel-book";
+    src: url(assets/sentinel-book.ttf);
+}
+
+@font-face {
+    font-family: "sentinel-bold";
+    src: url(assets/sentinel-bold.ttf);
+}
+
+@font-face {
+    font-family: "sentinel-semibold";
+    src: url(assets/sentinel-semibold.ttf);
+}
+
+@font-face {
+    font-family: "gotham-medium";
+    src: url(assets/GOTHAM-MEDIUM.TTF);
+}
+
+@font-face {
+    font-family: "gotham-bold";
+    src: url(assets/GOTHAM-BOLD.TTF);
+}
+
+.majorGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) auto;
+	grid-template-rows: 50px auto 150px auto auto;
+	grid-template-areas:
+		"nav nav nav nav"
+		"banner banner banner banner"
+		"intro intro intro menu"
+		"tutor tutor tutor menu"
+		"footer footer footer footer";
+	margin: 0px;
+	min-width: 953px;
+}
+
+#nav {
+	display: flex;
+	align-items: center;
+	grid-area: nav;
+	background-color: #e8ebed;
+	padding-left: 80px;
+	display: grid;
+	grid-template-columns: repeat(6, auto);
+	grid-gap: 20px;
+	font-family: "gotham-medium";
+	font-size: 14px;
+	color: #333333;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+.button {
+	cursor: pointer;
+	font-family: "gotham-medium";
+	font-size: 14px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#download {
+	grid-column: 6/7;
+	justify-self: end;
+	align-content: center;
+	top: 25px;
+	margin-right: 80px;
+}
+
+#navButton {
+	height: 25px;
+	border-radius: 25px;
+	background-color: #203573;
+	border: none;
+	color: white;
+}
+
+#bannerText {
+	font-size: 50px;
+	margin: 0px;
+	padding-top: 50px;
+}
+
+#banner {
+	grid-area: banner;
+	text-align: left;
+	color: #fff;
+	background: linear-gradient(#132b5e, #404978);
+	padding-left: 80px;
+	font-family: "sentinel-book";
+}
+
+.copy {
+	grid-area:intro;
+	margin-left: 80px;
+	margin-top: 50px;
+	font-family: "sentinel-book";
+	font-size: 16px;
+}
+
+/*.overlay {
+	bottom: 0px;
+	width: 100%;
+	height: 150px;
+	z-index: 2;
+	background-color: #fff;
+	border-top: solid 1px;
+	text-align: center;
+}*/
+
+.tutor {
+	grid-area: tutor;
+	margin-top: 50px;
+	margin-left: 80px;
+	margin-right: 0px;
+	margin-bottom: 100px;
+}
+
+.tutorWrapper {
+	position: relative;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-template-areas:
+		"back play next";
+	background-color: white;
+	position: absolute;
+	z-index: 4;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#introButton {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#tuteButton {
+	box-shadow: 0px 0px 10px #d3d3d3;
+}
+
+.button2 {
+	margin: 15px;
+	margin-top: 12px;
+	margin-bottom: 10px;
+	padding: 0px;
+	top: 50%;
+}
+
+.buttonImg {
+	margin: 0px;
+	padding: 0px;
+}
+
+#blackout {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	transition: 0.5s ease;
+	z-index: 3;
+}
+
+#blackoutText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: white;
+	transform: translate(-50%, -50%);
+	font-family: 'sentinel-book';
+	font-size: 20px;
+}
+
+#menu {
+	grid-area: menu;
+	text-align: left;
+	width: 300px;
+	transition: 1.5s;
+	margin-bottom: 50px;
+}
+
+.menuText {
+	margin-left: 50px;
+	margin-right: 80px;
+	margin-top: 0px;
+	font-family: "sentinel-book";
+	font-size: 16px;
+}
+
+.menuTitle {
+	margin-left: 50px;
+	margin-bottom: 12px;
+}
+
+.menuSubTitle {
+	margin-left: 80px;
+	margin-bottom: 12px;
+}
+
+.menuHeader {
+	margin-top: 50px;
+	font-family: "sentinel-semibold";
+	font-size: 21px;
+	border-bottom: 2px solid;
+}
+
+.interface {
+	width: 100%;
+}
+
+.title {
+	font-family: "gotham-bold";
+}
+
+/*#finalRef {
+	width: 200px;
+	padding-left: 25px;
+	padding-right: 25px;
+}*/
+
+.backButton {
+	grid-area: back;
+	padding-top: 6px;
+}
+
+.playButton {
+	grid-area: play;
+}
+
+.skipButton {
+	grid-area: next;
+	padding-top: 6px;
+}
+
+.sectionHeader {
+	font-family: "sentinel-semibold";
+	font-size: 21px;
+	color: #333333;
+}
+
+.header {
+	font-family: "sentinel-bold";
+	font-size: 16px;
+	color: #333333;
+}
+
+.body {
+	font-family: "sentinel-book";
+	font-size: 14px;
+	line-height: 1.5;
+	color: #333333;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+#footer {
+	grid-area: footer;
+	background: linear-gradient(#132b5e, #404978);
+	padding: 50px;
+	padding-left: 80px;
+	color: white;
+	font-family: "sentinel-book";
+	font-size: 14px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "text img img";
+	grid-gap: 50px;
+}
+
+#footerContent {
+	grid-area: text;
+}
+
+#footerTitle {
+	font-family: "gotham-medium";
+	font-size: 14pt;
+}

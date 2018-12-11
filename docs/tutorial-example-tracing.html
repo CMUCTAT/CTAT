@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creating an Example-Tracing Tutor</title>
+		<link rel="stylesheet" type="text/css" href="tutorial.css">
+	</head>
+	<body class="majorGrid">
+
+		<div id="nav">
+			<a href="index.html"><img src="images/ctat-logo.png"></a>
+			<a href="index.html#faq"><p>FAQ</p></a>
+			<a href="tutor-gallery.html"><p>Tutor Gallery</p></a>
+			<a href="tutorials-and-doc.html"><p>Tutorials &amp; Documentation</p></a>
+			<a><p>Community</p></a>
+			<div id="download">
+				<a href="https://github.com/CMUCTAT/CTAT/wiki/Quick-Start#download-ctat"><button id="navButton" class="button" type="button">Download CTAT</button></a>
+			</div>
+		</div>
+		<div id="banner">
+			<p id="bannerText">Creating an Example-Tracing Tutor</p>
+			<p class="body" style="width:50%;padding-bottom:50px;color:#fff;">Learn to use CTAT's Behavior Recorder to build an Example-tracing fraction addition tutor (requires a completed student interface). This tutor is authored by demonstration, without programming.</p>
+		</div>
+
+		<div class="copy">
+
+			<div id="0-text" class="textFocus">
+				<p class="title">Introduction</p>
+				<p class="body">In this tutorial, you will use CTAT's Behavior Recorder to author an Example-tracing Tutor for a basic fraction addition problem. Click here to learn more about Example-tracing Tutors.</p>
+				<p class="body"><b>Note:</b> You will need an already-complete HTML interface. See our <a href="tutorial-html-interface.html" style="color:#0056ad">HTML interface tutorial</a> if you need to create one first.</p>
+			</div>
+
+			<div id="1-text" style="display:none;">
+				<p class="title">Launching the HTML Interface</p>
+				<p class="body">From the CTAT application, click <b>Launch HTML Interface</b> (Cmd/Ctrl + I). This prompt will open your files. Go into your Fraction Addition package, and locate the HTML file. Make sure you select the <b>.html file</b>, not the .ed.html file.</p>
+			</div>
+
+			<div id="2-text" style="display:none;">
+				<p class="title">Setting up Your Workspace (optional)</p>
+				<p class="body">After launching, you’ll have 2 windows open: the student interface and the behavior graph. You may want to adjust your windows so that you can see them side by side.</p>
+			</div>
+
+			<div id="3-text" style="display:none;">
+				<p class="title">Initial State</p>
+				<p class="body">Set an <b>initial state</b> by inputting the values you want in your problem statement. This initial state will be your “template” interface, and for different problems with the same structure you can fix the input.</p>
+			</div>
+
+			<div id="4-text" style="display:none;">
+				<p class="title">Start State (1)</p>
+				<p class="body">Under Graph, select <b>Create Start State</b> (or Cmd/Ctrl + B). The Start State is the state students will see when they first enter the tutor.</p>
+			</div>
+
+			<div id="5-text" style="display:none;">
+				<p class="title">Start State (2)</p>
+				<p class="body">Give the State State a name that will help you remember what’s in the student interface in this state.</p>
+			</div>
+
+			<div id="6-text" style="display:none;">
+				<p class="title">Demonstrate</p>
+				<p class="body">Click and drag to adjust the Text Field boundaries. Under <b>Font</b> in the Properties panel, you can set your desired text size, font, and color (make sure the Text Field is selected).</p>
+			</div>
+
+			<div id="7-text" style="display:none;">
+				<p class="title">Done</p>
+				<p class="body">When your solution is complete, hit <b>Done</b>. This indicates to the graph that the path it recorded is complete.</p>
+			</div>
+
+			<div id="8-text" style="display:none;">
+				<p class="title">Return to Start State</p>
+				<p class="body">After you finish demonstrating a path, return to the <b>Start State</b> by clicking on it. From this state, you can create another path or perform a number of other actions.</p>
+			</div>
+
+			<div id="9-text" style="display:none;">
+				<p class="title">Test Tutor</p>
+				<p class="body">Enter <b>Test Tutor mode</b> to iteratively test your tutor. To test from the beginning, click the Start State in the behavior graph. To test from any other step in the problem, click the desired problem-solving state and the student interface will update accordingly.</p>
+			</div>
+
+			<div id="10-text" style="display:none;">
+				<p class="title">Test Demonstrated Solution</p>
+				<p class="body">Try inputting the path you just inputted. CTAT recognizes the path in the graph as a correct solution, and if you input the same values, the interface should show feedback that the solution is correct.</p>
+			</div>
+
+			<div id="11-text" style="display:none;">
+				<p class="title">Test Alternative Solution</p>
+				<p class="body">Now try a different correct solution. You’ll see that CTAT does NOT recognize this solution as correct, because it isn’t recorded in the behavior graph.</p>
+			</div>
+
+			<div id="12-text" style="display:none;">
+				<p class="title">Demonstrate Alternative Solution</p>
+				<p class="body">Here we’ll demonstrate another path. In your own tutors, try to think of different ways that students might go about solving the problem. With multiple paths recorded in the graph, you can provide feedback for a variety of approaches.</p>
+			</div>
+
+			<div id="13-text" style="display:none;">
+				<p class="title">Incorrect Actions (bugs)</p>
+				<p class="body">Include paths for common missteps in your graph, so that you can provide feedback to address them. Mark these paths as <b>Incorrect Actions (bugs)</b>. They will turn red. (CTAT assumes that paths you don’t mark are correct solution paths.)</p>
+			</div>
+
+			<div id="14-text" style="display:none;">
+				<p class="title">Set Hint Messages</p>
+				<p class="body">From <b>Package Name</b>, select the package you created earlier, in step 1. Your interface will be saved in this folder.</p>
+			</div>
+
+			<div id="15-text" style="display:none;">
+				<p class="title">Test Hint Messages</p>
+				<p class="body">In <b>Test Tutor mode</b>, you can test if your Hint message appears as expected. Hit the Hint button in the Hint Widget.</p>
+			</div>
+
+			<div id="16-text" style="display:none;">
+				<p class="title">That’s All!</p>
+				<p class="body">Add any other paths and messages that you want for this problem, then rinse and repeat for other problems in your problem set. Test your completed tutor to make sure it’s good to go!</p>
+			</div>
+		</div>
+
+		<div class="tutor">
+			<div class="tutorWrapper">
+
+			<div id="introButton" class="buttons">
+				<a onclick="back()" class="button2 backButton cursor"><img class="buttonImg" src="images/backWhite.png"></a>
+				<a onclick="play('example tracing tutorial')" class="button2 playButton cursor"><img class="buttonImg" src="images/playWhite.png"></a>
+				<a onclick="next('example tracing tutorial')" class="button2 skipButton cursor"><img class="buttonImg" src="images/skipWhite.png"></a>
+			</div>
+
+			<div id="tuteButton" class="buttons" style="display:none;">
+				<a onclick="back()" class="button2 backButton cursor" id="back"><img class="buttonImg" src="images/back.png"></a>
+				<a onclick="play('example tracing tutorial')" class="button2 playButton cursor"><img  id="play" class="buttonImg" src="images/play.png"></a>
+				<a onclick="next('example tracing tutorial')" class="button2 skipButton cursors" id="next"><img class="buttonImg" src="images/skip.png"></a>
+			</div>
+
+			<div id="blackout">
+				<p id="blackoutText">Click Play to Get Started</p>
+			</div>
+
+			<img class="interface focus" id="0-a" src="example tracing tutorial/0-a.jpg">
+
+			<img class="interface" id="1-a" style="display:none;" src="example tracing tutorial/1-a.jpg">
+			<img class="interface" style="display:none;" id="1-gif" src="example tracing tutorial/1.gif">
+
+			<img class="interface" id="2-a" style="display:none;" src="example tracing tutorial/2-a.jpg">
+			<img class="interface" style="display:none;" id="2-gif" src="example tracing tutorial/2.gif">
+
+			<img class="interface" id="3-a" style="display:none;" src="example tracing tutorial/3-a.jpg">
+			<img class="interface" style="display:none;" id="3-gif" src="example tracing tutorial/3.gif">
+
+			<img class="interface" id="4-a" style="display:none;" src="example tracing tutorial/4-a.jpg">
+			<img class="interface" style="display:none;" id="4-gif" src="example tracing tutorial/4.gif">
+
+			<img class="interface" id="5-a" style="display:none;" src="example tracing tutorial/5-a.jpg">
+			<img class="interface" style="display:none;" id="5-gif" src="example tracing tutorial/5.gif">
+
+			<img class="interface" id="6-a" style="display:none;" src="example tracing tutorial/6-a.jpg">
+			<img class="interface" style="display:none;" id="6-gif" src="example tracing tutorial/6.gif">
+
+			<img class="interface" id="7-a" style="display:none;" src="example tracing tutorial/7-a.jpg">
+			<img class="interface" style="display:none;" id="7-gif" src="example tracing tutorial/7.gif">
+
+			<img class="interface" id="8-a" style="display:none;" src="example tracing tutorial/8-a.jpg">
+			<img class="interface" style="display:none;" id="8-gif" src="example tracing tutorial/8.gif">
+
+			<img class="interface" id="9-a" style="display:none;" src="example tracing tutorial/9-a.jpg">
+			<img class="interface" style="display:none;" id="9-gif" src="example tracing tutorial/9.gif">
+
+			<img class="interface" id="10-a" style="display:none;" src="example tracing tutorial/10-a.jpg">
+			<img class="interface" style="display:none;" id="10-gif" src="example tracing tutorial/10.gif">
+
+			<img class="interface" id="11-a" style="display:none;" src="example tracing tutorial/11-a.jpg">
+			<img class="interface" style="display:none;" id="11-gif" src="example tracing tutorial/11.gif">
+
+			<img class="interface" id="12-a" style="display:none;" src="example tracing tutorial/12-a.jpg">
+			<img class="interface" style="display:none;" id="12-gif" src="example tracing tutorial/12.gif">
+
+			<img class="interface" id="13-a" style="display:none;" src="example tracing tutorial/13-a.jpg">
+			<img class="interface" style="display:none;" id="13-gif" src="example tracing tutorial/13.gif">
+
+			<img class="interface" id="14-a" style="display:none;" src="example tracing tutorial/14-a.jpg">
+			<img class="interface" style="display:none;" id="14-gif" src="example tracing tutorial/14.gif">
+
+			<img class="interface" id="15-a" style="display:none;" src="example tracing tutorial/15-a.jpg">
+			<img class="interface" style="display:none;" id="15-gif" src="example tracing tutorial/15.gif">
+			</div>
+
+			<img class="interface" id="16-a" style="display:none;" src="example tracing tutorial/16-a.jpg">
+			<img class="interface" style="display:none;" id="15-gif" src="example tracing tutorial/16.gif">
+			</div>
+
+		</div>
+
+		<div id="menu">
+			<p style="margin-top: 66px;" class="menuText sectionHeader">Table of Contents</p>
+			<p id="0-menu" class="menuText menuTitle cursor" style="color:#00568d;" onclick="menuJump(this)">Introduction</p>
+			<p id="" class="menuText menuTitle">Set Start State</p>
+			<p id="1-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Launching the HTML Interface</p>
+			<p id="2-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Setting up Your Workspace (optional)</p>
+			<p id="3-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Initial State</p>
+			<p id="4-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Start State (1)</p>
+			<p id="5-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Start State (2)</p>
+			<p id="" class="menuText menuTitle">Demonstrating a Solution</p>
+			<p id="6-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Demonstrate</p>
+			<p id="7-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Done</p>
+			<p id="8-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Return to Start State</p>
+			<p id="" class="menuText menuTitle">Testing a Solution</p>
+			<p id="9-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Test Tutor</p>
+			<p id="10-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Test Demonstrated Solution</p>
+			<p id="11-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Test Alternative Solution</p>
+			<p id="12-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Demonstrate Alternative Solution</p>
+			<p id="" class="menuText menuTitle">Errors and Hints</p>
+			<p id="13-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Incorrect Actions (bugs)</p>
+			<p id="14-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Set Hint Messages</p>
+			<p id="15-menu" class="menuText menuSubTitle cursor" onclick="menuJump(this)">Test Hint Messages</p>
+		</div>
+			
+
+		<div id="footer">
+			<div id="footerContent">
+				<p id="footerTitle">Contact Us</p>
+				<p style="color:#fff;" class="body">Discuss CTAT with other users and CTAT developers by joining our Google Group. You can also browse the group's archives without joining.</p>
+			</div>
+		</div>
+
+		<script src="tutorial-nav.js"></script>
+	</body>
+
+</html>
