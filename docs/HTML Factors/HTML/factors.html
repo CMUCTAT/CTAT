@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Factors</title>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css">
+
+<style>
+html,body { width: 100%; height: 100%; margin: 0px; padding: 0px; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; }
+.CTATTextInput { width: 120px; height: 22px; margin: 5px; font-size: inherit; }  
+textarea, input[type="text"] { font-family: Verdana, Arial, Helvetica, sans-serif; }
+textarea { border: none;  }
+.fraction-bar { width: 67px; border-style: solid; margin: 5px 0px 0px 0px; color: black; }
+.boldtext { font-weight: bold; }
+</style>
+
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/jquery.min.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
+
+<script>
+	function showToolTip(x) {
+		x.title="This box can calculate! If you need to, type in an expression here and it will calculate the result for you!";
+	}
+</script>
+</head>
+<body>
+  <div id="container" style="display: flex; flex-direction: column; height: 600px; border: 0px solid black;">
+  <div id="tutor" style="display: flex; flex-direction: row;" >
+   <div id="statement" class="CTATTextField" style="flex: auto; position: relative; left: 25px; top: 20px; width: 385px; height: 136px">%(problem-statement)%</div>
+   <div id="components" style="flex: auto; position: relative; left: 55px; top: 10px; ">
+    <div id="header" style="display: flex; flex-direction: row; position: relative; left: 90px; height: 55px">
+	<div id="from" class="CTATTextField boldtext" style="position: relative; top: 10px; width: 84px; height: 55px;">%(from)%</div>
+	<div id="SF" class="CTATTextField" style="width: 65px; height: 38px; position: relative; left: 60px;">Operator</div>
+	<div id="to" class="CTATTextField boldtext" style="width: 84px; height: 55px; position: relative; top: 10px; left: 100px;">%(to)%</div>
+    </div>
+    <div id="s1_row" style="display: flex; flex-direction: row; position: relative; left: 165px; height: 40px">
+	<div><img src="Assets/arrow-left-top.png" alt="arrow-left-top" style="position: relative; top: 10px;"></div>
+	<div class="boldtext" style="position: relative; left: 15px; font-size: 20px;">x</div>
+	<div id="SF1" class="CTATTextInput" style="position: relative; left: 20px; width: 66px; height: 22px;" tabindex="4"></div>				
+	<div><img src="Assets/arrow-right-top.png" alt="arrow-right-top" style="position: relative; top: 10px; left: 35px;"></div>
+    </div>    
+    <div id="v1_row" style="display: flex; flex-direction: row; height: 40px">
+	<div id="item1" class="CTATTextField boldtext" style="width: 120px; height: 28px; padding-top: 10px">%(item1)%</div>
+	<div id="OV1" class="CTATTextInput" style="width: 77px; height: 28px" tabindex="1"></div>				
+	<div style="width: 90px;"></div>				
+	<div id="CV1" class="CTATTextInput" style="width: 77px; height: 28px" tabindex="3"></div>				
+	<div><img src="Assets/calcIcon.png" onmouseover="showToolTip(this);" title="" alt="Calculator" style="position:relative; top:10px; height:20px; padding-left:10px;"></div>
+    </div>
+    <div id="mid_row" style="display: flex; flex-direction: row; position: relative; left: 132px; height: 10px;">
+	<div><hr class="fraction-bar"</hr></div>
+	<div style="position: relative; left: 45px; bottom: 10px; font-size: 24px;">=</div>
+	<div style="position: relative; left: 88px;"><hr class="fraction-bar"</hr></div>
+    </div>
+    <div id="v2_row" style="display: flex; flex-direction: row; height: 40px">
+	<div id="item2" class="CTATTextField boldtext" style="width: 120px; height: 28px; padding-top: 10px">%(item2)%</div>
+	<div id="OV2" class="CTATTextInput" style="width: 77px; height: 28px" tabindex="2"></div>				
+	<div style="width: 90px;"></div>				
+	<div id="CV2" class="CTATTextInput" style="width: 77px; height: 28px" tabindex="6"></div>				
+	<div><img src="Assets/calcIcon.png" onmouseover="showToolTip(this);" title="" alt="Calculator" style="position:relative; top:10px; height:20px; padding-left:10px;"></div>
+    </div>
+    <div id="s2_row" style="display: flex; flex-direction: row; position: relative; left: 165px; height: 40px">
+	<div><img src="Assets/arrow-left-bottom.png" alt="arrow-left-bottom" style="position: relative;"></div>
+	<div class="boldtext" style="position: relative; left: 15px; font-size: 20px;">x</div>
+	<div id="SF2" class="CTATTextInput" style="position: relative; left: 20px; width: 66px; height: 22px;" tabindex="5"></div>				
+	<div><img src="Assets/arrow-right-bottom.png" alt="arrow-right-bottom" style="position: relative; left: 35px;"></div>
+    </div>
+    <div style="display: flex; flex-direction: row; position: relative; height: 60px"></div>
+    <div style="display: flex; flex-direction: row; position: relative; height: 40px">
+	<div id="final_statement" class="CTATTextField" style="">%(final_statement)%</div>
+    </div>
+    <div id="answer" style="display: flex; flex-direction: row; position: relative; height: 40px; padding-bottom: 20px;">
+	<div id="answerText" class="boldtext" style="padding-top: 10px">Answer:</div>
+	<div id="A3" class="CTATTextInput" style="width: 60px; height: 27px" tabindex="7"></div>				
+	<div id="final_unit" class="CTATTextField" style="width: 210px; padding-left: 10px; padding-top: 10px">%(final_unit)%</div>				
+    </div>
+   </div>
+   </div>
+			
+   <div id="tools" style="display: flex; flex-direction: row; padding: 10px;">
+	    <div id="hint" class="CTATHintButton"></div>
+	    <div id="hint-window" class="CTATHintWindow" style="flex: auto; margin: 2px;"></div>
+	    <div id="skill-window" class="CTATSkillWindow" style="flex: auto; margin: 2px;"></div>
+	    <div id="done" class="CTATDoneButton" tabindex="8"></div>
+   </div>
+ </div>
+</body>
+</html>
