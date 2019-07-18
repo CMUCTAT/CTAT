@@ -1,0 +1,26 @@
+Problem Name	balloons	cookies	pizza
+%(startStateNodeName)%	balloons	cookies	pizza
+%(problem-statement)%	Salma is buying balloons for her little brother's birthday party. In a store in Salma's neighborhood, each pack of 12 balloons costs $4.25, and she needs to buy 36 balloons. How much will Salma have to spend on balloons?	The school cafeteria bought 90 bags of chocolate chip cookies. Each bag has an equal number of cookies. After two weeks, they have 30 bags of cookies left, and inside, there are a total of 120 cookies left. How many cookies were in all the bags two weeks ago?	In a store, frozen pizzas are 8 for $6.50. How much will 4 pizzas cost?
+%(from)%	They sell	Now	They sell
+%(to)%	Salma wants	2 weeks ago	You want
+%(item1)%	Balloons	Bags	Pizzas
+%(item2)%	Cost ($)	Cookies	Cost ($)
+%(final_statement)%	Salma will have to spend $_____ on balloons.	Two weeks ago, ____ cookies were in the bags.	4 pizzas will cost ____ dollars.
+%(final_unit)%	dollars.	cookies.	dollars.
+%(ov1)%	12	30	8
+%(ov2)%	4.25	120	6.50
+%(cv1)%	36	90	4
+%(sf1)%	3	3	.5
+%(sf2)%	3	3	.5
+%(cv2)%	12.75	360	3.25
+%(a3)%	12.75	360	3.25
+%(ov1-bug-msg)%	number of balloons	number of bags	number of pizzas
+%(ov2-bug-msg)%	cost of balloons	number of cookies	cost of pizzas
+%(ov1-hint1)%	How many balloons are in a pack?	How many bags of cookies do they have now?	How many frozen pizzas do they sell for $%(ov2)%?
+%(ov2-hint1)%	How much does each pack of balloons cost?	How many cookies total are left now?	How much do %(ov1)% pizzas cost?
+%(cv1-hint1)%	How many balloons does Salma want?	How many bags of cookies did they have 2 weeks ago?	How many pizzas do you want?
+%(sf-hint1-if)%	number of balloons	number of bags	number of pizzas
+%(cv2-hint1)%	cost of the balloons the store sells into the amount of money Salma must spend.	 number of cookies now into the number of cookies the cafeteria had 2 weeks ago.	cost of %(ov1)% pizzas into the amount of money you must spend for %(cv1)% pizzas.
+%(cv2-hint2)%	The amount of money Salma must spend is the cost of the balloons sold in the store multiplied by the operator you found.	The total number of cookies 2 weeks ago is the number of cookies now multiplied by the operator you found.	The cost of the %(cv1)% pizzas you want is the cost of %(ov1)% pizzas multiplied by the operator you found.
+%(cv2-hint3)%	You are scaling the store's cost of balloons UP using the operator, %(sf2)%, like this: %(ov2)% * %(sf2)% = ?	You are scaling the number of cookies 2 weeks ago UP using the operator, %(sf2)%, like this: %(ov2)% * %(sf2)% = ?	You are scaling the cost of the %(cv1)% pizzas you want DOWN using the operator, %(sf2)%, like this: %(ov2)% * %(sf2)% = ?
+%(a3-hint2)%	How much money will Salma spend on her balloons?	How many cookies were in all of the bags 2 weeks ago?	How much will it cost you for %(cv1)% pizzas?
