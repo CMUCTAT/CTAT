@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package name="mathtutor_templates" label="Mathtutor Templates" description="HTML templates to use in reimplementing Mathtutor packages" tutor_type="javascript">
+  <Problems>
+    <Problem name="overlaid" label="Overlaid" description="One-tutor solution for instruction screens that overlays instructions over the tutor panel" tutor_flag="tutor" problem_file="empty.brd" student_interface="overlaid.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="switched" label="Switched" description="One-tutor solution for instruction screens that switches between two alternate panels for instructions vs tutor" tutor_flag="tutor" problem_file="empty.brd" student_interface="switched.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="tutor" label="Tutor" description="Tutor interface of a two-separate-tutors solution for instruction screens" tutor_flag="tutor" problem_file="empty.brd" student_interface="tutor.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="instructions" label="Instructions" description="Instructions interface of a two-separate-tutors solution for instruction screens" tutor_flag="tutor" problem_file="empty.brd" student_interface="instructions.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="single" label="Single" description="Tutor interface that doesn't have instructions" tutor_flag="tutor" problem_file="empty.brd" student_interface="single.html">
+      <Skills>
+      </Skills>
+    </Problem>
+    <Problem name="single_same_side" label="Single Same Side" description="Tutor interface that doesn't have instructions and has both buttons on the same side" tutor_flag="tutor" problem_file="empty.brd" student_interface="single_same_side.html">
+      <Skills>
+      </Skills>
+    </Problem>
+  </Problems>
+  <ProblemSets>
+    <ProblemSet name="mathtutor_templates" label="Mathtutor Templates" description="The different problems implement different types of instructions or different button positions" status="active" team_size="1" selection_algorithm="sequential" max_count="1000" max_repeat="1" initial_sequence="0">
+      <Problems>
+        <Problem name="instructions" position="1" role="0"/>
+        <Problem name="tutor" position="2" role="0"/>
+        <Problem name="switched" position="3" role="0"/>
+        <Problem name="overlaid" position="4" role="0"/>
+        <Problem name="single" position="5" role="0"/>
+        <Problem name="single_same_side" position="6" role="0"/>
+      </Problems>
+      <Skills>
+      </Skills>
+      <Assets>
+      </Assets>
+      <Categories>
+        <Standard name="PA" label="PA Assessment Anchors" description="PA Assessment Anchors" category="standard"/>
+        <Standard name="NCTM" label="NCTM Curriculum Focal Points" description="NCTM Curriculum Focal Points" category="standard"/>
+        <Standard name="Student" label="Problem Set Categories" description="Student Standards" category="standard"/>
+        <Standard name="CommonCore" label="Common Core Standards" description="Common Core Standards" category="standard"/>
+      </Categories>
+    </ProblemSet>
+  </ProblemSets>
+  <Assets>
+    <Asset name="tutor.html" label="Tutor.Html" description="Tutor.Html" asset_locator="HTML/tutor.html"/>
+    <Asset name="tutor.css" label="Tutor.Css" description="Tutor.Css" asset_locator="HTML/Assets/tutor.css"/>
+    <Asset name="instructions.html" label="Instructions.Html" description="Instructions.Html" asset_locator="HTML/instructions.html"/>
+    <Asset name="switched.css" label="Switched.Css" description="Switched.Css" asset_locator="HTML/Assets/switched.css"/>
+    <Asset name="switched.html" label="Switched.Html" description="Switched.Html" asset_locator="HTML/switched.html"/>
+    <Asset name="CTAT.css" label="Ctat.Css" description="Ctat.Css" asset_locator="HTML/Assets/CTAT.css"/>
+    <Asset name="overlaid.html" label="Overlaid.Html" description="Overlaid.Html" asset_locator="HTML/overlaid.html"/>
+    <Asset name="overlaid.css" label="Overlaid.Css" description="Overlaid.Css" asset_locator="HTML/Assets/overlaid.css"/>
+    <Asset name="overlaid.js" label="Overlaid.Js" description="Overlaid.Js" asset_locator="HTML/Assets/overlaid.js"/>
+    <Asset name="switched.js" label="Switched.Js" description="Switched.Js" asset_locator="HTML/Assets/switched.js"/>
+    <Asset name="empty.brd" label="Empty.Brd" description="Empty.Brd" asset_locator="FinalBRDs/empty.brd"/>
+    <Asset name="tutor.js" label="Tutor.Js" description="Tutor.Js" asset_locator="HTML/Assets/tutor.js"/>
+    <Asset name="single.html" label="Single.Html" description="Single.Html" asset_locator="HTML/single.html"/>
+    <Asset name="single.css" label="Single.Css" description="Single.Css" asset_locator="HTML/Assets/single.css"/>
+    <Asset name="single_same_side.html" label="Single Same Side.Html" description="Single Same Side.Html" asset_locator="HTML/single_same_side.html"/>
+  </Assets>
+</Package>

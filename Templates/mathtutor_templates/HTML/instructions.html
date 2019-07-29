@@ -1,0 +1,84 @@
+<html lang="en-US">
+  <head>
+    <title>Tutor</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/beta/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="Assets/tutor.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctatloader.js"></script>
+    <script src="Assets/tutor.js"></script>
+ </head>
+
+  <body>
+    <main class="CTATTutor">
+      <h1>Instructions</h1>
+
+      <section class="CTATProblemSolving">
+        <h2>Problem Solving</h2>
+
+        <section class="CTATProblem">
+          <h3>Problem</h3>
+          <div class="CTATTextField">
+            <div class="CTATInstructionsBullet">1</div>
+          </div>
+        </section>
+
+        <section class="CTATSolution">
+          <h3>Solution</h3>
+          <div>
+            <div class="CTATInstructionsBullet">2</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <section class="CTATInstructions">
+          <h3>Instructions</h3>
+          <div class="CTATButtons">
+            <div class="CTATHintButton" data-ctat-enabled="false"></div>
+            <div class="CTATInstructionsButton">
+              <button class="unselectable CTAT-instructions-button" disabled="">
+                <div class="CTAT-instructions-button--icon">i</div>
+                <div class="CTAT-instructions-button--text">Instructions</div>
+              </button>
+            </div>
+            <div class="CTATBackButton">
+              <button class="unselectable CTAT-back-button">
+                <div class="CTAT-back-button--icon">➜</div>
+                <div class="CTAT-back-button--text">Back</div>
+              </button>
+            </div>
+          </div>
+          <div class="CTATInstructionsWindow">
+            <div class="CTATInstructionsItem">
+              <div class="CTATInstructionsBullet">1</div>
+              <div class="CTATInstructionsText">Problem text</div>
+            </div>
+            <div class="CTATInstructionsItem">
+              <div class="CTATInstructionsBullet">2</div>
+              <div class="CTATInstructionsText">Problem solution</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="CTATInstructions">
+          <h3>Instructions</h3>
+          <div class="CTATInstructionsWindow"></div>
+          <div class="CTATButtons">
+            <div class="CTATDoneButton" data-ctat-enabled="false"></div>
+            <div class="CTATStartButton">
+              <button class="unselectable CTAT-start-button">
+                <div class="CTAT-start-button--icon">➜</div>
+                <div class="CTAT-start-button--text">Start</div>
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
