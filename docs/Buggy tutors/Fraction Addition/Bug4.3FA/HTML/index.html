@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 01 Sep 2015 15:55:08 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Fraction Addition HTML5</title>
+	
+	<link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css">
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/beta/jquery.min.js"></script>
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/beta/jquery-ui.min.js"></script>
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctatloader.js"></script>
+	
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctat.min.js"></script>
+	<script src="https://cdn.ctat.cs.cmu.edu/releases/beta/nools.js"></script>
+	<style type="text/css">
+		   .CTAT-text { font-size: 20px; font-family: Arial}
+		   .misc-text { font-size: 20px; font-family: Arial}
+	</style>
+	  <script>
+		var myVars = {
+		  question_file: "../CognitiveModel/3-4plus1-6.nools",
+		  tutoring_service_communication: "javascript"
+		};
+	
+		function ctatOnload() {
+		  initTutor(myVars);
+		  // MathJax.Hub.Typeset();
+		  // initTutor();
+		  // $('#problem-statement-part-1').on('CTAT_EXECUTE_SAI', function (e) {
+		  //     MathJax.Hub.Queue(['Typeset', MathJax.Hub, $('#problem-statement-part-1')[0]]);
+		  // });
+		}
+	  </script>
+
+  </head>
+  <body>
+  <div id="container" style="visibility: hiddedn; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 400;">
+  	   <canvas id="main-canvas" width="800" height="500">Your browser does not support CTAT. Please update or use another browser.</canvas>
+
+	   <div id="given1numer" class="CTATTextInput" style="position: absolute; left: 40px; top: 10px; z-index: 18; width: 30px; height: 30px;"></div>
+	   <div id="given1denom" class="CTATTextInput" style="position: absolute; left: 40px; top: 50px; z-index: 18; width: 30px; height: 30px;"></div>
+	   <div id="given2numer" class="CTATTextInput" style="position: absolute; left: 40px; top: 110px; z-index: 18; width: 30px; height: 30px;"></div>
+	   <div id="given2denom" class="CTATTextInput" style="position: absolute; left: 40px; top: 150px; z-index: 18; width: 30px; height: 30px;"></div>
+	   <div id="givensPlus" class="misc-text" style="position: absolute; left: 20px; top: 85px; z-index: 18;">+</div>
+	   <div id="firstConvEq" class="misc-text" style="position: absolute; left: 90px; top: 35px; z-index: 18;">=</div>
+	   <div id="secConvEq" class="misc-text" style="position: absolute; left: 90px; top: 135px; z-index: 18;">=</div>
+	   <!-- <div id="finalEq" class="misc-text" style="position: absolute; left: 170px; top: 235px; z-index: 18;">=</div> -->
+	   
+	   <div id="conv1numer" class="CTATTextInput" tabindex="4" style="position: absolute; left: 120px; top: 10px; z-index: 18; width: 30px; height: 30px;"></div>
+	   <div id="conv1denom" class="CTATTextInput" tabindex="1" style="position: absolute; left: 120px; top: 50px; z-index: 18; width: 30px; height: 30px;"></div>
+	   <div id="conv2numer" class="CTATTextInput" tabindex="5" style="position: absolute; left: 120px; top: 110px; z-index: 18; width: 30px; height: 30px;"></div>
+	   <div id="conv2denom" class="CTATTextInput" tabindex="2" style="position: absolute; left: 120px; top: 150px; z-index: 18; width: 30px; height: 30px;"></div>
+	   
+	   <div id="ans1numer" class="CTATTextInput" tabindex="6" style="position: absolute; left: 120px; top: 210px; z-index: 18; width: 30px; height: 30px;"></div>
+	   <div id="ans1denom" class="CTATTextInput" tabindex="3" style="position: absolute; left: 120px; top: 250px; z-index: 18; width: 30px; height: 30px;"></div>
+
+	   <!-- <div id="reducednumer" class="CTATTextInput" tabindex="8" style="position: absolute; left: 200px; top: 210px; z-index: 18; width: 30px; height: 30px;"></div>	
+	   <div id="reduceddenom" class="CTATTextInput" tabindex="7" style="position: absolute; left: 200px; top: 250px; z-index: 18; width: 30px; height: 30px;"></div>	    -->
+	   
+	   
+	   <div id="done-button" class="CTATDoneButton" tabindex="9" style="position: absolute; left: 40px; top: 330px; z-index: 18;"></div>
+	   <div id="hint-button" class="CTATHintButton" style="position: absolute; left: 110px; top: 330px; z-index: 18;"></div>
+	   <div id="HintWindow" class="CTATHintWindow" style="position: absolute; left: 180px; top: 330px; z-index: 18;; width: 400px; height: 150px"></div>
+  </div>
+  </body>
+</html>

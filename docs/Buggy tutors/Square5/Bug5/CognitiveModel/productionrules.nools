@@ -1,0 +1,139 @@
+import("types.nools");
+
+// If the argument is an integer, return it without the ones digit, else return null
+//
+function removeOnesDigit(n) {
+    return (Number.isInteger(n) ? Math.floor(n/10) : null);
+}
+
+// Return true if the 2 arguments are not equal.
+//
+function notEqual(m, n) {
+    return m != n;
+}
+
+
+// RULE bootstrap
+// Always fired at startup for initialization of working memory
+//
+rule bootstrap {
+    when {
+        s: Boolean s === false from false;
+    }
+    then {
+        console.log("bootstrap", numberToSquare);
+
+        // create facts to represent the student interface components
+        let given = assert(new InterfaceElement("givenNum"));
+        let firstPart = assert(new InterfaceElement("firstPart"));
+        let firstPartPlus1 = assert(new InterfaceElement("firstPartPlusOne"));
+        let product = assert(new InterfaceElement("product"));
+        let append25 = assert(new InterfaceElement("append25"));
+        let finalAnswer = assert(new InterfaceElement("finalAnswer"));
+
+        // create the main Problem fact, with the given numberToSquare and the component names
+        assert(new Problem("square"+numberToSquare, numberToSquare,
+            firstPart.name,
+            firstPartPlus1.name,
+            product.name,
+            append25.name,
+            finalAnswer.name));
+
+        // write the numberToSquare to the proper student interface component
+        assert(new TPA(given.name, "UpdateTextField", numberToSquare));
+
+        setProblemAttribute("use_backtracking", true);
+        halt();
+    }
+}
+
+// RULE findFirstPart
+// IF
+//   there is a Problem with givenNumber n that ends in 5
+//   and whose firstPart is empty  (i.e., we have not yet found the first part)
+// THEN
+//   compute f by removing the ones digit from n
+//   write f as the firstPart
+//
+rule findFirstPart {
+    when {
+        prob : Problem prob.firstPart == null && (prob.givenNumber % 10) == 5
+            {givenNumber: n, ieFirstPart: sel};
+        ie : InterfaceElement ie.name == sel && ie.value == null;
+    }
+    then {
+            // compute the number with the 5 on the right "chopped off"
+        let f = removeOnesDigit(n);
+            // hints
+        assert(new Hint("Start by removing the right-most digit from "+n+"."));
+        assert(new Hint("If you remove the right-most digit from "+n+", you have "+f+"."));
+        assert(new Hint("Please write "+f+"."));
+            // model observable action
+	      if (checkSAI({selection: sel, action: "UpdateTextField", input: f})) {
+             modify(prob, "firstPart", f);    // modify semantic representation
+	           modify(ie, "value", f);         // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+	           halt();                 // await next student action
+        }
+        else {
+            backtrack();             // undo any changes and search further
+	     }
+    }
+}
+
+// RULE addOne
+// IF
+//    there is a goal to determine the square of a number
+//    and we have split off the first part (call it f)
+//    and we have not added 1 to the first part
+//THEN
+//    Write (f + 1) as the first part plus 1
+
+rule addOne {
+  when {
+    p : Problem p.firstPart != null && p.firstPartPlus1 == null
+	      {firstPart: f, ieFirstPartPlus1: sel};
+    ie : InterfaceElement ie.name==sel && ie.value==null;
+  }
+  then {
+            // do the actual adding of 1
+    let f1 = f + 1;
+            // hints
+    assert(new Hint("Next step: Add 1."));
+    assert(new Hint("If you add 1 to the previous number, "+f+", you have "+f1+"."));
+    assert(new Hint("Please write "+f1+"."));
+            // model observable action
+    if(checkSAI({selection: sel, action: "UpdateTextField", input: f1})) {
+        modify(p, "firstPartPlus1", f1);       // modify semantic representation
+        modify(ie, "value", f1);              // modify interface represention in WM
+                                            //(this does not change the interface itself!!)
+        halt();                 // await next student action
+    }
+    else {
+	     backtrack();             // undo any changes and search further
+	 }
+  }
+}
+
+
+rule multiply {
+    when {
+      p : Problem p.firstPart != null && p.firstPartPlus1 != null && p.product == null
+                 {firstPart: f, firstPartPlus1: f1, ieProduct: sel};
+      ie : InterfaceElement ie.name == sel && ie.value == null;    
+    }
+    then {
+      let  prod = f + f1;
+      assert(new Hint("Now you need to multiply the two numbers you just found, "+f+" and "+f1+"."));
+      assert(new Hint("Multiply "+f+" and "+f1+"."));
+      assert(new Hint("Please write "+prod+"."));
+      if(checkSAI({selection: sel, action: "UpdateTextField", input: prod})) {
+          modify(p, "product", prod); 
+          modify(ie, "value", prod);
+          halt();
+      }
+      else {
+           backtrack();      // undo any changes and search further
+       }
+    }
+  }

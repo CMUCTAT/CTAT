@@ -1,0 +1,85 @@
+// Types for facts in your model.
+
+
+// InterfaceElement facts are usually of the form {name, value}, where
+//   the name is the selection from the student's selection-action-input, and
+//   the value is student's input
+define InterfaceElement {
+    name: null,
+	value: null,
+	constructor: function(n) {
+		this.name = n;
+	}
+}
+
+// The top-level fact with the problem-specific given values and
+// the names of the interface elements.
+define Problem {
+	name: null,
+	givenNumber: null,
+	firstPart: null,
+	firstPartPlus1: null,
+	product: null,
+	append25: null,
+	finalAnswer: null,
+	printed: null,
+	ieFirstPart: null,
+	ieFirstPartPlus1: null,
+	ieProduct: null,
+	ieAppend25: null,
+	ieFinalAnswer: null,
+	constructor: function(name, given, firstPart, firstPartPlus1, product, append25, finalAnswer) {
+		this.name = name;
+		this.givenNumber = given;
+		this.ieFirstPart = firstPart;
+		this.ieFirstPartPlus1 = firstPartPlus1;
+		this.ieProduct = product;
+		this.ieAppend25 = append25;
+		this.ieFinalAnswer = finalAnswer;
+	}
+}
+
+
+// The following are standard types needed for the Nools model tracer.
+// We recommend not changing these types.
+// The StudentValues, TPA and Hint facts are the same for every tutor.
+
+// The student's entries from the interface.
+define StudentValues {
+	selection: null,
+	action: null,
+	input: null,
+	constructor: function(s,a,i) {
+		this.selection = s;
+		this.action = a;
+		this.input = i;
+	}
+}
+
+// Assert a TPA fact to set a value in a component on the student interface.
+define TPA {
+	selection: null,
+	action: null,
+	input: null,
+	constructor: function(s, a, i) {
+		if(Array.isArray(s)) {
+			this.selection = s[0];
+			this.action = s[1];
+			this.input = s[2];
+		} else {
+			this.selection = s;
+			this.action = a;
+			this.input = i;
+		}
+	}
+}
+
+// Assert a Hint fact for each hint you want in a step.
+define Hint {
+	precedence: 0,
+	msg: "",
+	constructor: function(m, optPrecedence) {
+		this.msg = m;
+		this.precedence = optPrecedence || 0;
+	}
+}

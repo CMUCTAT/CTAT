@@ -1,0 +1,1 @@
+Suppose after the students enter common multiple for first fraction you want them to be able to enter either the denominator for 2nd fraction or numerator for the fraction in which they already entered the denominator but right now it only allows one. 

@@ -1,0 +1,320 @@
+import("types.nools");
+
+rule bootstrap {
+	when {
+		s: Boolean s === false from false;
+	}
+	then {
+		// create facts to represent the student interface components
+		let ieGiven1numer = assert(new InterfaceElement("given1numer"));
+		let ieGiven1denom = assert(new InterfaceElement("given1denom"));
+
+		let ieGiven2numer = assert(new InterfaceElement("given2numer"));
+		let ieGiven2denom = assert(new InterfaceElement("given2denom"));
+
+		let ieConv1numer = assert(new InterfaceElement("conv1numer"));
+		let ieConv1denom = assert(new InterfaceElement("conv1denom"));
+
+		let ieConv2numer = assert(new InterfaceElement("conv2numer"));
+		let ieConv2denom = assert(new InterfaceElement("conv2denom"));
+
+		let ieAns1numer = assert(new InterfaceElement("ans1numer"));
+		let ieAns1denom = assert(new InterfaceElement("ans1denom"));
+
+
+		// givens
+		let given1Fact = assert(new Fraction("given1", given1Numer, given1Denom, ieGiven1numer.name, ieGiven1denom.name, "conv1"));
+		let given2Fact = assert(new Fraction("given2", given2Numer, given2Denom, ieGiven2numer.name, ieGiven2denom.name, "conv2"));
+
+		// converted
+		assert(new Fraction(given1Fact.convertedForm, null, null, ieConv1numer.name, ieConv1denom.name, null));
+		assert(new Fraction(given2Fact.convertedForm, null, null, ieConv2numer.name, ieConv2denom.name, null));
+
+		// answer
+		let ansFact = assert(new Fraction("ans1", null, null, ieAns1numer.name, ieAns1denom.name, null, false));
+
+		assert(new Problem(probName, [given1Fact.name, given2Fact.name], [given1Fact.convertedForm, given2Fact.convertedForm], ansFact.name));
+
+		assert(new TPA(ieGiven1numer.name, "UpdateTextField", given1Numer));
+		assert(new TPA(ieGiven1denom.name, "UpdateTextField", given1Denom));
+		assert(new TPA(ieGiven2numer.name, "UpdateTextField", given2Numer));
+		assert(new TPA(ieGiven2denom.name, "UpdateTextField", given2Denom));
+
+		setProblemAttribute("use_backtracking", true);
+		halt();
+	}
+}
+
+
+// need lots of inline quesitons to describe this structure
+rule DetermineCommonMultiple1 {
+	when {
+		// Have a Problem fact (call it prob).
+		// Call its givenFractions part "givens"
+		prob: Problem { givenFractions: givens };
+
+		// Have a Fraction fact (call it f1) such that
+		//      its name is the first element in givens
+		//  Call its value "f1Val". Call its convertedForm "f1Convert".
+		f1: Fraction f1.name === givens[0]
+		{ denominator: f1Denom, convertedForm: f1Convert };
+
+		f2: Fraction f2.name === givens[1]
+		{ denominator: f2Denom, convertedForm: f2Convert };
+
+
+		// Have a Fraction fact (call it c1) such that
+		//      its name is equal to f1Convert
+		//      its numerator is null
+		//      its denominator is null
+		// Call its ieDenominator "sel"
+		c1: Fraction c1.name === f1Convert &&
+			c1.numerator == null &&
+			c1.denominator == null
+		{ ieDenominator: sel };
+
+		c2: Fraction c2.name === f2Convert &&
+			c2.numerator == null &&
+			c2.denominator == null;
+
+		ie: InterfaceElement ie.name == sel &&
+			ie.value == null;
+	}
+	then {
+		// Simple version: require that the student multiplies the denominators
+		let newDen = f1Denom * f2Denom;
+
+		predictedSAI = { selection: sel, action: "UpdateTextField", input: newDen };
+
+		if (checkSAI(predictedSAI)) {
+			// var newVal = {denom: newDen, numer: c1.numerator};
+			modify(c1, "denominator", newDen);
+			modify(ie, "value", newDen);
+			halt();
+		} else {
+			backtrack();
+		}
+		assert(new Hint("Enter " + newDen + " in the highlighted field"));
+	}
+}
+
+rule ConvertNumerator1 {
+	when {
+		prob: Problem { givenFractions: givens };
+
+		// givens
+		f1: Fraction f1.name === givens[0]
+		{ numerator: f1Numer, denominator: f1Denom, convertedForm: f1Convert };
+
+		f2: Fraction f2.name === givens[1]
+		{ convertedForm: f2Convert };
+
+		// converted forms of givens
+		c1: Fraction c1.name === f1Convert &&
+			c1.numerator == null &&
+			c1.denominator != null
+		{ denominator: c1Denom, ieNumerator: sel };
+
+		c2: Fraction c2.name === f2Convert &&
+			c2.numerator == null &&
+			c2.denominator == null;
+
+		// selection
+		ie: InterfaceElement ie.name == sel &&
+			ie.value == null;
+	}
+
+	then {
+		var newNum = f1Numer * (c1Denom / f1Denom);
+		assert(new Hint("Enter " + newNum + " in the highlighted field"));
+
+		let predictedSAI = { selection: sel, action: "UpdateTextField", input: newNum };
+		if (checkSAI(predictedSAI)) {
+			//var newVal = {denom: c1Denom, numer: newNum};
+			modify(c1, "numerator", newNum);
+			modify(ie, "value", newNum);
+			halt();
+		} else {
+			backtrack();
+		}
+	}
+}
+
+
+rule DetermineCommonMultiple2 {
+	when {
+		prob: Problem { givenFractions: givens };
+
+		f1: Fraction f1.name === givens[0]
+		{ convertedForm: f1Convert };
+
+		f2: Fraction f2.name === givens[1]
+		{ convertedForm: f2Convert };
+
+		c1: Fraction c1.name === f1Convert &&
+			c1.numerator != null &&
+			c1.denominator != null
+		{ denominator: c1Denom };
+
+		c2: Fraction c2.name === f2Convert &&
+			c2.numerator == null &&
+			c2.denominator == null
+		{ ieDenominator: sel };
+
+		ie: InterfaceElement ie.name == sel &&
+			ie.value == null;
+	}
+	then {
+		// 2nd denominator should be same as 1st
+		let newDen = c1Denom;
+
+		predictedSAI = { selection: sel, action: "UpdateTextField", input: newDen };
+		if (checkSAI(predictedSAI)) {
+			//var newVal = {denom: newDen, numer: c2.numerator};
+			modify(c2, "denominator", newDen);
+			modify(ie, "value", newDen);
+			halt();
+		} else {
+			backtrack();
+		}
+		assert(new Hint("Enter " + newDen + " in the highlighted field"));
+	}
+}
+
+
+rule ConvertNumerator2 {
+	when {
+		prob: Problem { givenFractions: givens };
+
+		f1: Fraction f1.name === givens[0]
+		{ convertedForm: f1Convert };
+
+		f2: Fraction f2.name === givens[1]
+		{ numerator: f2Numer, denominator: f2Denom, convertedForm: f2Convert };
+
+		c1: Fraction c1.name === f1Convert &&
+			c1.numerator != null &&
+			c1.denominator != null;
+
+		c2: Fraction c2.name === f2Convert &&
+			c2.numerator == null &&
+			c2.denominator != null
+		{ denominator: c2Denom, ieNumerator: sel };
+
+		ie: InterfaceElement ie.name == sel &&
+			ie.value == null;
+	}
+	then {
+		var newNum = f2Numer * (c2Denom / f2Denom);
+		assert(new Hint("Enter " + newNum + " in the highlighted field"));
+
+		let predictedSAI = { selection: sel, action: "UpdateTextField", input: newNum };
+		if (checkSAI(predictedSAI)) {
+			//var newVal = {denom: c2Denom, numer: newNum};
+			modify(c2, "numerator", newNum);
+			modify(ie, "value", newNum);
+			halt();
+		} else {
+			backtrack();
+		}
+	}
+}
+
+
+rule CopyDenom {
+	when {
+		prob: Problem prob.answerFraction { answerFraction: answer, givenFractions: givens };
+
+		f1: Fraction f1.name === givens[0]
+		{ convertedForm: f1Convert };
+
+		f2: Fraction f2.name === givens[1]
+		{ convertedForm: f2Convert };
+
+		c1: Fraction c1.name === f1Convert &&
+			c1.numerator != null &&
+			c1.denominator != null;
+
+		c2: Fraction c2.name === f2Convert &&
+			c2.numerator != null &&
+			c2.denominator != null
+		{ denominator: c2Denom };
+
+		ans: Fraction ans.name == answer &&
+			ans.denominator == null
+		{ ieDenominator: sel };
+	}
+	then {
+		let denomToCopy = c2Denom;
+		assert(new Hint("The sum of any two fractions with the same denominator will also share that denominator"));
+		assert(new Hint("Enter " + denomToCopy + " in the highlighted field"));
+
+		let predictedSAI = { selection: sel, action: "UpdateTextField", input: denomToCopy };
+		if (checkSAI(predictedSAI)) {
+			//var newVal = {denom: denomToCopy, numer: ans.numerator};
+			modify(ans, "denominator", denomToCopy);
+			halt();
+		} else {
+			backtrack();
+		}
+	}
+}
+
+
+rule AddNumerators {
+	when {
+		prob: Problem prob.answerFraction { answerFraction: answer, givenFractions: givens };
+
+		f1: Fraction f1.name === givens[0]
+		{ convertedForm: f1Convert };
+
+		f2: Fraction f2.name === givens[1]
+		{ convertedForm: f2Convert };
+
+		c1: Fraction c1.name === f1Convert &&
+			c1.numerator != null &&
+			c1.denominator != null
+		{ numerator: c1Numer, denominator: c1Denom };
+
+		c2: Fraction c2.name === f2Convert &&
+			c2.numerator != null &&
+			c2.denominator == c1Denom
+		{ numerator: c2Numer };
+
+		ans: Fraction ans.name == answer &&
+			ans.denominator != null
+		{ ieNumerator: sel };
+
+		ie: InterfaceElement ie.name == sel &&
+			ie.value == null;
+	}
+	then {
+		var sum = c1Numer + c2Numer;
+		assert(new Hint("Now that both fractions have the same denominator, you can add the numerators"));
+		assert(new Hint("Add " + c1Numer + " and " + c2Numer + " to get the numerator of the sum fraction"));
+
+		let predictedSAI = { selection: sel, action: "UpdateTextField", input: sum };
+		if (checkSAI(predictedSAI)) {
+			//var newVal = {numer: sum, denom: ans.denominator};
+			modify(ans, "numerator", sum);
+			halt();
+		} else {
+			backtrack();
+		}
+	}
+}
+
+
+rule Done {
+	when {
+		prob: Problem prob.answerFraction { answerFraction: answer };
+		ans: Fraction ans.name == answer &&
+			ans.numerator != null &&
+			ans.denominator != null;
+	}
+	then {
+		if (checkSAI({ selection: "done", action: "ButtonPressed", input: -1 })) {
+			halt();
+		}
+	}
+}

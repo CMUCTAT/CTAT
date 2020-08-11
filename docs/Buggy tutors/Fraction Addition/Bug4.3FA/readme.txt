@@ -1,0 +1,1 @@
+tutor accepts any multiple of 4 but it should only accept any multiple of lowest common multiple of the two denominators

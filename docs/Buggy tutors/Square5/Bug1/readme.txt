@@ -1,0 +1,1 @@
+tutor does not load (i.e., gets stuck while displaying message "please wait while the tutor is being loaded")

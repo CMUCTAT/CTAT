@@ -1,0 +1,1 @@
+it accepts 0 as final numerator if you don't enter any value in previous text inputs which is undesirable. Can you solve it?

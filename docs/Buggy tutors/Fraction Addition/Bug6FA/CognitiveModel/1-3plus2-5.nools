@@ -1,0 +1,9 @@
+import("productionrules.nools");
+
+global probName = "1-3plus2-5";
+
+global given1Numer = 1;
+global given1Denom = 3;
+
+global given2Numer = 2;
+global given2Denom = 5;

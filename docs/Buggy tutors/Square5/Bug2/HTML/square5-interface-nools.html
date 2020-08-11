@@ -1,0 +1,167 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- generator meta tag -->
+  <!-- leave this for stats and Silex version check -->
+  <meta name="generator" content="Silex v2.2.5" />
+  <!-- End of generator meta tag -->
+
+  <!--CSS-->
+  <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/normalize.css" rel="stylesheet" />
+  <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/front-end.css" rel="stylesheet" />
+  <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css" rel="stylesheet" />
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .CTATTextInput {
+      display: inline-block;
+      background-color: white;
+    }
+
+    .CTATTextField {
+      display: inline-block
+    }
+
+    #prompt initialnum {
+      padding: 1em;
+      border-style: none;
+      font-family: Trebuchet MS;
+      background-color: white;
+    }
+
+    .subproblem {
+      padding: 1em;
+      width: 50%;
+    }
+
+    .greybox {
+      padding: 1em;
+      border-style: none;
+      background-color: lightgray;
+      display: inline-block;
+    }
+  </style>
+
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/latest/jquery.min.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctat.min.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctatloader.js"></script>
+  <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/nools.js"></script>
+
+  <script>
+    var myVars = {
+      question_file: "../CognitiveModel/sq35.nools",
+      tutoring_service_communication: "javascript"
+    };
+
+    function ctatOnload() {
+      initTutor(myVars);
+      // MathJax.Hub.Typeset();
+      // initTutor();
+      // $('#problem-statement-part-1').on('CTAT_EXECUTE_SAI', function (e) {
+      //     MathJax.Hub.Queue(['Typeset', MathJax.Hub, $('#problem-statement-part-1')[0]]);
+      // });
+    }
+  </script>
+</head>
+
+
+<body>
+
+  <div id="container" style="display: table; width:700; height:600px; border: 1px solid black; border-spacing: 2px;">
+    <div style="display: table-row; height:100%;">
+      <div class="subproblem">
+        <div style="padding-bottom: 1em;">Find the square of <div id="givenNum" class="CTATTextInput"></div>
+        </div>
+        <div id="sub-problem1" class="CTATGroupingComponent greybox">
+          <table border="0">
+            <tr>
+              <td align="left">First part</td>
+              <td width="20">&nbsp;</td>
+              <td>
+                <div id="firstPart" class="CTATTextInput"></div>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">First part + 1</td>
+              <td width="20">&nbsp;</td>
+              <td>
+                <div id="firstPartPlusOne" class="CTATTextInput"></div>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">Product</td>
+              <td width="20">&nbsp;</td>
+              <td>
+                <div id="product" class="CTATTextInput"></div>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">Append 25</td>
+              <td width="20">&nbsp;</td>
+              <td>
+                <div id="append25" class="CTATTextInput"></div>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+      <div class="subproblem">
+        <div id="final-answer" class="CTATGroupingComponent greybox">
+          <table border="0">
+            <tr>
+              <td align="left">Final Answer</td>
+              <td width="20">&nbsp;</td>
+              <td>
+                <div id="finalAnswer" class="CTATTextInput"></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Don't bother touching anything below this. It's for the hint window and buttons. -->
+    <div style="float: left; width: 350px; height: 100%; padding: 10px; background-color: #f9fcff; border-left: 1px solid grey;">
+      <div id="skills" class="CTATSkillWindow" style="width: 100%;" data-ctat-threshold="0.85"></div>
+      <br>
+      <div id="HintWindow" class="CTATHintWindow" style="width: 100%;"></div>
+      <br>
+      <div style="display:flex; justify-content:space-around">
+        <div id="done" class="CTATDoneButton" tabindex="9" style="" data-ctat-completion-status="completeSequence"></div>
+        <div id="hint" class="CTATHintButton" tabindex="10" style=""></div>
+      </div>
+    </div>
+    <!--
+    <div style="display: table-row; height: 200px;">
+        <div style="width: 49%; display: inline-block; border: 1px solid black;">
+          <div style="display: table-cell; width: 100%; vertical-align: bottom;">
+            <div id="HintWindow" class="CTATHintWindow" style="width: 100%; height: 100%"></div>
+          </div>
+          <div style="display: table-cell; width: 60px;">
+            <div style="border: 0px solid black; margin-bottom: 2px;">
+                <div id="hint-button" class="CTATHintButton"></div>
+            </div>
+            <div style="border: 0px solid black;">
+                <div id="done" class="CTATDoneButton"></div>
+            </div>
+          </div>
+        </div>
+        <div style="display: inline-block; width: 49%; vertical-align: bottom; border: 1px solid black">
+            <div id="skills" class="CTATSkillWindow" style="width: 100%"></div>
+        </div>
+    </div>
+-->
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+define StudentValues {
+	selection: null,
+	action: null,
+	input: null,
+	constructor: function(s,a,i) {
+		this.selection = s;
+		this.action = a;
+		this.input = i;
+	}
+}
+
+define TPA {
+	selection: null,
+	action: null,
+	input: null,
+	constructor: function(s, a, i) {
+		this.selection = s;
+		this.action = a;
+		this.input = i;
+	}
+}
+
+define Hint {
+	precedence: 0,
+	msg: "",
+	constructor: function(m, optPrecedence) {
+		this.msg = m;
+		this.precedence = optPrecedence || 0;
+	}
+}
+
+define InterfaceElement {
+    name: null,
+	value: null,
+	constructor: function(n) {
+		this.name = n;
+	}
+}
+
+define Problem {
+	name: null,
+	givenFractions: [],
+	convertedFractions: [],
+	answerFraction: null,
+	constructor: function(n, g, c, a) {
+		this.name = n;
+		this.givenFractions = g;
+		this.convertedFractions = c;
+		this.answerFraction = a;
+	}
+}
+
+// Instead of making value a JS object with numer and denom,
+// uses 2 separate slots for numerator and denominator
+define Fraction {
+	name: null,
+    numerator: null,
+    denominator: null,
+    
+	ieNumerator: null,
+	ieDenominator: null,
+	convertedForm: null, // link to another Fraction fact
+
+	constructor: function(n, numer, denom, ieNumer, ieDenom, c) {
+		this.name = n;
+		this.numerator = numer;
+        this.denominator = denom;
+		this.ieNumerator = ieNumer;
+		this.ieDenominator = ieDenom;
+		this.convertedForm = c;
+	}
+}

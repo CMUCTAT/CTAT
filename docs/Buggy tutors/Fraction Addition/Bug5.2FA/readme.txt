@@ -1,0 +1,2 @@
+This tutor only allows 2nd fraction denominator to be accepted after the first fraction have been converted which is not desirable.
+Can you make the tutor flexible enough to accept entering denominator for either of the two fractions?

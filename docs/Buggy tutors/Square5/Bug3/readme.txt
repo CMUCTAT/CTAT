@@ -1,0 +1,1 @@
+On finding the square of 35, input 4 is not accepted on the second step.
