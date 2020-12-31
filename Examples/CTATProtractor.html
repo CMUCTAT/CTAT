@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>CTATProtractor Examples</title>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css">
+<link rel="stylesheet" href="Assets/ctat_example.css">
+<link rel="stylesheet" href="Assets/CTATProtractor.css">
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/jquery.min.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctat.min.js"></script>
+<script src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
+<script src="Assets/CTATProtractor.js"></script>
+<script>
+// function ctatOnload() {
+//       initTutor({"question_file":'data:file/brd;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4KCjxzdGF0ZUdyYXBoIGZpcnN0Q2hlY2tBbGxTdGF0ZXM9InRydWUiIGNhc2VJbnNlbnNpdGl2ZT0idHJ1ZSIgdW5vcmRlcmVkPSJmYWxzZSIgbG9ja1dpZGdldD0idHJ1ZSIgaGludFBvbGljeT0iVXNlIEJvdGggS2luZHMgb2YgQmlhcyIgdmVyc2lvbj0iNC4wIiBzdXBwcmVzc1N0dWRlbnRGZWVkYmFjaz0iU2hvdyBBbGwgRmVlZGJhY2siIGhpZ2hsaWdodFJpZ2h0U2VsZWN0aW9uPSJ0cnVlIiBzdGFydFN0YXRlTm9kZU5hbWU9IiUoc3RhcnRTdGF0ZU5vZGVOYW1lKSUiIHR1dG9yVHlwZT0iRXhhbXBsZS10cmFjaW5nIFR1dG9yIj4KICAgIDxzdGFydE5vZGVNZXNzYWdlcz4KICAgICAgICA8bWVzc2FnZT4KICAgICAgICAgICAgPHZlcmI+U2VuZE5vdGVQcm9wZXJ0eTwvdmVyYj4KICAgICAgICAgICAgPHByb3BlcnRpZXM+CiAgICAgICAgICAgICAgICA8TWVzc2FnZVR5cGU+U3RhcnRQcm9ibGVtPC9NZXNzYWdlVHlwZT4KICAgICAgICAgICAgICAgIDxQcm9ibGVtTmFtZT5zaW1wbGVfc3RhcnQ8L1Byb2JsZW1OYW1lPgogICAgICAgICAgICA8L3Byb3BlcnRpZXM+CiAgICAgICAgPC9tZXNzYWdlPgogICAgICAgIDxtZXNzYWdlPgogICAgICAgICAgICA8dmVyYj5TZW5kTm90ZVByb3BlcnR5PC92ZXJiPgogICAgICAgICAgICA8cHJvcGVydGllcz4KICAgICAgICAgICAgICAgIDxNZXNzYWdlVHlwZT5TdGFydFN0YXRlRW5kPC9NZXNzYWdlVHlwZT4KICAgICAgICAgICAgPC9wcm9wZXJ0aWVzPgogICAgICAgIDwvbWVzc2FnZT4KICAgIDwvc3RhcnROb2RlTWVzc2FnZXM+CiAgICA8bm9kZSBsb2NrZWQ9ImZhbHNlIiBkb25lU3RhdGU9ImZhbHNlIj4KICAgICAgICA8dGV4dD5zaW1wbGVfc3RhcnQ8L3RleHQ+CiAgICAgICAgPHVuaXF1ZUlEPjE8L3VuaXF1ZUlEPgogICAgICAgIDxkaW1lbnNpb24+CiAgICAgICAgICAgIDx4PjUzMDwveD4KICAgICAgICAgICAgPHk+MzA8L3k+CiAgICAgICAgPC9kaW1lbnNpb24+CiAgICA8L25vZGU+CiAgICA8bm9kZSBsb2NrZWQ9ImZhbHNlIiBkb25lU3RhdGU9ImZhbHNlIj4KICAgICAgICA8dGV4dD5zdGF0ZTE8L3RleHQ+CiAgICAgICAgPHVuaXF1ZUlEPjI8L3VuaXF1ZUlEPgogICAgICAgIDxkaW1lbnNpb24+CiAgICAgICAgICAgIDx4PjU0NDwveD4KICAgICAgICAgICAgPHk+MTc4PC95PgogICAgICAgIDwvZGltZW5zaW9uPgogICAgPC9ub2RlPgogICAgPGVkZ2U+CiAgICAgICAgPGFjdGlvbkxhYmVsIHByZWZlclBhdGhNYXJrPSJ0cnVlIiBtaW5UcmF2ZXJzYWxzPSIxIiBtYXhUcmF2ZXJzYWxzPSIxIj4KICAgICAgICAgICAgPHN0dWRlbnRIaW50UmVxdWVzdD48L3N0dWRlbnRIaW50UmVxdWVzdD4KICAgICAgICAgICAgPHN0ZXBTdWNjZXNzZnVsQ29tcGxldGlvbj48L3N0ZXBTdWNjZXNzZnVsQ29tcGxldGlvbj4KICAgICAgICAgICAgPHN0ZXBTdHVkZW50RXJyb3I+PC9zdGVwU3R1ZGVudEVycm9yPgogICAgICAgICAgICA8dW5pcXVlSUQ+MTwvdW5pcXVlSUQ+CiAgICAgICAgICAgIDxtZXNzYWdlPgogICAgICAgICAgICAgICAgPHZlcmI+Tm90ZVByb3BlcnR5U2V0PC92ZXJiPgogICAgICAgICAgICAgICAgPHByb3BlcnRpZXM+CiAgICAgICAgICAgICAgICAgICAgPE1lc3NhZ2VUeXBlPkludGVyZmFjZUFjdGlvbjwvTWVzc2FnZVR5cGU+CiAgICAgICAgICAgICAgICAgICAgPHRyYW5zYWN0aW9uX2lkPjAwYzEzNGI1LWE4NTMtZjY1Zi0zM2NiLWVkZjI2MGFlZjExMjwvdHJhbnNhY3Rpb25faWQ+CiAgICAgICAgICAgICAgICAgICAgPFNlbGVjdGlvbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHZhbHVlPmFuZ2xlczwvdmFsdWU+CiAgICAgICAgICAgICAgICAgICAgPC9TZWxlY3Rpb24+CiAgICAgICAgICAgICAgICAgICAgPEFjdGlvbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHZhbHVlPnNldEFuZ2xlPC92YWx1ZT4KICAgICAgICAgICAgICAgICAgICA8L0FjdGlvbj4KICAgICAgICAgICAgICAgICAgICA8SW5wdXQ+CiAgICAgICAgICAgICAgICAgICAgICAgIDx2YWx1ZT4xMzU8L3ZhbHVlPgogICAgICAgICAgICAgICAgICAgIDwvSW5wdXQ+CiAgICAgICAgICAgICAgICA8L3Byb3BlcnRpZXM+CiAgICAgICAgICAgIDwvbWVzc2FnZT4KICAgICAgICAgICAgPGJ1Z2d5TWVzc2FnZT5ObywgdGhpcyBpcyBub3QgY29ycmVjdC48L2J1Z2d5TWVzc2FnZT4KICAgICAgICAgICAgPHN1Y2Nlc3NNZXNzYWdlPjwvc3VjY2Vzc01lc3NhZ2U+CiAgICAgICAgICAgIDxoaW50TWVzc2FnZT5QbGVhc2UgcHJvdmlkZSB5b3VyIGFuc3dlciAnMTM1JyBpbiB0aGUgaGlnaGxpZ2h0ZWQgZWxlbWVudC48L2hpbnRNZXNzYWdlPgogICAgICAgICAgICA8Y2FsbGJhY2tGbj48L2NhbGxiYWNrRm4+CiAgICAgICAgICAgIDxhY3Rpb25UeXBlPkNvcnJlY3QgQWN0aW9uPC9hY3Rpb25UeXBlPgogICAgICAgICAgICA8b2xkQWN0aW9uVHlwZT5Db3JyZWN0IEFjdGlvbjwvb2xkQWN0aW9uVHlwZT4KICAgICAgICAgICAgPGNoZWNrZWRTdGF0dXM+TmV2ZXIgQ2hlY2tlZDwvY2hlY2tlZFN0YXR1cz4KICAgICAgICAgICAgPG1hdGNoZXJzIENvbmNhdGVuYXRpb249InRydWUiPgogICAgICAgICAgICAgICAgPFNlbGVjdGlvbj4KICAgICAgICAgICAgICAgICAgICA8bWF0Y2hlcj4KICAgICAgICAgICAgICAgICAgICAgICAgPG1hdGNoZXJUeXBlPkV4YWN0TWF0Y2hlcjwvbWF0Y2hlclR5cGU+CiAgICAgICAgICAgICAgICAgICAgICAgIDxtYXRjaGVyUGFyYW1ldGVyIG5hbWU9InNpbmdsZSI+YW5nbGVzPC9tYXRjaGVyUGFyYW1ldGVyPgogICAgICAgICAgICAgICAgICAgIDwvbWF0Y2hlcj4KICAgICAgICAgICAgICAgIDwvU2VsZWN0aW9uPgogICAgICAgICAgICAgICAgPEFjdGlvbj4KICAgICAgICAgICAgICAgICAgICA8bWF0Y2hlcj4KICAgICAgICAgICAgICAgICAgICAgICAgPG1hdGNoZXJUeXBlPkV4YWN0TWF0Y2hlcjwvbWF0Y2hlclR5cGU+CiAgICAgICAgICAgICAgICAgICAgICAgIDxtYXRjaGVyUGFyYW1ldGVyIG5hbWU9InNpbmdsZSI+c2V0QW5nbGU8L21hdGNoZXJQYXJhbWV0ZXI+CiAgICAgICAgICAgICAgICAgICAgPC9tYXRjaGVyPgogICAgICAgICAgICAgICAgPC9BY3Rpb24+CiAgICAgICAgICAgICAgICA8SW5wdXQ+CiAgICAgICAgICAgICAgICAgICAgPG1hdGNoZXI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxtYXRjaGVyVHlwZT5FeGFjdE1hdGNoZXI8L21hdGNoZXJUeXBlPgogICAgICAgICAgICAgICAgICAgICAgICA8bWF0Y2hlclBhcmFtZXRlciBuYW1lPSJzaW5nbGUiPjEzNTwvbWF0Y2hlclBhcmFtZXRlcj4KICAgICAgICAgICAgICAgICAgICA8L21hdGNoZXI+CiAgICAgICAgICAgICAgICA8L0lucHV0PgogICAgICAgICAgICAgICAgPEFjdG9yIGxpbmtUcmlnZ2VyZWQ9ImZhbHNlIj5TdHVkZW50PC9BY3Rvcj4KICAgICAgICAgICAgPC9tYXRjaGVycz4KICAgICAgICA8L2FjdGlvbkxhYmVsPgogICAgICAgIDxwcmVDaGVja2VkU3RhdHVzPk5vLUFwcGxpY2FibGU8L3ByZUNoZWNrZWRTdGF0dXM+CiAgICAgICAgPHJ1bGU+CiAgICAgICAgICAgIDx0ZXh0PnVubmFtZWQ8L3RleHQ+CiAgICAgICAgICAgIDxpbmRpY2F0b3I+LTE8L2luZGljYXRvcj4KICAgICAgICA8L3J1bGU+CiAgICAgICAgPHNvdXJjZUlEPjE8L3NvdXJjZUlEPgogICAgICAgIDxkZXN0SUQ+MjwvZGVzdElEPgogICAgICAgIDx0cmF2ZXJzYWxDb3VudD4wPC90cmF2ZXJzYWxDb3VudD4KICAgIDwvZWRnZT4KICAgIDxFZGdlc0dyb3VwcyBvcmRlcmVkPSJ0cnVlIj48L0VkZ2VzR3JvdXBzPgo8L3N0YXRlR3JhcGg+Cgo='});
+// };
+</script>
+<style type="text/css">
+  div.tutor_window { width: 800px; }
+  hr { width: 85%; }
+  #hint-box {
+    position:fixed;
+    bottom:10px;
+    background-color: cornsilk;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+  <div class="tutor_window">
+    <a href="http://ctat.pact.cs.cmu.edu/">
+      <img id="CTATBanner" alt="CTAT: Cognitive Tutor Authoring Tools" src="Assets/CTAT_Banner.svg">
+    </a>
+    <h1>CTATProtractor Example</h1>
+    <p>Some CTATProtractor examples that show some of its basic functionality.</p>
+    <hr>
+    <div>
+      <div class="ctat_example">
+	CTATProtractor with default settings:
+<div id=protractorDefault class="CTATProtractor CTATComponent">      </div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="protractorDefault" 
+    class="CTATProtractor"&gt;
+&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <div class="ctat_example">
+	Setting different tickmark/snap intervals:
+        <div id="intervalProtractor" class="CTATProtractor" data-ctat-interval="20"></div>
+</div>
+      <div class="ctat_code">
+	<pre>&lt;div div id="intervalProtractor" 
+    class="CTATProtractor" 
+    data-ctat-interval="20"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>This setting will adjust the tickmark intervals in degrees.  The value must evenly divide 180, or it defaults to 15.</p>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <div class="ctat_example">
+  Snapping and drag-on-arc turned off:
+  <div id=dragSnapOffProtractor class="CTATProtractor" data-ctat-drag-on-arc="false" data-ctat-snap="false"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;id=dragSnapOffProtractor 
+    class="CTATProtractor" 
+    data-ctat-drag-on-arc="false" 
+    data-ctat-snap="false"&gt;
+&lt;/div&gt;
+	</pre>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <div class="ctat_example">
+  Setting different labels:
+    <div id="radianlabelsProtractor" class="CTATProtractor" data-ctat-inner-labels="clockwise degrees" data-ctat-outer-labels="clockwise radians"></div>
+      </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="radianlabelsProtractor" 
+    class="CTATProtractor" 
+    data-ctat-inner-labels="clockwise degrees" 
+    data-ctat-outer-labels="clockwise radians"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>Please note that CTATProtractor always reports angles as counterclockwise, even when the labels are set to clockwise.</p>
+	<p>To compensate, you can subtract from 180 in your .brd files.</p>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <div class="ctat_example">
+	Adding additional interactive points and base points:
+        <div id="morePointsProtractor" class="CTATProtractor" data-ctat-interactive-points="LMN" data-ctat-base-points="QED"></div>
+</div>
+      <div class="ctat_code">
+	<pre>&lt;div id="morePointsProtractor" 
+    class="CTATProtractor"
+    data-ctat-interactive-points="LMN" 
+    data-ctat-base-points="QED"&gt;
+&lt;/div&gt;
+  </pre>
+  <p>Notice that the protractor now reports ALL possible angles from the point move.  To work with only a single angle, use the "chooseAngle" TPA in the .brd to select only a single angle.</p>
+      </div>
+    </div>
+    <hr>
+
+    <div>
+      <div class="ctat_example">
+	Changing Unit of Measure (radian decimal):
+<div id="decimalRadianProtractor" class="CTATProtractor" data-ctat-unit-of-measure="radians" data-ctat-precision="3" data-ctat-outer-labels="counterclockwise radian"></div>
+</div>
+      <div class="ctat_code">
+	<pre>&lt;div id="decimalRadianProtractor" 
+    class="CTATProtractor" 
+    data-ctat-unit-of-measure="radians"
+    data-ctat-precision="3"
+    data-ctat-outer-labels=
+      "counterclockwise radian"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>Move point A to see its output in the hint window.  It will report in decimal radian measure, to three decimal places (set by data-ctat-precision).</p>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <div class="ctat_example">
+      Changing Unit of Measure (radian fraction):
+      <div id="fractionRadianProtractor" class="CTATProtractor" data-ctat-unit-of-measure="fraction" data-ctat-precision="24" data-ctat-outer-labels="counterclockwise radian"></div>      
+    </div>
+      <div class="ctat_code">
+	<pre>&lt;div id="decimalRadianProtractor" 
+    class="CTATProtractor" 
+    data-ctat-unit-of-measure="fraction"
+    data-ctat-precision="24"
+    data-ctat-outer-labels=
+      "counterclockwise radian"&gt;
+&lt;/div&gt;
+	</pre>
+	<p>Move point A to see its output in the hint window.  It will report in fractional radian measure, with a denominator of 24 (set by data-ctat-precision).</p>
+      </div>
+    </div>
+
+    <hr>
+    
+
+
+    <div style="height:200px;"></div>
+    <div id="hint-box">
+      <div id="HintWindow" class="CTATHintWindow CTATComponent" data-ctat-component="CTATHintWindow" onkeypress="return noenter(event)" data-ctat-enabled="true"></div>
+      <div>
+	<div id="hint-button" class="CTATHintButton CTATComponent" data-ctat-component="CTATHintButton" data-ctat-enabled="true"></div>
+	<div id="done" class="CTATDoneButton CTATComponent" data-ctat-component="CTATDoneButton" data-ctat-enabled="true"></div>
+      </div>
+    </div>
+  </div>
+
+
+</body></html>
