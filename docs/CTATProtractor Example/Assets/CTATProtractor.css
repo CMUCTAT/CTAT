@@ -1,0 +1,85 @@
+/*-------------------------------------------------------*\
+	#CTAT Protractor
+\*-------------------------------------------------------*/
+
+.CTATProtractor {
+  min-height: 200px;
+  min-width: 400px;
+  max-width: 1000px;
+  max-height: 500px;
+  display: contents;
+}
+
+.CTATProtractor--container {
+  height: auto;
+  width: 100%;
+  outline: 2px solid cornflowerblue;
+  outline-offset: -2px;
+}
+
+.CTATProtractor--compass {
+  stroke: rgb(131, 171, 245);
+  stroke-width: 3px;
+  fill: none;
+}
+
+.CTATProtractor--ticks {
+  stroke: rgb(163, 118, 5);
+  stroke-width: 4px;
+}
+
+.CTATProtractor--labels {
+  text-anchor: middle;
+  fill: rgb(47, 110, 182);
+  font-size: 80%;
+}
+
+.CTATProtractor--label90 {
+  font-weight: bold;
+  font-size: 125%;
+}
+
+.CTATProtractor--label-origin {
+  text-anchor: middle;
+  font-style: italic;
+  stroke: none;
+  font-size: 125%;
+  fill: blue;
+}
+
+.CTATProtractor--protrays {
+  stroke: rgb(0, 204, 194);
+  fill: rgb(0, 204, 194);
+  stroke-width: 2;
+}
+
+.CTATProtractor--fgrays {
+  stroke: blue;
+  fill: blue;
+  stroke-width: 2;
+}
+
+.CTATProtractor--labelray {
+  text-anchor: middle;
+  font-style: italic;
+  stroke: none;
+  font-size: 100%;
+}
+
+.CTATProtractor--select {
+  cursor: grab;
+  user-select: auto;
+}
+
+.CTATProtractor--correct {
+  filter: drop-shadow(0 -1px 3px limegreen) drop-shadow(1px 0 3px limegreen)
+    drop-shadow(0 1px 3px limegreen);
+}
+.CTATProtractor--incorrect {
+  filter: drop-shadow(0 -1px 3px red) drop-shadow(1px 0 3px red)
+    drop-shadow(0 1px 3px red);
+}
+.CTATProtractor--hint {
+  filter: drop-shadow(0 -1px 3px yellow) drop-shadow(1px 0 3px yellow)
+    drop-shadow(0 1px 3px yellow);
+}

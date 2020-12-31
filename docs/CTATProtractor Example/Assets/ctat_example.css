@@ -1,0 +1,43 @@
+body {
+  background-color: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.tutor_window {
+  position: relative;
+  background-color: white;
+  border: 1px solid black;
+  width: 700px;
+  margin: 0 auto;
+  padding: 5px;
+  box-shadow: 10px 10px 5px grey;
+}
+div.ctat_example {
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+div.ctat_code {
+  display: inline-block;
+  width: 40%;
+  border-left: 1px dotted gray;
+  padding-left: 3px;
+}
+#hint-box {
+  margin: 3px;
+  text-align: right;
+}
+#hint-button {
+  margin: 0 5px 5px 5px;
+}
+#done-button {
+  margin: 0 5px 0px 5px;
+}
+#done {
+  margin: 0 5px 0px 5px;
+}
+#HintWindow {
+  display: inline-flex;
+  width: 400px;
+}
