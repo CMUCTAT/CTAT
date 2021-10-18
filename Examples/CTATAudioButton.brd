@@ -37,7 +37,7 @@
                     <value>setSource</value>
                 </Action>
                 <Input>
-                    <value>https://drive.google.com/uc?export=view&amp;id=0BwGsdDsj8yYcTXZFc2hHZUx5VW8</value>
+                    <value>sounds/Tada-sound.mp3</value>
                 </Input>
             </properties>
         </message>
