@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CTATChart Examples</title>
+    <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTAT.css">
+    <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/CTATChart.css">
+    <link rel="stylesheet" href="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/Mathtutor.css">
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/lab/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/lab/CTATChart.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/mathtutor/ctatloader.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="http://ctat.pact.cs.cmu.edu/"><img id="CTATBanner" alt="CTAT: Cognitive Tutor Authoring Tools" src="https://cdn.rawgit.com/CMUCTAT/CTAT/latest/Examples/skindata/CTAT_Banner.svg"></a>
+    </header>
+    <section>
+      <h3>Basic setup with controller components</h3>
+      <p></p>
+      <ol>
+	<li>Place points: click on (5,5), then (7,6).</li>
+	<li>Draw line: Click on one of the correct points and then click on the other one.</li>
+      </ol>
+      <p></p>
+      <div style="width:400px" class="CTATTable" id="c1table" data-ctat-num-rows="6" data-ctat-num-cols="2"></div>
+      <div class="CTATGrapher">
+	<h3 class="CTATGrapher-title">X vs Y</h3>
+	<div class="CTATGrapher-top">
+	  <div>
+	    <span>X Scale:</span>
+	    <div id="stepx" class="CTATNumericStepper" data-ctat-tutor="false" value="1"></div>
+	  </div>
+	  <div>
+	    <span>Y Scale:</span>
+	    <div id="stepy" class="CTATNumericStepper" data-ctat-tutor="false" value="1"></div>
+	  </div>
+	</div>
+	<div class="CTATGrapher-y">
+	  <div id="maxy" class="CTATNumericStepper" data-ctat-tutor="false" value="10"></div>
+	  <div id="labely" class="CTATTextInput"></div>
+	  <div id="unity" class="CTATTextInput"></div>
+	  <div id="miny" class="CTATNumericStepper" data-ctat-tutor="false" value="0"></div>
+	</div>
+	<div id="chart1" class="CTATChart" data-ctat-disable-on-correct="false" data-ctat-ctrl-minimum-x="minx" data-ctat-ctrl-maximum-x="maxx" data-ctat-ctrl-step-x="stepx" data-ctat-ctrl-minimum-y="miny" data-ctat-ctrl-maximum-y="maxy" data-ctat-ctrl-step-y="stepy" aria-label="Two dimension data chart" role="img"></div>
+	<div class="CTATGrapher-x">
+	  <div id="minx" class="CTATNumericStepper" data-ctat-tutor="false" value="0"></div>
+	  <div id="labelx" class="CTATTextInput"></div>
+	  <div id="unitx" class="CTATTextInput"></div>
+	  <div id="maxx" class="CTATNumericStepper" data-ctat-tutor="false" value="10"></div>
+	</div>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <h3>Snapping disabled</h3>
+      <p></p>
+      <ol>
+	<li>Place points: click near (5,5), then near (7,6).</li>
+	<li>Draw line: Click on one of the correct points and then click on the other one.</li>
+      </ol>
+      <p></p>
+      <div id="chart2" class="CTATChart" data-ctat-disable-on-correct="false" data-ctat-snap="false" aria-label="Two dimension data chart" role="img"></div>
+    </section>
+    <hr>
+    <section>
+      <h3>Free Entry (no grading)</h3>
+      <div id="chart3" class="CTATChart" data-ctat-disable-on-correct="false" data-ctat-snap="false" data-ctat-tutor="false" role="img"></div>
+    </section>
+    <hr>
+    <footer id="hint-box">
+      <div id="HintWindow" class="CTATHintWindow"></div>
+      <div id="hint-box-buttons">
+	<div id="hint-button" class="CTATHintButton"></div>
+	<div id="done" class="CTATDoneButton"></div>
+      </div>
+    </footer>
+  </body>
+</html>
