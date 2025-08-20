@@ -52,13 +52,13 @@
                     <MessageType>InterfaceAction</MessageType>
                     <transaction_id>00c134b5-a853-f65f-33cb-edf260aef112</transaction_id>
                     <Selection>
-                        <value>angles</value>
+                        <value>protractorDefault</value>
                     </Selection>
                     <Action>
                         <value>setAngle</value>
                     </Action>
                     <Input>
-                        <value>200</value>
+                        <value>135</value>
                     </Input>
                 </properties>
             </message>
@@ -73,7 +73,7 @@
                 <Selection>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">angles</matcherParameter>
+                        <matcherParameter name="single">protractorDefault</matcherParameter>
                     </matcher>
                 </Selection>
                 <Action>
@@ -85,7 +85,7 @@
                 <Input>
                     <matcher>
                         <matcherType>ExactMatcher</matcherType>
-                        <matcherParameter name="single">200</matcherParameter>
+                        <matcherParameter name="single">135</matcherParameter>
                     </matcher>
                 </Input>
                 <Actor linkTriggered="false">Student</Actor>
